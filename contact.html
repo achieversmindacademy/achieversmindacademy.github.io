@@ -2,38 +2,502 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Achievers Mind Academy</title>
+  <title>Contact Us | Achievers Mind Academy - Get in Touch Today</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Contact Achievers Mind Academy for program information, consultations, enrollment, or support. Multiple ways to reach us including phone, email, and live chat.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/@barba/core"></script>
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <img src="images/logo.png" class="logo" alt="Achievers Mind Academy">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav">
-  <img src="images/logo.png" class="logo">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="programs.html">Programs</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Get in<br><span>Touch Today</span></h1>
+      <p>Ready to start your transformation journey? We're here to help you every step of the way. Reach out to us through any of the convenient methods below.</p>
+      <div class="hero-buttons">
+        <a href="#contact-form" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Send Message
+        </a>
+        <a href="tel:+1234567890" class="btn btn-secondary">
+          <i class="fas fa-phone"></i>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section class="glass section contact">
-  <h2>Get In Touch</h2>
+  <!-- CONTACT METHODS -->
+  <section class="glass section">
+    <h2>How Can We Help You?</h2>
+    <p>Choose the best way to reach us based on your needs and preferences</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+      <div class="card slide-up" style="text-align: center;">
+        <div style="font-size: 3rem; color: #4facfe; margin-bottom: 1rem;">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Phone Support</h3>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Speak directly with our team for immediate assistance</p>
+        <div style="color: #4facfe; font-weight: 600; margin-bottom: 1rem;">+1 (234) 567-8900</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Mon-Fri: 8AM-8PM EST</div>
+        <a href="tel:+1234567890" class="btn btn-primary" style="margin-top: 1rem;">Call Now</a>
+      </div>
 
-  <form action="https://formsubmit.co/youremail@example.com" method="POST">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <div class="card slide-up" style="text-align: center;">
+        <div style="font-size: 3rem; color: #f093fb; margin-bottom: 1rem;">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Send us a detailed message and we'll respond within 24 hours</p>
+        <div style="color: #f093fb; font-weight: 600; margin-bottom: 1rem;">info@achieversmindacademy.com</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Response time: 24 hours</div>
+        <a href="mailto:info@achieversmindacademy.com" class="btn btn-secondary" style="margin-top: 1rem;">Send Email</a>
+      </div>
 
-<footer>© 2026 Achievers Mind Academy</footer>
+      <div class="card slide-up" style="text-align: center;">
+        <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3>Live Chat</h3>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Get instant answers to your questions</p>
+        <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Available 24/7</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Instant response</div>
+        <button class="btn btn-primary" onclick="openChat()" style="margin-top: 1rem;">Start Chat</button>
+      </div>
+
+      <div class="card slide-up" style="text-align: center;">
+        <div style="font-size: 3rem; color: #00f2fe; margin-bottom: 1rem;">
+          <i class="fas fa-calendar"></i>
+        </div>
+        <h3>Free Consultation</h3>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Schedule a 30-minute consultation with our advisors</p>
+        <div style="color: #00f2fe; font-weight: 600; margin-bottom: 1rem;">Book Online</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">30-minute session</div>
+        <button class="btn btn-primary" onclick="openBooking()" style="margin-top: 1rem;">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact-form" class="section contact">
+    <h2>Send Us a Message</h2>
+    <p>Fill out the form below and we'll get back to you as soon as possible</p>
+    
+    <form action="https://formsubmit.co/info@achieversmindacademy.com" method="POST" style="max-width: 800px; margin: 3rem auto 0;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <label for="firstName" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem; transition: all 0.3s ease;">
+        </div>
+        <div>
+          <label for="lastName" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem; transition: all 0.3s ease;">
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <label for="email" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Email Address *</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem; transition: all 0.3s ease;">
+        </div>
+        <div>
+          <label for="phone" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Phone Number</label>
+          <input type="tel" id="phone" name="phone" style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem; transition: all 0.3s ease;">
+        </div>
+      </div>
+      
+      <div style="margin-bottom: 2rem;">
+        <label for="subject" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Subject *</label>
+        <select id="subject" name="subject" required style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+          <option value="">Select a subject</option>
+          <option value="program-inquiry">Program Inquiry</option>
+          <option value="enrollment">Enrollment Information</option>
+          <option value="consultation">Schedule Consultation</option>
+          <option value="support">Technical Support</option>
+          <option value="partnership">Partnership Opportunity</option>
+          <option value="media">Media Inquiry</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div style="margin-bottom: 2rem;">
+        <label for="programInterest" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Program Interest (Optional)</label>
+        <select id="programInterest" name="programInterest" style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+          <option value="">Select a program</option>
+          <option value="mindset-mastery">Mindset Mastery</option>
+          <option value="academic-excellence">Academic Excellence</option>
+          <option value="leadership-character">Leadership & Character Development</option>
+          <option value="educator-transformation">Educator Transformation</option>
+          <option value="emotional-intelligence">Emotional Intelligence</option>
+          <option value="peak-performance">Peak Performance</option>
+          <option value="custom-program">Custom Program</option>
+        </select>
+      </div>
+      
+      <div style="margin-bottom: 2rem;">
+        <label for="message" style="display: block; color: white; margin-bottom: 0.5rem; font-weight: 500;">Message *</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your goals, questions, or how we can help you..." style="width: 100%; padding: 15px; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem; resize: vertical; font-family: inherit;"></textarea>
+      </div>
+      
+      <div style="margin-bottom: 2rem;">
+        <label style="display: flex; align-items: center; color: rgba(255,255,255,0.8); cursor: pointer;">
+          <input type="checkbox" name="newsletter" style="margin-right: 0.5rem; transform: scale(1.2);">
+          <span>Subscribe to our newsletter for tips, insights, and program updates</span>
+        </label>
+      </div>
+      
+      <div style="margin-bottom: 2rem;">
+        <label style="display: flex; align-items: center; color: rgba(255,255,255,0.8); cursor: pointer;">
+          <input type="checkbox" name="privacy" required style="margin-right: 0.5rem; transform: scale(1.2);">
+          <span>I agree to the <a href="#" style="color: #4facfe;">Privacy Policy</a> and <a href="#" style="color: #4facfe;">Terms of Service</a> *</span>
+        </label>
+      </div>
+      
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">
+          <i class="fas fa-paper-plane"></i>
+          Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- OFFICE LOCATIONS -->
+  <section class="glass section">
+    <h2>Our Locations</h2>
+    <p>Visit us at one of our convenient locations or connect with us online from anywhere in the world</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem;">
+      <div class="card" style="text-align: center;">
+        <div style="font-size: 3rem; color: #4facfe; margin-bottom: 1rem;">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Headquarters - New York</h3>
+        <div style="color: rgba(255,255,255,0.8); margin: 1rem 0;">
+          <p>123 Innovation Drive, Suite 500</p>
+          <p>New York, NY 10001</p>
+          <p>United States</p>
+        </div>
+        <div style="color: #4facfe; font-weight: 600; margin: 1rem 0;">+1 (234) 567-8900</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Mon-Fri: 8AM-8PM EST</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Sat: 9AM-5PM EST</div>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div style="font-size: 3rem; color: #f093fb; margin-bottom: 1rem;">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3>West Coast Office - California</h3>
+        <div style="color: rgba(255,255,255,0.8); margin: 1rem 0;">
+          <p>456 Success Boulevard, Floor 10</p>
+          <p>San Francisco, CA 94102</p>
+          <p>United States</p>
+        </div>
+        <div style="color: #f093fb; font-weight: 600; margin: 1rem 0;">+1 (234) 567-8901</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Mon-Fri: 8AM-6PM PST</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Sat: 9AM-3PM PST</div>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>International Office - London</h3>
+        <div style="color: rgba(255,255,255,0.8); margin: 1rem 0;">
+          <p>789 Transformation Lane</p>
+          <p>London EC1A 1BB</p>
+          <p>United Kingdom</p>
+        </div>
+        <div style="color: #667eea; font-weight: 600; margin: 1rem 0;">+44 20 7123 4567</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Mon-Fri: 9AM-6PM GMT</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Sat: 10AM-4PM GMT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <p>Quick answers to common questions about our programs and services</p>
+    
+    <div style="max-width: 900px; margin: 3rem auto 0;">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3 style="color: #4facfe; margin-bottom: 1rem;">How quickly can I start a program?</h3>
+        <p style="color: rgba(255,255,255,0.8);">Most programs have monthly start dates, and we can often accommodate special requests for immediate enrollment. Contact us to discuss your timeline and preferences.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3 style="color: #f093fb; margin-bottom: 1rem;">Do you offer payment plans?</h3>
+        <p style="color: rgba(255,255,255,0.8);">Yes, we offer flexible payment plans for all our programs. You can choose from monthly, quarterly, or full payment options with no additional fees.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3 style="color: #667eea; margin-bottom: 1rem;">Can I attend programs remotely?</h3>
+        <p style="color: rgba(255,255,255,0.8);">Absolutely! Most of our programs are available online with the same quality and interaction as in-person sessions. Hybrid options are also available for some programs.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3 style="color: #00f2fe; margin-bottom: 1rem;">What if I'm not satisfied with a program?</h3>
+        <p style="color: rgba(255,255,255,0.8);">We offer a 30-day money-back guarantee. If you're not completely satisfied within the first 30 days, we'll provide a full refund.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3 style="color: #f5576c; margin-bottom: 1rem;">Do you provide certificates upon completion?</h3>
+        <p style="color: rgba(255,255,255,0.8);">Yes, all participants receive official certificates upon successful completion of our programs. These certificates are recognized by many educational institutions and employers.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="color: #764ba2; margin-bottom: 1rem;">Can you customize programs for organizations?</h3>
+        <p style="color: rgba(255,255,255,0.8);">Yes, we specialize in creating custom programs for schools, universities, and corporate clients. Contact us to discuss your specific needs and requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA & COMMUNITY -->
+  <section class="glass section">
+    <h2>Join Our Community</h2>
+    <p>Connect with us on social media for daily motivation, success tips, and community updates</p>
+    
+    <div style="display: flex; justify-content: center; gap: 2rem; margin: 3rem 0; flex-wrap: wrap;">
+      <a href="#" class="social-link" style="text-decoration: none;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem; transition: all 0.3s ease;">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div style="color: white; font-weight: 600;">Facebook</div>
+      </a>
+
+      <a href="#" class="social-link" style="text-decoration: none;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem; transition: all 0.3s ease;">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div style="color: white; font-weight: 600;">Twitter</div>
+      </a>
+
+      <a href="#" class="social-link" style="text-decoration: none;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0077b5 0%, #005885 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem; transition: all 0.3s ease;">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div style="color: white; font-weight: 600;">LinkedIn</div>
+      </a>
+
+      <a href="#" class="social-link" style="text-decoration: none;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #e4405f 0%, #c13584 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem; transition: all 0.3s ease;">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div style="color: white; font-weight: 600;">Instagram</div>
+      </a>
+
+      <a href="#" class="social-link" style="text-decoration: none;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1rem; transition: all 0.3s ease;">
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div style="color: white; font-weight: 600;">YouTube</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- EMERGENCY CONTACT -->
+  <section class="section">
+    <h2>Emergency & Urgent Support</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+      <div class="card" style="text-align: center;">
+        <div style="font-size: 3rem; color: #ff4757; margin-bottom: 1rem;">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3>Crisis Support</h3>
+        <p style="color: rgba(255,255,255,0.8);">For students in immediate distress or crisis situations</p>
+        <div style="color: #ff4757; font-weight: 600; margin: 1rem 0;">+1 (234) 911-HELP</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">24/7 Crisis Line</div>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div style="font-size: 3rem; color: #ffa502; margin-bottom: 1rem;">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Technical Support</h3>
+        <p style="color: rgba(255,255,255,0.8);">For online platform issues and technical difficulties</p>
+        <div style="color: #ffa502; font-weight: 600; margin: 1rem 0;">support@achieversmindacademy.com</div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Response within 2 hours</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; text-align: left;">
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Achievers Mind Academy</h3>
+        <p style="color: rgba(255,255,255,0.7);">Transforming minds, building futures, and creating leaders who make a positive impact on the world.</p>
+      </div>
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Quick Links</h3>
+        <ul style="list-style: none; color: rgba(255,255,255,0.7);">
+          <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="programs.html" style="color: inherit; text-decoration: none;">Our Programs</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="gallery.html" style="color: inherit; text-decoration: none;">Gallery</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Connect With Us</h3>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="color: rgba(255,255,255,0.7);">Follow us on social media for daily motivation and success tips!</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+      <p>&copy; 2026 Achievers Mind Academy. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script>
+    // Chat functionality
+    function openChat() {
+      alert('Live chat feature would be implemented here with a third-party chat service like Intercom or Zendesk. For now, please call us at +1 (234) 567-8900 or use our contact form.');
+    }
+
+    // Booking functionality
+    function openBooking() {
+      alert('Online booking system would be integrated here with tools like Calendly or Acuity Scheduling. Please call us at +1 (234) 567-8900 to schedule your consultation.');
+    }
+
+    // Form validation and enhancement
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('.contact form');
+      const inputs = form.querySelectorAll('input, textarea, select');
+
+      // Enhanced form styling on focus
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.style.borderColor = '#4facfe';
+          this.style.boxShadow = '0 0 20px rgba(79, 172, 254, 0.3)';
+        });
+
+        input.addEventListener('blur', function() {
+          if (!this.value) {
+            this.style.borderColor = 'rgba(255,255,255,0.2)';
+            this.style.boxShadow = 'none';
+          }
+        });
+
+        input.addEventListener('input', function() {
+          if (this.value) {
+            this.style.borderColor = 'rgba(79, 172, 254, 0.5)';
+          }
+        });
+      });
+
+      // Form submission handling
+      form.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Reset after a short delay (in real implementation, this would be after actual submission)
+        setTimeout(() => {
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+          submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+          
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+            this.reset();
+            inputs.forEach(input => {
+              input.style.borderColor = 'rgba(255,255,255,0.2)';
+              input.style.boxShadow = 'none';
+            });
+          }, 3000);
+        }, 1500);
+      });
+
+      // Social media hover effects
+      const socialLinks = document.querySelectorAll('.social-link');
+      socialLinks.forEach(link => {
+        const icon = link.querySelector('div');
+        link.addEventListener('mouseenter', function() {
+          gsap.to(icon, {
+            scale: 1.1,
+            rotation: 5,
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+
+        link.addEventListener('mouseleave', function() {
+          gsap.to(icon, {
+            scale: 1,
+            rotation: 0,
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+      });
+    });
+  </script>
+
+  <style>
+    /* Form input focus effects */
+    input:focus, textarea:focus, select:focus {
+      outline: none !important;
+      border-color: #4facfe !important;
+      box-shadow: 0 0 20px rgba(79, 172, 254, 0.3) !important;
+    }
+
+    /* Placeholder styling */
+    input::placeholder, textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    /* Checkbox styling */
+    input[type="checkbox"] {
+      accent-color: #4facfe;
+    }
+
+    /* Social media link hover effects */
+    .social-link:hover div {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Emergency contact card hover effects */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </body>
 </html>

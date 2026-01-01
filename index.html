@@ -2,109 +2,251 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Achievers Mind Academy</title>
+  <title>Achievers Mind Academy - Transform Your Mind, Transform Your Future</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Achievers Mind Academy - Leading institution for mindset training, leadership development, and character building. Transform your mind, transform your future.">
+  <meta name="keywords" content="mindset training, leadership development, character building, education, personal development, academic excellence">
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/@barba/core"></script>
 </head>
 <body>
-<div id="intro">
-  <img src="images/logo.png" alt="Achievers Mind Academy">
-  <h1>Achievers Mind Academy</h1>
-  <p>Shaping Minds • Building Futures</p>
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <img src="images/logo.png" class="logo" alt="Achievers Mind Academy">
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="programs.html">Programs</a></li>
-  <li><a href="gallery.html">Gallery</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Shaping Minds.<br><span>Creating Achievers.</span></h1>
-    <p>The future of education, leadership and mindset training.</p>
-    <button>Explore Programs</button>
+  <!-- INTRO SCREEN -->
+  <div id="intro">
+    <img src="images/logo.png" alt="Achievers Mind Academy Logo">
+    <h1>Achievers Mind Academy</h1>
+    <p>Transforming Minds • Building Excellence • Creating Leaders</p>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section class="glass section">
-  <h2>Who We Are</h2>
-  <p>
-    Achievers Mind Academy is a next-generation education and mindset institution
-    empowering students, educators, and leaders through purpose-driven learning.
-  </p>
-</section>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <img src="images/logo.png" class="logo" alt="Achievers Mind Academy">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- PROGRAMS -->
-<section class="section programs">
-  <h2>Our Core Programs</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Student Mindset Mastery</h3>
-      <p>Confidence, focus, emotional intelligence and academic excellence.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Mind.</h1>
+      <p>Unlock your potential through proven mindset training, leadership development, and character building programs designed to create extraordinary achievers.</p>
+      <div class="hero-buttons">
+        <a href="programs.html" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          Explore Programs
+        </a>
+        <a href="about.html" class="btn btn-secondary">
+          <i class="fas fa-info-circle"></i>
+          Learn More
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Educator Transformation</h3>
-      <p>Ethical leadership, pedagogy excellence and human values.</p>
+  <!-- ABOUT SECTION -->
+  <section class="glass section fade-in">
+    <h2>Who We Are</h2>
+    <p>
+      Achievers Mind Academy is a premier educational institution dedicated to transforming minds and building exceptional leaders. We specialize in comprehensive mindset training, academic excellence programs, and character development initiatives that empower students, educators, and professionals to reach their full potential.
+    </p>
+    <p>
+      Our innovative approach combines proven psychological principles with practical leadership strategies, creating a unique learning environment where personal growth meets academic achievement. We believe that true education goes beyond textbooks—it's about shaping resilient, ethical, and visionary leaders who will make a positive impact on the world.
+    </p>
+  </section>
+
+  <!-- PROGRAMS SECTION -->
+  <section class="section programs">
+    <h2>Our Signature Programs</h2>
+    
+    <div class="cards">
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #4facfe; margin-bottom: 1rem;">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Mindset Mastery</h3>
+        <p>Develop unshakeable confidence, laser-sharp focus, and emotional intelligence through our scientifically-backed mindset training program. Learn to overcome limiting beliefs and unlock your true potential.</p>
+      </div>
+
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #f093fb; margin-bottom: 1rem;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Academic Excellence</h3>
+        <p>Master advanced study techniques, memory enhancement strategies, and critical thinking skills. Our proven methodologies help students achieve exceptional academic results while maintaining mental wellness.</p>
+      </div>
+
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h3>Leadership & Character</h3>
+        <p>Build authentic leadership skills, ethical decision-making abilities, and strong character foundations. Develop the vision and discipline needed to become a transformative leader in any field.</p>
+      </div>
+
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #00f2fe; margin-bottom: 1rem;">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Educator Transformation</h3>
+        <p>Empower educators with cutting-edge teaching methodologies, classroom management techniques, and student motivation strategies. Create inspiring learning environments that nurture both knowledge and character.</p>
+      </div>
+
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #f5576c; margin-bottom: 1rem;">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Emotional Intelligence</h3>
+        <p>Develop self-awareness, empathy, and relationship management skills. Learn to navigate complex social situations with confidence and create meaningful connections with others.</p>
+      </div>
+
+      <div class="card slide-up">
+        <div style="font-size: 2.5rem; color: #764ba2; margin-bottom: 1rem;">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Peak Performance</h3>
+        <p>Achieve optimal performance in academics, sports, and life through advanced mental training, goal-setting strategies, and performance psychology techniques used by elite athletes and high achievers.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Leadership & Character</h3>
-      <p>Purpose, discipline, vision and lifelong impact.</p>
+  <!-- ACHIEVEMENTS SECTION -->
+  <section class="glass section">
+    <h2>Our Impact</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #4facfe; margin-bottom: 0.5rem;">10,000+</div>
+        <div style="color: rgba(255,255,255,0.8);">Students Transformed</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #f093fb; margin-bottom: 0.5rem;">500+</div>
+        <div style="color: rgba(255,255,255,0.8);">Educators Trained</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #667eea; margin-bottom: 0.5rem;">50+</div>
+        <div style="color: rgba(255,255,255,0.8);">Countries Reached</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #00f2fe; margin-bottom: 0.5rem;">95%</div>
+        <div style="color: rgba(255,255,255,0.8);">Success Rate</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- GALLERY -->
-<section class="section gallery">
-  <h2>Our Journey</h2>
-  <div class="gallery-grid">
-    <img src="images/gallery1.jpg">
-    <img src="images/gallery2.jpg">
-    <img src="images/gallery3.jpg">
-    <img src="images/gallery4.jpg">
-    <img src="images/gallery5.jpg">
-    <img src="images/gallery6.jpg">
-  </div>
-</section>
+  <!-- GALLERY SECTION -->
+  <section class="section gallery">
+    <h2>Our Journey in Action</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Students in intensive training session">
+      <img src="images/gallery2.jpg" alt="Leadership workshop with professionals">
+      <img src="images/gallery3.jpg" alt="Educators in transformation seminar">
+      <img src="images/gallery4.jpg" alt="Academic excellence program">
+      <img src="images/gallery5.jpg" alt="Mindset training workshop">
+      <img src="images/gallery6.jpg" alt="Character building activities">
+    </div>
+  </section>
 
-<!-- CONTACT -->
-<section class="glass section contact">
-  <h2>Contact Us</h2>
+  <!-- TESTIMONIALS SECTION -->
+  <section class="glass section">
+    <h2>What Our Community Says</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+      <div class="card" style="text-align: left;">
+        <div style="color: #4facfe; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <p style="font-style: italic; margin-bottom: 1rem;">"The mindset training completely transformed how I approach challenges. My confidence has skyrocketed, and my academic performance has improved dramatically."</p>
+        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Sarah Chen, Student</div>
+      </div>
+      <div class="card" style="text-align: left;">
+        <div style="color: #f093fb; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <p style="font-style: italic; margin-bottom: 1rem;">"The educator transformation program gave me tools I never knew I needed. My students are more engaged, and my teaching has never been more effective."</p>
+        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Michael Rodriguez, Teacher</div>
+      </div>
+      <div class="card" style="text-align: left;">
+        <div style="color: #667eea; font-size: 1.2rem; margin-bottom: 1rem;">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <p style="font-style: italic; margin-bottom: 1rem;">"The leadership program helped me develop the character and vision needed to lead my team to unprecedented success. Truly life-changing."</p>
+        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Dr. James Park, Executive</div>
+      </div>
+    </div>
+  </section>
 
-  <form action="https://formsubmit.co/youremail@example.com" method="POST">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <!-- CONTACT SECTION -->
+  <section class="section contact">
+    <h2>Start Your Transformation Today</h2>
+    <p>Ready to unlock your potential? Get in touch with us to learn how our programs can transform your life and career.</p>
+    
+    <form action="https://formsubmit.co/info@achieversmindacademy.com" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <select name="program" required style="padding: 15px; margin: 10px 0; border-radius: 15px; border: none; background: rgba(255,255,255,0.05); color: white;">
+        <option value="">Select Your Interest</option>
+        <option value="mindset-mastery">Mindset Mastery</option>
+        <option value="academic-excellence">Academic Excellence</option>
+        <option value="leadership-character">Leadership & Character</option>
+        <option value="educator-transformation">Educator Transformation</option>
+        <option value="emotional-intelligence">Emotional Intelligence</option>
+        <option value="peak-performance">Peak Performance</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your goals and how we can help you achieve them..." rows="5"></textarea>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        Send Message
+      </button>
+    </form>
+  </section>
 
-<footer>
-  © 2026 Achievers Mind Academy. All Rights Reserved.
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; text-align: left;">
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Achievers Mind Academy</h3>
+        <p style="color: rgba(255,255,255,0.7);">Transforming minds, building futures, and creating leaders who make a positive impact on the world.</p>
+      </div>
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Quick Links</h3>
+        <ul style="list-style: none; color: rgba(255,255,255,0.7);">
+          <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="programs.html" style="color: inherit; text-decoration: none;">Our Programs</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="gallery.html" style="color: inherit; text-decoration: none;">Gallery</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color: white; margin-bottom: 1rem;">Connect With Us</h3>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="color: rgba(255,255,255,0.7);">Follow us on social media for daily motivation and success tips!</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+      <p>&copy; 2026 Achievers Mind Academy. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+  </footer>
 
-<script src="js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
