@@ -2,251 +2,478 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Achievers Mind Academy - Transform Your Mind, Transform Your Future</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Achievers Mind Academy - Leading institution for mindset training, leadership development, and character building. Transform your mind, transform your future.">
-  <meta name="keywords" content="mindset training, leadership development, character building, education, personal development, academic excellence">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <title>Achievers Mind Academy | Memory &amp; Learning Skills Training Malaysia</title>
+  <meta name="description" content="Achievers Mind Academy — Malaysian academy specialising in memory training, learning skills and cognitive development for students. Super Memory Programme with free preview sessions. Standard 4 to Form 5.">
+  <meta name="keywords" content="memory training Malaysia, Super Memory Programme, Achievers Mind Academy, learning skills, student development, free preview, Master Alagan Govindan">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Achievers Mind Academy | Memory &amp; Learning Skills Training Malaysia">
+  <meta property="og:description" content="Practical memory, learning and cognitive skills training for students — through engaging, hands-on experiences. Join a free preview.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/web/gallery2-1600.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Structured data (verified information only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Achievers Mind Academy",
+    "description": "Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students through the Super Memory Programme.",
+    "founder": { "@type": "Person", "name": "Master Alagan Govindan", "jobTitle": "Founder & Trainer" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C-6-1, Jalan Mutiara 2, Mutiara Business Park",
+      "addressRegion": "Selangor",
+      "addressCountry": "MY"
+    },
+    "sameAs": [
+      "https://www.instagram.com/achievers.mind.academy",
+      "https://www.tiktok.com/@achievers.mind.academy"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- INTRO SCREEN -->
-  <div id="intro">
-    <img src="images/logo.png" alt="Achievers Mind Academy Logo">
-    <h1>Achievers Mind Academy</h1>
-    <p>Transforming Minds • Building Excellence • Creating Leaders</p>
-  </div>
 
-  <!-- NAVIGATION -->
+  <!-- ================= NAVIGATION ================= -->
   <nav class="nav">
-    <img src="images/logo.png" class="logo" alt="Achievers Mind Academy">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
+        <span>Achievers Mind Academy<small>Memory &amp; Learning Skills</small></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+        <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <div class="lang-switch" aria-label="Language">
+          <button data-lang="en" class="active" data-i18n="lang.en">EN</button>
+          <button data-lang="bm" data-i18n="lang.bm">BM</button>
+          <button data-lang="ta" data-i18n="lang.ta">TA</button>
+        </div>
+        <a href="experience.html#register" class="btn btn-brass" data-i18n="cta.preview">Join a Free Preview</a>
+        <button class="nav-toggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+      </div>
+    </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Transform Your Mind.</h1>
-      <p>Unlock your potential through proven mindset training, leadership development, and character building programs designed to create extraordinary achievers.</p>
-      <div class="hero-buttons">
-        <a href="programs.html" class="btn btn-primary">
-          <i class="fas fa-rocket"></i>
-          Explore Programs
-        </a>
-        <a href="about.html" class="btn btn-secondary">
-          <i class="fas fa-info-circle"></i>
-          Learn More
-        </a>
+  <main>
+
+    <!-- ================= 01 · HERO ================= -->
+    <section class="hero">
+      <div class="hero-bg">
+        <picture>
+          <source srcset="images/web/gallery2-1600.webp" type="image/webp">
+          <img src="images/web/gallery2-1600.jpg" alt="Photograph from an Achievers Mind Academy session" fetchpriority="high">
+        </picture>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="glass section fade-in">
-    <h2>Who We Are</h2>
-    <p>
-      Achievers Mind Academy is a premier educational institution dedicated to transforming minds and building exceptional leaders. We specialize in comprehensive mindset training, academic excellence programs, and character development initiatives that empower students, educators, and professionals to reach their full potential.
-    </p>
-    <p>
-      Our innovative approach combines proven psychological principles with practical leadership strategies, creating a unique learning environment where personal growth meets academic achievement. We believe that true education goes beyond textbooks—it's about shaping resilient, ethical, and visionary leaders who will make a positive impact on the world.
-    </p>
-  </section>
-
-  <!-- PROGRAMS SECTION -->
-  <section class="section programs">
-    <h2>Our Signature Programs</h2>
-    
-    <div class="cards">
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #4facfe; margin-bottom: 1rem;">
-          <i class="fas fa-brain"></i>
+      <div class="container hero-content">
+        <p class="eyebrow">Achievers Mind Academy · Malaysia</p>
+        <h1 class="display-1">Unlock the potential of the mind.</h1>
+        <p class="lead">Practical memory, learning and cognitive skills training for students — delivered through engaging, hands-on experiences. For parents who want their children to become better learners.</p>
+        <div class="hero-actions">
+          <a href="experience.html#register" class="btn btn-brass btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Join a Free Preview
+          </a>
+          <a href="programmes.html" class="btn btn-ghost btn-lg">Explore the Programme</a>
         </div>
-        <h3>Mindset Mastery</h3>
-        <p>Develop unshakeable confidence, laser-sharp focus, and emotional intelligence through our scientifically-backed mindset training program. Learn to overcome limiting beliefs and unlock your true potential.</p>
-      </div>
-
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #f093fb; margin-bottom: 1rem;">
-          <i class="fas fa-graduation-cap"></i>
+        <div class="hero-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"/></svg>33+ Years of Super Memory Programmes</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z"/></svg>MSc Training &amp; Development · University of Leicester, UK</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14l-3-2-3 2-3-2-3 2-3-2-1 1z"/></svg>For Students Standard 4 – Form 5</span>
         </div>
-        <h3>Academic Excellence</h3>
-        <p>Master advanced study techniques, memory enhancement strategies, and critical thinking skills. Our proven methodologies help students achieve exceptional academic results while maintaining mental wellness.</p>
       </div>
+    </section>
 
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;">
-          <i class="fas fa-crown"></i>
+    <!-- ================= 02 · WHY AMA IS DIFFERENT ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow">Why Achievers Mind Academy is different</p>
+          <h2 class="display-2">More than a memory class.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Achievers Mind Academy is not a tuition centre. It is a specialised cognitive and memory training academy with a distinctive live methodology — and the best way to understand it is to see it in action.</p>
         </div>
-        <h3>Leadership & Character</h3>
-        <p>Build authentic leadership skills, ethical decision-making abilities, and strong character foundations. Develop the vision and discipline needed to become a transformative leader in any field.</p>
-      </div>
 
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #00f2fe; margin-bottom: 1rem;">
-          <i class="fas fa-users"></i>
+        <div class="grid grid-4" style="margin-top:3rem;">
+          <div class="feature reveal">
+            <span class="num">01</span>
+            <h3>Live Demonstrations</h3>
+            <p>See students demonstrate memory techniques, recall challenges and recognition activities in real time.</p>
+          </div>
+          <div class="feature reveal reveal-delay-1">
+            <span class="num">02</span>
+            <h3>Hands-On Experience</h3>
+            <p>Parents and students take part in the activities themselves — not just watch from the side.</p>
+          </div>
+          <div class="feature reveal reveal-delay-2">
+            <span class="num">03</span>
+            <h3>Understand the Method</h3>
+            <p>Learn what the programme is designed to develop — memory, recall, focus and practical learning skills.</p>
+          </div>
+          <div class="feature reveal reveal-delay-3">
+            <span class="num">04</span>
+            <h3>Decide With Confidence</h3>
+            <p>Understand the programme fully before committing. That is exactly what the free preview is for.</p>
+          </div>
         </div>
-        <h3>Educator Transformation</h3>
-        <p>Empower educators with cutting-edge teaching methodologies, classroom management techniques, and student motivation strategies. Create inspiring learning environments that nurture both knowledge and character.</p>
       </div>
+    </section>
 
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #f5576c; margin-bottom: 1rem;">
-          <i class="fas fa-heart"></i>
+    <!-- ================= 03 · FREE PREVIEW ================= -->
+    <section class="section tone-light">
+      <div class="container split">
+        <div class="split-media reveal">
+          <picture>
+            <source srcset="images/web/gallery3-1600.webp" type="image/webp">
+            <img src="images/web/gallery3-1600.jpg" alt="Photograph from an Achievers Mind Academy preview session" loading="lazy">
+          </picture>
+          <span class="frame-note">Free preview sessions</span>
         </div>
-        <h3>Emotional Intelligence</h3>
-        <p>Develop self-awareness, empathy, and relationship management skills. Learn to navigate complex social situations with confidence and create meaningful connections with others.</p>
-      </div>
-
-      <div class="card slide-up">
-        <div style="font-size: 2.5rem; color: #764ba2; margin-bottom: 1rem;">
-          <i class="fas fa-chart-line"></i>
+        <div class="reveal reveal-delay-1">
+          <p class="eyebrow">The free preview</p>
+          <h2 class="display-2">Experience the method before you decide.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Don't just read about memory training — come and experience it. At a preview session, parents and children witness live demonstrations, take part in hands-on activities and receive a clear introduction to the Super Memory Programme.</p>
+          <ul class="prose" style="margin-top:1.6rem; display:grid; gap:0.7rem;">
+            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:#9a7a3a;flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">A free preview session for parents and children together</span></li>
+            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:#9a7a3a;flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">Student demonstrations of the techniques</span></li>
+            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:#9a7a3a;flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">Hands-on activities you try yourself</span></li>
+            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:#9a7a3a;flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">A clear introduction to the methodology and how the programme works</span></li>
+          </ul>
+          <div class="hero-actions" style="margin-top:2.2rem;">
+            <a href="experience.html#register" class="btn btn-ink btn-lg">Reserve Your Free Preview</a>
+          </div>
+          <p style="margin-top:1.2rem; font-size:0.92rem; color:var(--ink-muted);">Previews are conducted across Malaysia — including Selangor, Johor, Perak and Pahang. Register your interest for the next session in your area.</p>
         </div>
-        <h3>Peak Performance</h3>
-        <p>Achieve optimal performance in academics, sports, and life through advanced mental training, goal-setting strategies, and performance psychology techniques used by elite athletes and high achievers.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ACHIEVEMENTS SECTION -->
-  <section class="glass section">
-    <h2>Our Impact</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
-      <div style="text-align: center;">
-        <div style="font-size: 3rem; font-weight: 800; color: #4facfe; margin-bottom: 0.5rem;">10,000+</div>
-        <div style="color: rgba(255,255,255,0.8);">Students Transformed</div>
-      </div>
-      <div style="text-align: center;">
-        <div style="font-size: 3rem; font-weight: 800; color: #f093fb; margin-bottom: 0.5rem;">500+</div>
-        <div style="color: rgba(255,255,255,0.8);">Educators Trained</div>
-      </div>
-      <div style="text-align: center;">
-        <div style="font-size: 3rem; font-weight: 800; color: #667eea; margin-bottom: 0.5rem;">50+</div>
-        <div style="color: rgba(255,255,255,0.8);">Countries Reached</div>
-      </div>
-      <div style="text-align: center;">
-        <div style="font-size: 3rem; font-weight: 800; color: #00f2fe; margin-bottom: 0.5rem;">95%</div>
-        <div style="color: rgba(255,255,255,0.8);">Success Rate</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY SECTION -->
-  <section class="section gallery">
-    <h2>Our Journey in Action</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Students in intensive training session">
-      <img src="images/gallery2.jpg" alt="Leadership workshop with professionals">
-      <img src="images/gallery3.jpg" alt="Educators in transformation seminar">
-      <img src="images/gallery4.jpg" alt="Academic excellence program">
-      <img src="images/gallery5.jpg" alt="Mindset training workshop">
-      <img src="images/gallery6.jpg" alt="Character building activities">
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS SECTION -->
-  <section class="glass section">
-    <h2>What Our Community Says</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-      <div class="card" style="text-align: left;">
-        <div style="color: #4facfe; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fas fa-quote-left"></i>
+    <!-- ================= 04 · SUPER MEMORY PROGRAMME ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow">The programme</p>
+          <h2 class="display-2">Super Memory Programme</h2>
+          <p class="lead" style="margin-top:1.2rem;">A structured training experience designed to help students practise memory, focus, learning skills and confidence — through guided sessions, live demonstrations and practical techniques.</p>
         </div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"The mindset training completely transformed how I approach challenges. My confidence has skyrocketed, and my academic performance has improved dramatically."</p>
-        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Sarah Chen, Student</div>
-      </div>
-      <div class="card" style="text-align: left;">
-        <div style="color: #f093fb; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fas fa-quote-left"></i>
-        </div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"The educator transformation program gave me tools I never knew I needed. My students are more engaged, and my teaching has never been more effective."</p>
-        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Michael Rodriguez, Teacher</div>
-      </div>
-      <div class="card" style="text-align: left;">
-        <div style="color: #667eea; font-size: 1.2rem; margin-bottom: 1rem;">
-          <i class="fas fa-quote-left"></i>
-        </div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"The leadership program helped me develop the character and vision needed to lead my team to unprecedented success. Truly life-changing."</p>
-        <div style="color: rgba(255,255,255,0.8); font-weight: 600;">- Dr. James Park, Executive</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="section contact">
-    <h2>Start Your Transformation Today</h2>
-    <p>Ready to unlock your potential? Get in touch with us to learn how our programs can transform your life and career.</p>
-    
-    <form action="https://formsubmit.co/info@achieversmindacademy.com" method="POST">
-      <input type="text" name="name" placeholder="Your Full Name" required>
-      <input type="email" name="email" placeholder="Your Email Address" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number">
-      <select name="program" required style="padding: 15px; margin: 10px 0; border-radius: 15px; border: none; background: rgba(255,255,255,0.05); color: white;">
-        <option value="">Select Your Interest</option>
-        <option value="mindset-mastery">Mindset Mastery</option>
-        <option value="academic-excellence">Academic Excellence</option>
-        <option value="leadership-character">Leadership & Character</option>
-        <option value="educator-transformation">Educator Transformation</option>
-        <option value="emotional-intelligence">Emotional Intelligence</option>
-        <option value="peak-performance">Peak Performance</option>
-      </select>
-      <textarea name="message" placeholder="Tell us about your goals and how we can help you achieve them..." rows="5"></textarea>
-      <button type="submit" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i>
-        Send Message
-      </button>
-    </form>
-  </section>
+        <div class="grid grid-3" style="margin-top:3rem;">
+          <div class="feature reveal">
+            <h3>Memory Retention</h3>
+            <p>Practical techniques for holding and keeping information — the foundation of the method.</p>
+          </div>
+          <div class="feature reveal reveal-delay-1">
+            <h3>Recall</h3>
+            <p>Training the ability to bring information back quickly and accurately when it is needed.</p>
+          </div>
+          <div class="feature reveal reveal-delay-2">
+            <h3>Concentration</h3>
+            <p>Focused-attention practice built through guided activities and live exercises.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>Learning Techniques</h3>
+            <p>Structured approaches to studying, absorbing and organising new material.</p>
+          </div>
+          <div class="feature reveal reveal-delay-1">
+            <h3>Visualisation</h3>
+            <p>Mental-imagery methods used throughout the memory work students practise.</p>
+          </div>
+          <div class="feature reveal reveal-delay-2">
+            <h3>Confidence</h3>
+            <p>Progress earned through practice — and demonstrated in front of parents and peers.</p>
+          </div>
+        </div>
 
-  <!-- FOOTER -->
+        <div class="hero-actions" style="margin-top:3rem; justify-content:center;">
+          <a href="programmes.html" class="btn btn-brass btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Explore the Programme
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 · LIVE DEMONSTRATIONS ================= -->
+    <section class="section tone-light">
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow">See it live</p>
+          <h2 class="display-2">See the techniques and activities in action.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Memory challenges, recall exercises, recognition activities and live training — captured at our sessions. The demonstrations you see are the techniques students learn, practised live.</p>
+        </div>
+
+        <div class="photo-grid" style="margin-top:3rem;">
+          <picture class="reveal"><source srcset="images/web/gallery3-900.webp" type="image/webp"><img src="images/web/gallery3-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+          <picture class="reveal reveal-delay-1"><source srcset="images/web/gallery4-900.webp" type="image/webp"><img src="images/web/gallery4-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+          <picture class="reveal reveal-delay-2"><source srcset="images/web/gallery5-900.webp" type="image/webp"><img src="images/web/gallery5-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+        </div>
+
+        <p style="margin-top:2rem; text-align:center; color:var(--ink-muted);">Watch more demonstrations on our official channels.</p>
+      </div>
+    </section>
+
+    <!-- ================= 06 · FOUNDER ================= -->
+    <section class="section" id="founder">
+      <div class="container split reverse">
+        <div class="split-media reveal">
+          <picture>
+            <source srcset="images/web/gallery1-1600.webp" type="image/webp">
+            <img src="images/web/gallery1-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy">
+          </picture>
+          <span class="frame-note">More than three decades of Super Memory Programmes</span>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="eyebrow">The founder</p>
+          <h2 class="display-2">33+ years of experience.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Why should a parent trust this person with their child's learning development?</p>
+          <p class="lead" style="margin-top:1rem;">Master Alagan has spent more than three decades conducting Super Memory Programmes across Malaysia — training students, refining the method and seeing first-hand what works.</p>
+          <dl class="founder-creds">
+            <div>
+              <dt>Name</dt>
+              <dd>Master Alagan Govindan</dd>
+            </div>
+            <div>
+              <dt>Credentials</dt>
+              <dd>MSc in Training &amp; Development, University of Leicester, UK</dd>
+            </div>
+            <div>
+              <dt>Experience</dt>
+              <dd>More than 33 years conducting Super Memory Programmes</dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd>Founder &amp; Trainer</dd>
+            </div>
+          </dl>
+          <div class="hero-actions" style="margin-top:2.2rem;">
+            <a href="about.html#founder" class="btn btn-ghost">Read the Full Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 · STUDENT ACHIEVEMENTS ================= -->
+    <section class="section tone-light">
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow">Students are the proof</p>
+          <h2 class="display-2">See what happens when students put their minds to work.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Student demonstrations, memory challenges and achievement moments from our sessions — shared as they happen on our official channels.</p>
+        </div>
+
+        <div class="photo-grid" style="margin-top:3rem;">
+          <picture class="reveal"><source srcset="images/web/gallery6-900.webp" type="image/webp"><img src="images/web/gallery6-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+          <picture class="reveal reveal-delay-1"><source srcset="images/web/gallery2-900.webp" type="image/webp"><img src="images/web/gallery2-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+          <picture class="reveal reveal-delay-2"><source srcset="images/web/gallery1-900.webp" type="image/webp"><img src="images/web/gallery1-900.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy"></picture>
+        </div>
+
+        <div class="hero-actions" style="margin-top:2.6rem; justify-content:center;">
+          <a href="achievements.html" class="btn btn-ink">Visit the Achievements Page</a>
+          <a href="https://www.tiktok.com/@achievers.mind.academy" target="_blank" rel="noopener" class="btn btn-ghost" style="border-color:var(--line-ink); color:var(--ink);">Watch on TikTok</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 · AMA ACROSS MALAYSIA ================= -->
+    <section class="section">
+      <div class="container regions">
+        <div class="reveal">
+          <p class="eyebrow">Across Malaysia</p>
+          <h2 class="display-2">Taking the experience across Malaysia.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Preview programmes and events have been conducted across the country — bringing the methodology to families in each region.</p>
+          <ul class="region-list" style="margin-top:2rem;">
+            <li><span class="marker">●</span><div><span class="state">Selangor</span><div class="detail">Home of the academy — regular preview programmes and sessions.</div></div></li>
+            <li><span class="marker">●</span><div><span class="state">Johor</span><div class="detail">Preview programmes with community venues.</div></div></li>
+            <li><span class="marker">●</span><div><span class="state">Perak</span><div class="detail">Preview programmes and events.</div></div></li>
+            <li><span class="marker">●</span><div><span class="state">Pahang</span><div class="detail">Preview programmes and events.</div></div></li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal-delay-1" style="display:grid; place-items:center;">
+          <!-- Stylised schematic map of Peninsular Malaysia; dots mark regions where AMA preview programmes/events have been conducted -->
+          <svg viewBox="0 0 120 130" class="map" role="img" aria-label="Map of Peninsular Malaysia showing Selangor, Johor, Perak and Pahang">
+            <path d="M62 5 C70 5 76 9 77 16 C78 24 79 32 82 40 C84 48 85 58 84 66 C83 74 81 82 76 90 C73 96 70 104 68 112 C66 118 60 120 57 115 C55 108 54 100 53 92 C52 82 50 72 47 64 C44 56 40 50 36 44 C31 38 28 32 27 26 C26 20 30 14 36 11 C42 8 50 6 62 5 Z"
+              fill="rgba(201,164,92,0.10)" stroke="rgba(201,164,92,0.55)" stroke-width="1"/>
+            <!-- Perak -->
+            <circle cx="34" cy="22" r="2.6" fill="#e6c982"/>
+            <text x="38" y="24.5" font-size="5.2" fill="rgba(243,238,226,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">PERAK</text>
+            <!-- Selangor -->
+            <circle cx="42" cy="46" r="2.6" fill="#e6c982"/>
+            <text x="47" y="48" font-size="5.2" fill="rgba(243,238,226,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">SELANGOR</text>
+            <!-- Pahang -->
+            <circle cx="68" cy="38" r="2.6" fill="#e6c982"/>
+            <text x="60" y="32" font-size="5.2" fill="rgba(243,238,226,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">PAHANG</text>
+            <!-- Johor -->
+            <circle cx="60" cy="104" r="2.6" fill="#e6c982"/>
+            <text x="66" y="107" font-size="5.2" fill="rgba(243,238,226,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">JOHOR</text>
+          </svg>
+          <p style="margin-top:1rem; font-size:0.85rem; color:var(--muted-soft); text-align:center; max-width:20rem;">Community venues have included YMCA Brickfields (Kuala Lumpur), Digital Wave Academy (Klang) and Sri Subramaniar Paripalana Saba (Johor).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 09 · SOCIAL MEDIA ================= -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow">Follow the journey</p>
+          <h2 class="display-2">From the AMA community.</h2>
+          <p class="lead" style="margin-top:1.2rem;">Previews, sessions, demonstrations and achievement moments — shared as they happen on our official channels.</p>
+        </div>
+
+        <div class="social-grid" style="margin-top:3rem;">
+          <a class="social-card reveal" href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener">
+            <span class="thumb">
+              <img src="images/web/gallery4-900.jpg" alt="Achievers Mind Academy on Instagram" loading="lazy">
+              <span class="platform">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg>
+                Instagram
+              </span>
+            </span>
+            <span class="body">
+              <span class="handle">@achievers.mind.academy</span>
+              <h3>From the AMA Community</h3>
+              <p>Daily moments from previews, sessions and the AMA community — demonstrations, activities and student progress.</p>
+              <span class="go">Follow on Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+
+          <a class="social-card reveal reveal-delay-1" href="https://www.tiktok.com/@achievers.mind.academy" target="_blank" rel="noopener">
+            <span class="thumb">
+              <img src="images/web/gallery5-900.jpg" alt="Achievers Mind Academy on TikTok" loading="lazy">
+              <span class="platform">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.1 1.6 3.7 3.5 4v3c-1.4 0-2.7-.4-3.8-1.2v6.4c0 4-2.9 6.8-6.6 6.8-3.6 0-6.6-2.7-6.6-6.4 0-3.6 2.9-6.5 6.7-6.4v3.2c-2 0-3.6 1.4-3.6 3.3 0 1.9 1.6 3.3 3.5 3.3 2 0 3.5-1.5 3.5-3.6V2h3.4z"/></svg>
+                TikTok
+              </span>
+            </span>
+            <span class="body">
+              <span class="handle">@achievers.mind.academy</span>
+              <h3>Watch AMA in Action</h3>
+              <p>Memory challenges, demonstrations and event moments — short videos that show the method live.</p>
+              <span class="go">Watch on TikTok <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+
+          <a class="social-card reveal reveal-delay-2" data-facebook href="#" target="_blank" rel="noopener">
+            <span class="thumb">
+              <img src="images/web/gallery6-900.jpg" alt="Achievers Mind Academy on Facebook" loading="lazy">
+              <span class="platform">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.1-3.2 3.2V11H8.5v3h2.8v7h2.2z"/></svg>
+                Facebook
+              </span>
+            </span>
+            <span class="body">
+              <span class="handle">Official Facebook Page</span>
+              <h3>Follow Our Journey</h3>
+              <p>Event announcements, programme updates and community posts for parents and families.</p>
+              <span class="go">Follow on Facebook <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10 · FINAL CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <p class="eyebrow" style="justify-content:center;">Your next step</p>
+          <h2 class="display-2">Join the next preview.</h2>
+          <p class="lead">The best way to understand the Super Memory Programme is to experience it. Register your interest for the next free preview session — and see the method for yourself.</p>
+          <div class="cta-actions">
+            <a href="experience.html#register" class="btn btn-brass btn-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              Reserve Your Free Preview
+            </a>
+            <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" class="btn btn-ghost">Message Us on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
   <footer>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; text-align: left;">
-      <div>
-        <h3 style="color: white; margin-bottom: 1rem;">Achievers Mind Academy</h3>
-        <p style="color: rgba(255,255,255,0.7);">Transforming minds, building futures, and creating leaders who make a positive impact on the world.</p>
-      </div>
-      <div>
-        <h3 style="color: white; margin-bottom: 1rem;">Quick Links</h3>
-        <ul style="list-style: none; color: rgba(255,255,255,0.7);">
-          <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="programs.html" style="color: inherit; text-decoration: none;">Our Programs</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="gallery.html" style="color: inherit; text-decoration: none;">Gallery</a></li>
-          <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="color: white; margin-bottom: 1rem;">Connect With Us</h3>
-        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
-          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
-          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
-          <a href="#" style="color: #4facfe; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
+            <span>Achievers Mind Academy</span>
+          </a>
+          <p style="margin-top:1.1rem;">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
+          <div class="footer-social" style="margin-top:1.2rem;">
+            <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@achievers.mind.academy" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.1 1.6 3.7 3.5 4v3c-1.4 0-2.7-.4-3.8-1.2v6.4c0 4-2.9 6.8-6.6 6.8-3.6 0-6.6-2.7-6.6-6.4 0-3.6 2.9-6.5 6.7-6.4v3.2c-2 0-3.6 1.4-3.6 3.3 0 1.9 1.6 3.3 3.5 3.3 2 0 3.5-1.5 3.5-3.6V2h3.4z"/></svg>
+            </a>
+            <a data-facebook href="#" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.1-3.2 3.2V11H8.5v3h2.8v7h2.2z"/></svg>
+            </a>
+          </div>
         </div>
-        <p style="color: rgba(255,255,255,0.7);">Follow us on social media for daily motivation and success tips!</p>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="experience.html#register">Join a Free Preview</a></li>
+            <li><a href="programmes.html">Super Memory Programme</a></li>
+            <li><a href="experience.html">What to Expect</a></li>
+            <li><a href="about.html#founder">Meet the Founder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Headquarters</h4>
+          <p style="max-width:none;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
+        </div>
       </div>
-    </div>
-    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-      <p>&copy; 2026 Achievers Mind Academy. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+      <div class="footer-meta">
+        <p>© <span data-year>2026</span> Achievers Mind Academy. All rights reserved.</p>
+        <p class="corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+      </div>
     </div>
   </footer>
 
+  <!-- ================= MOBILE CTA ================= -->
+  <a class="mobile-cta" href="experience.html#register">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    Join a Free Preview
+  </a>
+
   <!-- JavaScript -->
+  <script src="js/i18n.js"></script>
+  <script src="js/lang/bm.js"></script>
+  <script src="js/lang/ta.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
