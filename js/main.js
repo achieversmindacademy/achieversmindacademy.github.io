@@ -112,6 +112,28 @@ var AMA_CONFIG = {
       revealEls.forEach(function (el) { el.classList.add('in'); });
     }
 
+    /* ---------- Centre list <-> map marker highlight ---------- */
+    var centreItems = document.querySelectorAll('.centre-item');
+    var mapMarkers = document.querySelectorAll('.malaysia-map .marker');
+    function highlightCentre(name) {
+      centreItems.forEach(function (el) {
+        el.classList.toggle('active', name && el.getAttribute('data-centre') === name);
+      });
+      mapMarkers.forEach(function (m) {
+        m.classList.toggle('active', name && m.getAttribute('data-centre') === name);
+      });
+    }
+    centreItems.forEach(function (el) {
+      el.addEventListener('mouseenter', function () { highlightCentre(el.getAttribute('data-centre')); });
+      el.addEventListener('mouseleave', function () { highlightCentre(null); });
+      el.addEventListener('focus', function () { highlightCentre(el.getAttribute('data-centre')); });
+      el.addEventListener('blur', function () { highlightCentre(null); });
+    });
+    mapMarkers.forEach(function (m) {
+      m.addEventListener('mouseenter', function () { highlightCentre(m.getAttribute('data-centre')); });
+      m.addEventListener('mouseleave', function () { highlightCentre(null); });
+    });
+
     /* ---------- Lightbox ---------- */
     var lb = document.createElement('div');
     lb.className = 'lightbox';

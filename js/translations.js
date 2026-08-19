@@ -98,8 +98,8 @@ bm: {
   'stats.s1l': 'Tahun Program Super Memory',
   'stats.s2n': 'Darjah 4 – Tingkatan 5',
   'stats.s2l': 'Kumpulan umur pelajar',
-  'stats.s3n': '4 Negeri',
-  'stats.s3l': 'Selangor, Johor, Perak & Pahang',
+  'stats.s3n': '9 Pusat',
+  'stats.s3l': 'Di Seluruh Malaysia',
   'stats.s4n': 'MSc',
   'stats.s4l': 'Latihan & Pembangunan · Universiti Leicester, UK',
 
@@ -122,7 +122,7 @@ bm: {
   'prev.b2': 'Demonstrasi teknik oleh pelajar',
   'prev.b3': 'Aktiviti hands-on yang anda cuba sendiri',
   'prev.b4': 'Pengenalan jelas tentang metodologi dan cara program berfungsi',
-  'prev.note': 'Pratonton dijalankan di seluruh Malaysia — termasuk Selangor, Johor, Perak dan Pahang. Daftar minat anda untuk sesi seterusnya di kawasan anda.',
+  'prev.note': 'Pratonton dijalankan di seluruh Malaysia. Daftar minat anda untuk sesi seterusnya di kawasan anda.',
 
   'prog.eyebrow': 'Program ini',
   'prog.title': 'Program Super Memory',
@@ -178,6 +178,12 @@ bm: {
   'mal.r4s': 'Pahang',
   'mal.r4d': 'Program pratonton dan acara.',
   'mal.note': 'Venue komuniti termasuk YMCA Brickfields (Kuala Lumpur), Digital Wave Academy (Klang) dan Sri Subramaniar Paripalana Saba (Johor).',
+
+  'ctr.eyebrow': 'Di seluruh Malaysia',
+  'ctr.title': '9 Pusat Di Seluruh Malaysia',
+  'ctr.sub': 'Membawa pengalaman pembelajaran Achievers Mind Academy lebih dekat kepada keluarga di seluruh Malaysia melalui rangkaian pusat kami.',
+  'ctr.hint': 'Leret pada pusat untuk melihat lokasinya di peta.',
+  'ctr.mapAria': 'Peta Malaysia menunjukkan sembilan pusat Achievers Mind Academy: Kulim, Pulau Pinang, Ipoh, Sitiawan, Rawang, Kuala Lumpur, Melaka, Klang dan Skudai.',
 
   'soc.eyebrow': 'Ikuti perjalanan kami',
   'soc.title': 'Dari komuniti AMA.',
@@ -487,8 +493,8 @@ ta: {
   'stats.s1l': 'ஆண்டுகள் சூப்பர் மெமரி திட்டங்கள்',
   'stats.s2n': 'நிலை 4 – படிவம் 5',
   'stats.s2l': 'மாணவர்களின் வயது வரம்பு',
-  'stats.s3n': '4 மாநிலங்கள்',
-  'stats.s3l': 'சிலாங்கூர், ஜொகூர், பேராக் & பகாங்',
+  'stats.s3n': '9 மையங்கள்',
+  'stats.s3l': 'மலேசியா முழுவதும்',
   'stats.s4n': 'MSc',
   'stats.s4l': 'பயிற்சி & மேம்பாடு · லீசெஸ்டர் பல்கலைக்கழகம், UK',
 
@@ -511,7 +517,7 @@ ta: {
   'prev.b2': 'மாணவர்களின் நுட்ப நிரூபணங்கள்',
   'prev.b3': 'நீங்களே முயற்சிக்கும் கைகளால் செய்து பார்க்கும் செயல்பாடுகள்',
   'prev.b4': 'முறை மற்றும் திட்டத்தின் செயல்பாடு குறித்த தெளிவான அறிமுகம்',
-  'prev.note': 'முன்னோட்டங்கள் மலேசியா முழுவதும் நடத்தப்படுகின்றன — சிலாங்கூர், ஜொகூர், பேராக் மற்றும் பகாங் உட்பட. உங்கள் பகுதியில் அடுத்த அமர்வுக்கு உங்கள் ஆர்வத்தைப் பதிவு செய்யுங்கள்.',
+  'prev.note': 'முன்னோட்டங்கள் மலேசியா முழுவதும் நடத்தப்படுகின்றன. உங்கள் பகுதியில் அடுத்த அமர்வுக்கு உங்கள் ஆர்வத்தைப் பதிவு செய்யுங்கள்.',
 
   'prog.eyebrow': 'திட்டம்',
   'prog.title': 'சூப்பர் மெமரி திட்டம்',
@@ -567,6 +573,12 @@ ta: {
   'mal.r4s': 'பகாங்',
   'mal.r4d': 'முன்னோட்ட திட்டங்கள் மற்றும் நிகழ்வுகள்.',
   'mal.note': 'சமூக அரங்குகளில் YMCA பிரிக்ஃபீல்ட்ஸ் (கோலாலம்பூர்), டிஜிட்டல் வேவ் அகாடமி (கிள்ளான்) மற்றும் ஸ்ரீ சுப்ரமணியர் பரிபாலன சபா (ஜொகூர்) ஆகியவை அடங்கும்.',
+
+  'ctr.eyebrow': 'மலேசியா முழுவதும்',
+  'ctr.title': 'மலேசியா முழுவதும் 9 மையங்கள்',
+  'ctr.sub': 'அச்சீவர்ஸ் மைண்ட் அகாடமியின் கற்றல் அனுபவத்தை எங்கள் மையங்களின் வலையமைப்பு மூலம் மலேசியா முழுவதும் உள்ள குடும்பங்களுக்கு நெருக்கமாகக் கொண்டு செல்கிறோம்.',
+  'ctr.hint': 'வரைபடத்தில் அதன் இடத்தைக் காண மையத்தின் மீது நகர்த்தவும்.',
+  'ctr.mapAria': 'குலிம், பினாங், ஈப்போ, சித்தியவான், ரவாங், கோலாலம்பூர், மலாக்கா, கிள்ளான் மற்றும் ஸ்கூடாய் ஆகிய ஒன்பது அச்சீவர்ஸ் மைண்ட் அகாடமி மையங்களைக் காட்டும் மலேசியாவின் வரைபடம்.',
 
   'soc.eyebrow': 'பயணத்தைப் பின்தொடருங்கள்',
   'soc.title': 'AMA சமூகத்திலிருந்து.',

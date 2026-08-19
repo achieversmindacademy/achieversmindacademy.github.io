@@ -688,7 +688,94 @@ body.drawer-open { overflow: hidden; }
 /* --------------------------------------------------------------------------
    14. REGIONS / MAP
    -------------------------------------------------------------------------- */
-.regions { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2.5rem, 6vw, 4.5rem); align-items: center; }
+.regions {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-areas: "lede map" "list map";
+  gap: clamp(2.5rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+}
+.regions > .lede-block { grid-area: lede; }
+.regions > .centre-grid { grid-area: list; }
+.regions > .map-panel { grid-area: map; }
+
+.centre-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; list-style: none; }
+.centre-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  cursor: default;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+.centre-item:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
+.centre-item:hover, .centre-item.active {
+  transform: translateY(-2px);
+  border-color: var(--blue-200);
+  background: var(--blue-50);
+  box-shadow: var(--shadow-sm);
+}
+.centre-item .centre-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--blue-600);
+  flex: none;
+  transition: background-color 0.18s ease;
+}
+.centre-item:hover .centre-dot, .centre-item.active .centre-dot { background: var(--gold-500); }
+
+.map-panel {
+  background: linear-gradient(180deg, var(--blue-50) 0%, var(--paper) 100%);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--radius-lg);
+  padding: clamp(1rem, 2vw, 1.6rem);
+  box-shadow: var(--shadow-sm);
+}
+.malaysia-map { display: block; width: 100%; height: auto; }
+.malaysia-map .land {
+  fill: #ffffff;
+  stroke: var(--blue-200);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.malaysia-map .marker {
+  cursor: default;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.18s ease;
+}
+.malaysia-map .marker .pin-body {
+  fill: var(--blue-700);
+  transition: fill 0.18s ease;
+}
+.malaysia-map .marker .pin-dot { fill: #ffffff; }
+.malaysia-map .marker text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.malaysia-map .marker:hover,
+.malaysia-map .marker.active { transform: scale(1.18); }
+.malaysia-map .marker:hover .pin-body,
+.malaysia-map .marker.active .pin-body { fill: var(--gold-500); }
+.map-hint {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
 .region-list { display: grid; gap: 1.1rem; }
 .region-list > li { display: flex; gap: 0.9rem; align-items: flex-start; }
 .region-list .marker { color: var(--blue-600); font-size: 0.9rem; line-height: 1.6; flex: none; }
@@ -703,7 +790,6 @@ body.drawer-open { overflow: hidden; }
 .region-item { border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
 .region-item .stat-num { display: block; font-weight: 800; }
 .region-item p { font-size: 0.92rem; color: var(--ink-muted); margin-top: 0.25rem; }
-.map { width: min(320px, 100%); margin-inline: auto; }
 
 /* --------------------------------------------------------------------------
    15. SOCIAL CARDS
@@ -1105,7 +1191,8 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .split, .hero-grid, .regions { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split, .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .regions { grid-template-columns: 1fr; grid-template-areas: "lede" "map" "list"; gap: 2.5rem; align-items: start; }
   .split.reverse .split-media { order: 0; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .photo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1115,6 +1202,8 @@ footer {
 
 @media (max-width: 640px) {
   .grid-3, .grid-4, .grid-2, .form-grid { grid-template-columns: 1fr; }
+  .centre-grid { grid-template-columns: repeat(2, 1fr); }
+  .malaysia-map .marker text { display: none; }
   .form-grid .full { grid-column: auto; }
   .journey { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1137,6 +1226,7 @@ footer {
 @media (max-width: 400px) {
   .brand img { width: 38px; height: 38px; }
   .brand-name { font-size: 0.93rem; }
+  .centre-grid { grid-template-columns: 1fr; }
 }
 
 /* --------------------------------------------------------------------------
