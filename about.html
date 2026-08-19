@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Achievers Mind Academy — Memory &amp; Learning Skills Training Malaysia</title>
   <meta name="description" content="About Achievers Mind Academy — a Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development. Meet founder Master Alagan Govindan.">
+  <link rel="canonical" href="https://achieversmindacademy.github.io/about.html">
 
   <meta property="og:title" content="About Achievers Mind Academy">
   <meta property="og:description" content="Who we are, our story, our methodology and the founder — Master Alagan Govindan.">
@@ -14,7 +15,7 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,10 +24,10 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-        <span>Achievers Mind Academy<small>Memory &amp; Learning Skills</small></span>
+        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="42" height="42" data-i18n-alt="alt.logo">
+        <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
       </a>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
         <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
@@ -35,26 +36,59 @@
         <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <div class="lang-switch" aria-label="Language">
-          <button data-lang="en" class="active" data-i18n="lang.en">EN</button>
-          <button data-lang="bm" data-i18n="lang.bm">BM</button>
-          <button data-lang="ta" data-i18n="lang.ta">TA</button>
+        <div class="lang-select" data-lang-select>
+          <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <span data-lang-code>EN</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-menu" role="listbox" aria-label="Language">
+            <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+          </ul>
         </div>
-        <a href="experience.html#register" class="btn btn-brass" data-i18n="cta.preview">Join a Free Preview</a>
-        <button class="nav-toggle" aria-label="Menu">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <a href="experience.html#register" class="btn btn-primary nav-btn" data-i18n="cta.preview">Join a Free Preview</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </nav>
 
+  <div class="drawer" id="site-drawer">
+    <ul class="drawer-links">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
+      <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+      <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+      <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="drawer-foot">
+      <div class="lang-select" data-lang-select>
+        <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <span data-lang-code>EN</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-menu" role="listbox" aria-label="Language">
+          <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+        </ul>
+      </div>
+      <a href="experience.html#register" class="btn btn-primary" data-i18n="cta.preview">Join a Free Preview</a>
+    </div>
+  </div>
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
   <main>
     <!-- ================= PAGE HERO ================= -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">About the academy</p>
-        <h1 class="display-1">Who we are.</h1>
-        <p class="lead">Achievers Mind Academy is a Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students — built on a live, hands-on methodology that parents can experience before enrolling.</p>
+        <p class="eyebrow" data-i18n="ab.hero.eyebrow">About the academy</p>
+        <h1 class="display-1" data-i18n="ab.hero.title">Who we are.</h1>
+        <p class="lead" data-i18n="ab.hero.sub">Achievers Mind Academy is a Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students — built on a live, hands-on methodology that parents can experience before enrolling.</p>
       </div>
     </section>
 
@@ -62,52 +96,52 @@
     <section class="section">
       <div class="container split">
         <div class="reveal">
-          <p class="eyebrow">Our story</p>
-          <h2 class="display-2">Decades of one method, refined in practice.</h2>
+          <p class="eyebrow" data-i18n="ab.story.eyebrow">Our story</p>
+          <h2 class="display-2" data-i18n="ab.story.title">Decades of one method, refined in practice.</h2>
           <div class="prose" style="margin-top:1.4rem;">
-            <p>Achievers Mind Academy was founded by Master Alagan Govindan, a trainer with more than 33 years of cumulative experience conducting Super Memory Programmes. The academy was built around a single conviction: that memory and learning skills can be trained — and that the training should be seen, experienced and understood before any commitment is made.</p>
-            <p>That conviction shapes everything we do. It is why our preview sessions are free. It is why demonstrations are live. And it is why parents are part of the journey from the very first session.</p>
+            <p data-i18n="ab.story.p1">Achievers Mind Academy was founded by Master Alagan Govindan, a trainer with more than 33 years of cumulative experience conducting Super Memory Programmes. The academy was built around a single conviction: that memory and learning skills can be trained — and that the training should be seen, experienced and understood before any commitment is made.</p>
+            <p data-i18n="ab.story.p2">That conviction shapes everything we do. It is why our preview sessions are free. It is why demonstrations are live. And it is why parents are part of the journey from the very first session.</p>
           </div>
         </div>
         <div class="split-media reveal reveal-delay-1">
           <picture>
             <source srcset="images/web/gallery2-1600.webp" type="image/webp">
-            <img src="images/web/gallery2-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy">
+            <img src="images/web/gallery2-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy" data-i18n-alt="alt.session">
           </picture>
         </div>
       </div>
     </section>
 
     <!-- ================= MASTER ALAGAN ================= -->
-    <section class="section tone-light" id="founder">
+    <section class="section tone-navy" id="founder">
       <div class="container split reverse">
         <div class="split-media reveal">
           <!-- REPLACE with a dedicated, well-lit portrait of Master Alagan when available. -->
           <picture>
             <source srcset="images/web/gallery1-1600.webp" type="image/webp">
-            <img src="images/web/gallery1-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy">
+            <img src="images/web/gallery1-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy" data-i18n-alt="alt.session">
           </picture>
-          <span class="frame-note">Founder &amp; Trainer</span>
+          <span class="frame-note" data-i18n="ab.founder.note">Founder &amp; Trainer</span>
         </div>
         <div class="reveal reveal-delay-1">
-          <p class="eyebrow">The founder</p>
-          <h2 class="display-2">Master Alagan Govindan.</h2>
-          <div class="prose" style="margin-top:1.4rem;">
-            <p>Master Alagan holds an MSc in Training &amp; Development from the University of Leicester, United Kingdom, and has more than 33 years of cumulative experience conducting Super Memory Programmes.</p>
-            <p>Over three decades he has led programmes and previews across Malaysia — Selangor, Johor, Perak and Pahang — working directly with students and parents. His approach is practical and direct: teach the techniques, demonstrate them live, and let parents see the results with their own eyes.</p>
+          <p class="eyebrow" data-i18n="ab.founder.eyebrow">The founder</p>
+          <h2 class="display-2" data-i18n="ab.founder.title">Master Alagan Govindan.</h2>
+          <div class="prose" style="margin-top:1.4rem; color:rgba(255,255,255,0.82);">
+            <p data-i18n="ab.founder.p1">Master Alagan holds an MSc in Training &amp; Development from the University of Leicester, United Kingdom, and has more than 33 years of cumulative experience conducting Super Memory Programmes.</p>
+            <p data-i18n="ab.founder.p2">Over three decades he has led programmes and previews across Malaysia — Selangor, Johor, Perak and Pahang — working directly with students and parents. His approach is practical and direct: teach the techniques, demonstrate them live, and let parents see the results with their own eyes.</p>
           </div>
           <dl class="founder-creds">
             <div>
-              <dt>Credentials</dt>
-              <dd>MSc in Training &amp; Development · University of Leicester, UK</dd>
+              <dt data-i18n="fnd.cred.cred">Credentials</dt>
+              <dd data-i18n="fnd.cred.credV">MSc in Training &amp; Development · University of Leicester, UK</dd>
             </div>
             <div>
-              <dt>Experience</dt>
-              <dd>More than 33 years conducting Super Memory Programmes</dd>
+              <dt data-i18n="fnd.cred.exp">Experience</dt>
+              <dd data-i18n="fnd.cred.expV">More than 33 years conducting Super Memory Programmes</dd>
             </div>
             <div>
-              <dt>Role</dt>
-              <dd>Founder &amp; Trainer</dd>
+              <dt data-i18n="fnd.cred.role">Role</dt>
+              <dd data-i18n="fnd.cred.roleV">Founder &amp; Trainer</dd>
             </div>
           </dl>
         </div>
@@ -118,34 +152,34 @@
     <section class="section">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">Our methodology</p>
-          <h2 class="display-2">A practical method, not a promise.</h2>
-          <p class="lead" style="margin-top:1.2rem;">The Super Memory Programme is a structured training experience designed to help students practise the mental skills behind better learning.</p>
+          <p class="eyebrow" data-i18n="ab.method.eyebrow">Our methodology</p>
+          <h2 class="display-2" data-i18n="ab.method.title">A practical method, not a promise.</h2>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="ab.method.sub">The Super Memory Programme is a structured training experience designed to help students practise the mental skills behind better learning.</p>
         </div>
         <div class="grid grid-3" style="margin-top:3rem;">
           <div class="feature reveal">
-            <h3>Memory Retention &amp; Recall</h3>
-            <p>Techniques for holding information and bringing it back accurately when needed — practised through guided activities.</p>
+            <h3 data-i18n="ab.method.m1t">Memory Retention &amp; Recall</h3>
+            <p data-i18n="ab.method.m1d">Techniques for holding information and bringing it back accurately when needed — practised through guided activities.</p>
           </div>
           <div class="feature reveal reveal-delay-1">
-            <h3>Concentration &amp; Focus</h3>
-            <p>Focused-attention training built into every session, so students learn to direct their minds deliberately.</p>
+            <h3 data-i18n="ab.method.m2t">Concentration &amp; Focus</h3>
+            <p data-i18n="ab.method.m2d">Focused-attention training built into every session, so students learn to direct their minds deliberately.</p>
           </div>
           <div class="feature reveal reveal-delay-2">
-            <h3>Learning Techniques</h3>
-            <p>Structured approaches to studying and absorbing new material — practical skills for school and beyond.</p>
+            <h3 data-i18n="ab.method.m3t">Learning Techniques</h3>
+            <p data-i18n="ab.method.m3d">Structured approaches to studying and absorbing new material — practical skills for school and beyond.</p>
           </div>
           <div class="feature reveal">
-            <h3>Visualisation</h3>
-            <p>Mental-imagery methods that form the backbone of the memory work students practise.</p>
+            <h3 data-i18n="ab.method.m4t">Visualisation</h3>
+            <p data-i18n="ab.method.m4d">Mental-imagery methods that form the backbone of the memory work students practise.</p>
           </div>
           <div class="feature reveal reveal-delay-1">
-            <h3>Live Demonstration</h3>
-            <p>Techniques are shown in action — by trainers and by students — so progress is visible, not assumed.</p>
+            <h3 data-i18n="ab.method.m5t">Live Demonstration</h3>
+            <p data-i18n="ab.method.m5d">Techniques are shown in action — by trainers and by students — so progress is visible, not assumed.</p>
           </div>
           <div class="feature reveal reveal-delay-2">
-            <h3>Confidence Through Practice</h3>
-            <p>Students build confidence by doing — performing techniques and demonstrating them in front of parents and peers.</p>
+            <h3 data-i18n="ab.method.m6t">Confidence Through Practice</h3>
+            <p data-i18n="ab.method.m6d">Students build confidence by doing — performing techniques and demonstrating them in front of parents and peers.</p>
           </div>
         </div>
       </div>
@@ -155,22 +189,22 @@
     <section class="section tone-light">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">Official recognition</p>
-          <h2 class="display-2">Operated with official approval.</h2>
-          <p class="lead" style="margin-top:1.2rem;">The academy's programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+          <p class="eyebrow" data-i18n="ab.recog.eyebrow">Official recognition</p>
+          <h2 class="display-2" data-i18n="ab.recog.title">Operated with official approval.</h2>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="ab.recog.sub">The academy's programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
         </div>
         <div class="trust-strip" style="margin-top:2.6rem;">
           <div class="trust-item reveal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"/></svg>
-            <div><strong>Ministry of Education Malaysia (KPM)</strong><span>Programmes operate with official approval from the Ministry of Education Malaysia.</span></div>
+            <div><strong data-i18n="ab.recog.r1t">Ministry of Education Malaysia (KPM)</strong><span data-i18n="ab.recog.r1d">Programmes operate with official approval from the Ministry of Education Malaysia.</span></div>
           </div>
           <div class="trust-item reveal reveal-delay-1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z"/></svg>
-            <div><strong>University-Grounded Training</strong><span>Founded by an MSc in Training &amp; Development, University of Leicester, UK.</span></div>
+            <div><strong data-i18n="ab.recog.r2t">University-Grounded Training</strong><span data-i18n="ab.recog.r2d">Founded by an MSc in Training &amp; Development, University of Leicester, UK.</span></div>
           </div>
           <div class="trust-item reveal reveal-delay-2">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14c0 2 1 3 4 3s4-1 4-3M4 9l2-5h12l2 5M4 9h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4V9z"/></svg>
-            <div><strong>A Malaysian Academy</strong><span>Headquartered in Selangor, with preview programmes across the country.</span></div>
+            <div><strong data-i18n="ab.recog.r3t">A Malaysian Academy</strong><span data-i18n="ab.recog.r3d">Headquartered in Selangor, with preview programmes across the country.</span></div>
           </div>
         </div>
       </div>
@@ -180,22 +214,22 @@
     <section class="section">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">Built with the community</p>
-          <h2 class="display-2">Grown through people and communities.</h2>
-          <p class="lead" style="margin-top:1.2rem;">Our preview programmes and events have been hosted alongside community institutions and venues across Malaysia — including:</p>
+          <p class="eyebrow" data-i18n="ab.comm.eyebrow">Built with the community</p>
+          <h2 class="display-2" data-i18n="ab.comm.title">Grown through people and communities.</h2>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="ab.comm.sub">Our preview programmes and events have been hosted alongside community institutions and venues across Malaysia — including:</p>
         </div>
         <div class="grid grid-3" style="margin-top:3rem;">
           <div class="feature reveal">
-            <h3>YMCA Brickfields</h3>
-            <p>Kuala Lumpur — community venue for preview programmes and events.</p>
+            <h3 data-i18n="ab.comm.c1t">YMCA Brickfields</h3>
+            <p data-i18n="ab.comm.c1d">Kuala Lumpur — community venue for preview programmes and events.</p>
           </div>
           <div class="feature reveal reveal-delay-1">
-            <h3>Digital Wave Academy</h3>
-            <p>Klang, Selangor — community venue for preview programmes and events.</p>
+            <h3 data-i18n="ab.comm.c2t">Digital Wave Academy</h3>
+            <p data-i18n="ab.comm.c2d">Klang, Selangor — community venue for preview programmes and events.</p>
           </div>
           <div class="feature reveal reveal-delay-2">
-            <h3>Sri Subramaniar Paripalana Saba</h3>
-            <p>Johor — community venue for preview programmes and events.</p>
+            <h3 data-i18n="ab.comm.c3t">Sri Subramaniar Paripalana Saba</h3>
+            <p data-i18n="ab.comm.c3d">Johor — community venue for preview programmes and events.</p>
           </div>
         </div>
       </div>
@@ -205,13 +239,13 @@
     <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="form-panel reveal">
-          <p class="eyebrow">Corporate information</p>
-          <h2 class="display-2" style="font-size:1.9rem;">Registered details.</h2>
+          <p class="eyebrow" data-i18n="ab.corp.eyebrow">Corporate information</p>
+          <h2 class="display-2" style="font-size:1.9rem;" data-i18n="ab.corp.title">Registered details.</h2>
           <div class="grid grid-2" style="margin-top:1.8rem; gap:0.8rem 2rem;">
-            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass);">Registration number</p><p style="color:var(--ink); margin-top:0.3rem;">002744992W / 201703417057</p></div>
-            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass);">Date of registration</p><p style="color:var(--ink); margin-top:0.3rem;">14 November 2017</p></div>
-            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass);">Headquarters</p><p style="color:var(--ink); margin-top:0.3rem;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor</p></div>
-            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass);">Business scope</p><p style="color:var(--ink); margin-top:0.3rem;">Event management &amp; book sales</p></div>
+            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--blue-700);" data-i18n="ab.corp.reg">Registration number</p><p style="color:var(--ink); margin-top:0.3rem;">002744992W / 201703417057</p></div>
+            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--blue-700);" data-i18n="ab.corp.date">Date of registration</p><p style="color:var(--ink); margin-top:0.3rem;" data-i18n="ab.corp.dateV">14 November 2017</p></div>
+            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--blue-700);" data-i18n="ab.corp.hq">Headquarters</p><p style="color:var(--ink); margin-top:0.3rem;" data-i18n="ab.corp.hqV">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor</p></div>
+            <div><p style="font-size:0.78rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--blue-700);" data-i18n="ab.corp.scope">Business scope</p><p style="color:var(--ink); margin-top:0.3rem;" data-i18n="ab.corp.scopeV">Event management &amp; book sales</p></div>
           </div>
         </div>
       </div>
@@ -221,12 +255,12 @@
     <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="cta-band reveal">
-          <p class="eyebrow" style="justify-content:center;">See it for yourself</p>
-          <h2 class="display-2">The best introduction is a preview.</h2>
-          <p class="lead">Join a free preview session with your child — watch the demonstrations, try the activities and understand the method before you decide.</p>
+          <p class="eyebrow" data-i18n="ab.cta.eyebrow">See it for yourself</p>
+          <h2 class="display-2" data-i18n="ab.cta.title">The best introduction is a preview.</h2>
+          <p class="lead" data-i18n="ab.cta.sub">Join a free preview session with your child — watch the demonstrations, try the activities and understand the method before you decide.</p>
           <div class="cta-actions">
-            <a href="experience.html#register" class="btn btn-brass btn-lg">Reserve Your Free Preview</a>
-            <a href="programmes.html" class="btn btn-ghost">Explore the Programme</a>
+            <a href="experience.html#register" class="btn btn-white btn-lg" data-i18n="cta.reserve">Reserve Your Free Preview</a>
+            <a href="programmes.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.35); color:#fff;" data-i18n="cta.explore">Explore the Programme</a>
           </div>
         </div>
       </div>
@@ -239,10 +273,10 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-            <span>Achievers Mind Academy</span>
+            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="40" height="40" data-i18n-alt="alt.logo">
+            <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
           </a>
-          <p style="margin-top:1.1rem;">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
+          <p style="margin-top:1.1rem;" data-i18n="footer.desc">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
           <div class="footer-social" style="margin-top:1.2rem;">
             <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg>
@@ -256,45 +290,44 @@
           </div>
         </div>
         <div>
-          <h4>Explore</h4>
+          <h4 data-i18n="footer.explore">Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="programmes.html">Programmes</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+            <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Get Started</h4>
+          <h4 data-i18n="footer.start">Get Started</h4>
           <ul>
-            <li><a href="experience.html#register">Join a Free Preview</a></li>
-            <li><a href="programmes.html">Super Memory Programme</a></li>
-            <li><a href="experience.html">What to Expect</a></li>
-            <li><a href="about.html#founder">Meet the Founder</a></li>
+            <li><a href="experience.html#register" data-i18n="footer.join">Join a Free Preview</a></li>
+            <li><a href="programmes.html" data-i18n="footer.programme">Super Memory Programme</a></li>
+            <li><a href="experience.html" data-i18n="footer.expect">What to Expect</a></li>
+            <li><a href="about.html#founder" data-i18n="footer.founder">Meet the Founder</a></li>
           </ul>
         </div>
         <div>
-          <h4>Headquarters</h4>
+          <h4 data-i18n="footer.hq">Headquarters</h4>
           <p style="max-width:none;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
         </div>
       </div>
       <div class="footer-meta">
-        <p>© <span data-year>2026</span> Achievers Mind Academy. All rights reserved.</p>
-        <p class="corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+        <p><span>©</span> <span data-year>2026</span> <span data-i18n="footer.rightsB">Achievers Mind Academy. All rights reserved.</span></p>
+        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
       </div>
     </div>
   </footer>
 
   <a class="mobile-cta" href="experience.html#register">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    Join a Free Preview
+    <span data-i18n="cta.preview">Join a Free Preview</span>
   </a>
 
   <script src="js/i18n.js"></script>
-  <script src="js/lang/bm.js"></script>
-  <script src="js/lang/ta.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

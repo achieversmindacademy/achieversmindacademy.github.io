@@ -33,6 +33,11 @@ var AMA_CONFIG = {
   'use strict';
 
   var CFG = AMA_CONFIG;
+  var I18N = window.AMA_I18N;
+
+  function i18n(key) {
+    return (I18N && I18N.t) ? I18N.t(key) : '';
+  }
 
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -45,17 +50,51 @@ var AMA_CONFIG = {
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    /* ---------- Mobile nav toggle ---------- */
-    var toggle = document.querySelector('.nav-toggle');
-    var links = document.querySelector('.nav-links');
-    if (toggle && links) {
+    /* ---------- Mobile drawer ---------- */
+    var toggle = document.querySelector('[data-nav-toggle]');
+    var drawer = document.querySelector('.drawer');
+    var overlay = document.querySelector('.drawer-overlay');
+    var body = document.body;
+
+    function closeDrawer() {
+      if (!drawer) return;
+      drawer.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      body.classList.remove('drawer-open');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', i18n('menu.open'));
+      }
+    }
+    function openDrawer() {
+      if (!drawer) return;
+      drawer.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      body.classList.add('drawer-open');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', i18n('menu.close'));
+      }
+    }
+
+    if (toggle && drawer) {
       toggle.addEventListener('click', function () {
-        links.classList.toggle('open');
+        if (drawer.classList.contains('open')) closeDrawer();
+        else openDrawer();
       });
-      links.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') links.classList.remove('open');
+      drawer.addEventListener('click', function (e) {
+        if (e.target.closest('a')) closeDrawer();
+      });
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDrawer();
       });
     }
+
+    /* Keep drawer labels in the selected language */
+    document.addEventListener('ama:lang', function () {
+      if (toggle) toggle.setAttribute('aria-label', i18n('menu.open'));
+    });
 
     /* ---------- Reveal on scroll ---------- */
     var revealEls = document.querySelectorAll('.reveal');
@@ -120,9 +159,37 @@ var AMA_CONFIG = {
     });
 
     /* ---------- Forms ---------- */
+    function formStatusHtml(kind) {
+      var handle = '@achievers.mind.academy';
+      var link = '<a href="' + CFG.INSTAGRAM_URL + '" target="_blank" rel="noopener">' + handle + '</a>';
+      if (kind === 'ok') return i18n('form.ok');
+      if (kind === 'notconnected') return i18n('form.notconnectedA') + ' ' + link + i18n('form.notconnectedB');
+      if (kind === 'error') return i18n('form.errorA') + ' ' + link + i18n('form.errorB');
+      return '';
+    }
+
     document.querySelectorAll('form[data-ama-form]').forEach(function (form) {
+      /* Localized native validation messages */
+      form.addEventListener('invalid', function (e) {
+        var f = e.target;
+        var msg = '';
+        if (f.validity.valueMissing) msg = i18n('form.err.required');
+        else if (f.validity.typeMismatch) msg = (f.type === 'email') ? i18n('form.err.email') : i18n('form.err.phone');
+        else if (f.validity.badInput) msg = (f.type === 'tel') ? i18n('form.err.phone') : i18n('form.err.required');
+        f.setCustomValidity(msg);
+      }, true);
+      form.addEventListener('input', function (e) {
+        if (e.target.setCustomValidity) e.target.setCustomValidity('');
+      }, true);
+      document.addEventListener('ama:lang', function () {
+        form.querySelectorAll('input, select, textarea').forEach(function (f) {
+          if (f.setCustomValidity) f.setCustomValidity('');
+        });
+      });
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        if (!form.checkValidity()) return;
         var status = form.querySelector('.form-status');
         var btn = form.querySelector('button[type="submit"]');
         var data = {};
@@ -131,9 +198,7 @@ var AMA_CONFIG = {
         if (!CFG.FORM_ENDPOINT) {
           if (status) {
             status.className = 'form-status warn';
-            status.innerHTML = 'Thank you — this form is being connected to our registration system. ' +
-              'For an immediate response, please message us on Instagram ' +
-              '<a href="' + CFG.INSTAGRAM_URL + '" target="_blank" rel="noopener">@achievers.mind.academy</a>.';
+            status.innerHTML = formStatusHtml('notconnected');
           }
           return;
         }
@@ -141,7 +206,7 @@ var AMA_CONFIG = {
         if (btn) {
           var original = btn.innerHTML;
           btn.disabled = true;
-          btn.textContent = 'Sending…';
+          btn.textContent = i18n('form.sending');
         }
 
         fetch(CFG.FORM_ENDPOINT, {
@@ -152,16 +217,13 @@ var AMA_CONFIG = {
           if (!res.ok) throw new Error('bad response');
           if (status) {
             status.className = 'form-status ok';
-            status.innerHTML = 'Thank you! Your registration of interest has been received. ' +
-              'Our team will contact you about the next preview session.';
+            status.innerHTML = formStatusHtml('ok');
           }
           form.reset();
         }).catch(function () {
           if (status) {
             status.className = 'form-status warn';
-            status.innerHTML = 'We could not reach the registration system just now. ' +
-              'Please try again shortly, or message us on Instagram ' +
-              '<a href="' + CFG.INSTAGRAM_URL + '" target="_blank" rel="noopener">@achievers.mind.academy</a>.';
+            status.innerHTML = formStatusHtml('error');
           }
         }).finally(function () {
           if (btn) {

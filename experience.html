@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience | Achievers Mind Academy — Free Preview Sessions</title>
-  <meta name="description" content="Attend a free Achievers Mind Academy preview session — live demonstrations, hands-on activities and an introduction to the Super Memory Programme. Register your interest today.">
+  <title>Experience the Programme | Achievers Mind Academy — Free Preview Sessions Malaysia</title>
+  <meta name="description" content="Experience the Super Memory Programme before you decide. Free preview sessions for parents and children — live demonstrations, hands-on activities and a clear introduction to the method.">
+  <link rel="canonical" href="https://achieversmindacademy.github.io/experience.html">
 
-  <meta property="og:title" content="Free Preview | Achievers Mind Academy">
-  <meta property="og:description" content="Experience the Super Memory Programme before you decide. Live demonstrations, hands-on activities, parents and children together.">
+  <meta property="og:title" content="Experience the Programme — Free Preview">
+  <meta property="og:description" content="Free preview sessions for parents and children across Malaysia.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/web/gallery3-1600.jpg">
+  <meta property="og:image" content="images/web/gallery2-1600.jpg">
 
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,10 +24,10 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-        <span>Achievers Mind Academy<small>Memory &amp; Learning Skills</small></span>
+        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="42" height="42" data-i18n-alt="alt.logo">
+        <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
       </a>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="about.html" data-i18n="nav.about">About</a></li>
         <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
@@ -35,28 +36,61 @@
         <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <div class="lang-switch" aria-label="Language">
-          <button data-lang="en" class="active" data-i18n="lang.en">EN</button>
-          <button data-lang="bm" data-i18n="lang.bm">BM</button>
-          <button data-lang="ta" data-i18n="lang.ta">TA</button>
+        <div class="lang-select" data-lang-select>
+          <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <span data-lang-code>EN</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-menu" role="listbox" aria-label="Language">
+            <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+          </ul>
         </div>
-        <a href="experience.html#register" class="btn btn-brass" data-i18n="cta.preview">Join a Free Preview</a>
-        <button class="nav-toggle" aria-label="Menu">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <a href="#register" class="btn btn-primary nav-btn" data-i18n="cta.preview">Join a Free Preview</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </nav>
 
+  <div class="drawer" id="site-drawer">
+    <ul class="drawer-links">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+      <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+      <li><a href="experience.html" class="active" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="drawer-foot">
+      <div class="lang-select" data-lang-select>
+        <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <span data-lang-code>EN</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-menu" role="listbox" aria-label="Language">
+          <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+        </ul>
+      </div>
+      <a href="#register" class="btn btn-primary" data-i18n="cta.preview">Join a Free Preview</a>
+    </div>
+  </div>
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
   <main>
     <!-- ================= PAGE HERO ================= -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">The free preview</p>
-        <h1 class="display-1">Experience the method before you decide.</h1>
-        <p class="lead">Don't just read about memory training — come and experience it. A free preview session for parents and children: live demonstrations, hands-on activities and a clear introduction to the Super Memory Programme.</p>
+        <p class="eyebrow" data-i18n="ex.hero.eyebrow">Free preview</p>
+        <h1 class="display-1" data-i18n="ex.hero.title">Experience the method before you decide.</h1>
+        <p class="lead" data-i18n="ex.hero.sub">Don't just read about memory training — come and experience it. A free preview session for parents and children: live demonstrations, hands-on activities and a clear introduction to the Super Memory Programme.</p>
         <div class="hero-actions">
-          <a href="#register" class="btn btn-brass btn-lg">Reserve Your Free Preview</a>
+          <a href="#register" class="btn btn-primary btn-lg" data-i18n="cta.reserve">Reserve Your Free Preview</a>
         </div>
       </div>
     </section>
@@ -65,160 +99,154 @@
     <section class="section">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">What happens at a preview</p>
-          <h2 class="display-2">A session you experience, not just watch.</h2>
+          <p class="eyebrow" data-i18n="ex.what.eyebrow">What happens at a preview</p>
+          <h2 class="display-2" data-i18n="ex.what.title">A session you experience, not just watch.</h2>
         </div>
-        <div class="grid grid-4" style="margin-top:3rem;">
+        <div class="grid grid-2" style="margin-top:3rem;">
           <div class="feature reveal">
-            <span class="num">01</span>
-            <h3>Live Demonstrations</h3>
-            <p>See students demonstrate memory techniques, recall challenges and recognition activities in real time.</p>
+            <h3 data-i18n="ex.what.f1t">Live Demonstrations</h3>
+            <p data-i18n="ex.what.f1d">Watch students perform memory techniques, recall challenges and recognition activities — live.</p>
           </div>
           <div class="feature reveal reveal-delay-1">
-            <span class="num">02</span>
-            <h3>Hands-On Activities</h3>
-            <p>Parents and children try the activities themselves — the method is experienced, not explained away.</p>
+            <h3 data-i18n="ex.what.f2t">Hands-On Activities</h3>
+            <p data-i18n="ex.what.f2d">Parents and children try the activities themselves — the method is experienced, not just explained.</p>
           </div>
-          <div class="feature reveal reveal-delay-2">
-            <span class="num">03</span>
-            <h3>Method Introduction</h3>
-            <p>A clear introduction to the Super Memory Programme — what it develops, how it works and how sessions are run.</p>
+          <div class="feature reveal">
+            <h3 data-i18n="ex.what.f3t">Method Introduction</h3>
+            <p data-i18n="ex.what.f3d">A clear introduction to the Super Memory Programme — what it builds, how it works and how sessions are run.</p>
           </div>
-          <div class="feature reveal reveal-delay-3">
-            <span class="num">04</span>
-            <h3>Your Decision</h3>
-            <p>Leave with a full understanding of the programme — and decide, with your child, whether to enrol.</p>
+          <div class="feature reveal reveal-delay-1">
+            <h3 data-i18n="ex.what.f4t">Your Decision</h3>
+            <p data-i18n="ex.what.f4d">Leave with a full understanding of the programme — and decide, together with your child, whether to enrol.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= JOURNEY ================= -->
+    <!-- ================= FULL JOURNEY ================= -->
     <section class="section tone-light">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">The full journey</p>
-          <h2 class="display-2">From first experience to demonstration.</h2>
+          <p class="eyebrow" data-i18n="ex.journey.eyebrow">The full journey</p>
+          <h2 class="display-2" data-i18n="ex.journey.title">From first experience to demonstration.</h2>
         </div>
-        <div class="journey" style="margin-top:3rem;">
+        <div class="journey">
           <div class="journey-step reveal">
-            <div class="step-num">01</div>
-            <h4>Free Preview</h4>
-            <p>Parents and students attend a free preview — live demonstrations, hands-on activities and an introduction to the method.</p>
+            <div class="step-num">1</div>
+            <h3 data-i18n="pg.journey.j1t">Free Preview</h3>
+            <p data-i18n="pg.journey.j1d">Your first introduction. Watch the demonstrations, try the activities and understand the method — free, with no commitment.</p>
           </div>
           <div class="journey-step reveal reveal-delay-1">
-            <div class="step-num">02</div>
-            <h4>Enrolment</h4>
-            <p>Families who have seen the method decide whether it fits their child — with full understanding of the programme.</p>
+            <div class="step-num">2</div>
+            <h3 data-i18n="pg.journey.j2t">Foundation Techniques</h3>
+            <p data-i18n="pg.journey.j2d">Session by session, students are introduced to the core memory and learning techniques through guided practice.</p>
           </div>
           <div class="journey-step reveal reveal-delay-2">
-            <div class="step-num">03</div>
-            <h4>Training</h4>
-            <p>Guided sessions in which students learn and practise memory techniques, focus work and learning methods.</p>
+            <div class="step-num">3</div>
+            <h3 data-i18n="pg.journey.j3t">Applied Practice</h3>
+            <p data-i18n="pg.journey.j3d">Techniques are applied to real learning material — the kind students meet in school every day.</p>
           </div>
-          <div class="journey-step reveal reveal-delay-3">
-            <div class="step-num">04</div>
-            <h4>Practice</h4>
-            <p>Students apply the techniques — building recall, concentration and confidence through regular practice.</p>
+          <div class="journey-step reveal">
+            <div class="step-num">4</div>
+            <h3 data-i18n="pg.journey.j4t">Live Demonstration</h3>
+            <p data-i18n="pg.journey.j4d">Students demonstrate their progress live, in front of parents — progress you can see with your own eyes.</p>
           </div>
-          <div class="journey-step reveal reveal-delay-3">
-            <div class="step-num">05</div>
-            <h4>Demonstration</h4>
-            <p>Progress is shown live — students demonstrate what they have learned in front of parents, trainers and peers.</p>
+          <div class="journey-step reveal reveal-delay-1">
+            <div class="step-num">5</div>
+            <h3 data-i18n="pg.journey.j5t">Confidence &amp; Continuation</h3>
+            <p data-i18n="pg.journey.j5d">Students leave with techniques to keep using — and the confidence that comes from having used them for real.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= REGISTRATION ================= -->
+    <!-- ================= REGISTER ================= -->
     <section class="section" id="register">
-      <div class="container split">
-        <div class="reveal">
-          <p class="eyebrow">Register your interest</p>
-          <h2 class="display-2">Join the next preview session.</h2>
-          <p class="lead" style="margin-top:1.2rem;">Previews are conducted across Malaysia — including Selangor, Johor, Perak and Pahang. Register your interest for the next session in your area and our team will contact you.</p>
-          <ul class="prose" style="margin-top:1.6rem; display:grid; gap:0.7rem;">
-            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:var(--brass);flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">Free for parents and children</span></li>
-            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:var(--brass);flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">For students Standard 4 to Form 5</span></li>
-            <li style="display:flex; gap:0.7rem; align-items:flex-start;"><svg style="width:1.1rem;height:1.1rem;color:var(--brass);flex:none;margin-top:0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span style="color:var(--ink-muted);">No commitment — understand the programme fully before deciding</span></li>
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow" data-i18n="ex.reg.eyebrow">Register your interest</p>
+          <h2 class="display-2" data-i18n="ex.reg.title">Join the next preview session.</h2>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="ex.reg.sub">Previews are held across Malaysia — including Selangor, Johor, Perak and Pahang. Register your interest for the next session in your area and our team will reach out to you.</p>
+          <ul class="checklist" style="margin-top:1.6rem;">
+            <li data-i18n="ex.reg.b1">Free for parents and children</li>
+            <li data-i18n="ex.reg.b2">For students Standard 4 to Form 5</li>
+            <li data-i18n="ex.reg.b3">No commitment — understand the programme fully before deciding</li>
           </ul>
-          <div class="info-list" style="margin-top:2rem;">
-            <div class="info-item">
-              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-              <div>
-                <h4>Prefer to ask first?</h4>
-                <p>Message us on Instagram — <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener">@achievers.mind.academy</a> — or use the <a href="contact.html">contact page</a>.</p>
-              </div>
-            </div>
-            <a class="info-item" data-whatsapp data-whatsapp-text="Hello, I would like to reserve a free preview session at Achievers Mind Academy." href="#">
-              <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg></span>
-              <div>
-                <h4>Chat with AMA</h4>
-                <p>Message us directly on WhatsApp for a quick response about preview sessions.</p>
-              </div>
-            </a>
-          </div>
         </div>
-
-        <div class="reveal reveal-delay-1">
-          <div class="form-panel">
-            <h3 style="margin-bottom:0.4rem;">Reserve a free preview</h3>
-            <p style="font-size:0.92rem; color:var(--ink-muted); margin-bottom:1.6rem;">Register your interest for the next preview session in your area.</p>
-
-            <form data-ama-form>
+        <div class="split" style="margin-top:2.8rem; align-items:stretch;">
+          <div class="form-panel reveal">
+            <h3 style="font-size:1.5rem;" data-i18n="ex.form.title">Book a free preview</h3>
+            <p style="margin-top:0.4rem; color:var(--ink-muted, var(--ink-soft));" data-i18n="ex.form.sub">Register your interest for the next preview session in your area.</p>
+            <form data-ama-form novalidate style="margin-top:1.6rem;">
               <div class="form-grid">
                 <div class="form-field">
-                  <label for="f-name">Parent's full name</label>
-                  <input type="text" id="f-name" name="name" placeholder="Your full name" required>
+                  <label for="f-name" data-i18n="ex.form.name">Parent's full name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required data-i18n-ph="ex.form.ph.name" placeholder="Your full name">
                 </div>
                 <div class="form-field">
-                  <label for="f-phone">Phone / WhatsApp</label>
-                  <input type="tel" id="f-phone" name="phone" placeholder="012-345 6789" required>
+                  <label for="f-phone" data-i18n="ex.form.phone">Phone / WhatsApp</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+()\-.\s]{8,}" data-i18n-ph="ex.form.ph.phone" placeholder="012-345 6789">
                 </div>
                 <div class="form-field">
-                  <label for="f-child">Child's name</label>
-                  <input type="text" id="f-child" name="child" placeholder="Child's full name" required>
+                  <label for="f-child" data-i18n="ex.form.child">Child's name</label>
+                  <input id="f-child" name="child" type="text" autocomplete="given-name" required data-i18n-ph="ex.form.ph.child" placeholder="Child's full name">
                 </div>
                 <div class="form-field">
-                  <label for="f-age">Child's age / form</label>
-                  <input type="text" id="f-age" name="age" placeholder="e.g. 12 years old · Form 1" required>
+                  <label for="f-age" data-i18n="ex.form.age">Child's age / form</label>
+                  <input id="f-age" name="age" type="text" required data-i18n-ph="ex.form.ph.age" placeholder="e.g. 12 years · Form 1">
                 </div>
                 <div class="form-field">
-                  <label for="f-location">Preferred location</label>
+                  <label for="f-location" data-i18n="ex.form.location">Preferred location</label>
                   <select id="f-location" name="location" required>
-                    <option value="" disabled selected>Select your area</option>
-                    <option value="selangor">Selangor</option>
-                    <option value="kl">Kuala Lumpur</option>
-                    <option value="johor">Johor</option>
-                    <option value="perak">Perak</option>
-                    <option value="pahang">Pahang</option>
-                    <option value="online">Online / Other</option>
+                    <option value="" disabled selected data-i18n="ex.form.ph.location">Select your area</option>
+                    <option value="Kuala Lumpur" data-i18n="ex.form.opt.kl">Kuala Lumpur</option>
+                    <option value="Online / Other" data-i18n="ex.form.opt.online">Online / Other</option>
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="f-language">Preferred language</label>
-                  <select id="f-language" name="language">
-                    <option value="english">English</option>
-                    <option value="bm">Bahasa Malaysia</option>
-                    <option value="tamil">Tamil</option>
-                  </select>
+                  <label data-i18n="ex.form.prefLang">Preferred language</label>
+                  <div class="radio-row" role="radiogroup">
+                    <label class="radio"><input type="radio" name="language" value="English" checked><span>English</span></label>
+                    <label class="radio"><input type="radio" name="language" value="Bahasa Melayu"><span>Bahasa Melayu</span></label>
+                    <label class="radio"><input type="radio" name="language" value="Tamil"><span>தமிழ்</span></label>
+                  </div>
                 </div>
-                <div class="form-field full">
-                  <label for="f-source">How did you hear about us?</label>
+                <div class="form-field">
+                  <label for="f-source" data-i18n="ex.form.source">How did you hear about us?</label>
                   <select id="f-source" name="source">
-                    <option value="" selected>Optional</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="tiktok">TikTok</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="friend">Friend / Family</option>
-                    <option value="event">Community event</option>
-                    <option value="other">Other</option>
+                    <option value="" disabled selected data-i18n="ex.form.ph.source">Select</option>
+                    <option value="Friend / Family" data-i18n="ex.form.src.friend">Friend / Family</option>
+                    <option value="Community event" data-i18n="ex.form.src.event">Community event</option>
+                    <option value="Other" data-i18n="ex.form.src.other">Other</option>
                   </select>
                 </div>
               </div>
-              <button type="submit" class="btn btn-brass btn-lg" style="width:100%; margin-top:1.6rem;">Reserve My Free Preview</button>
+              <button type="submit" class="btn btn-primary btn-lg" style="margin-top:1.4rem; width:100%;" data-i18n="ex.form.submit">Book My Free Preview</button>
               <div class="form-status" role="status"></div>
             </form>
+            <div class="ask" style="margin-top:1.6rem;">
+              <p><strong data-i18n="ex.reg.askT">Prefer to ask first?</strong></p>
+              <p style="color:var(--ink-soft);" data-i18n="ex.reg.askD1">Send us a message on Instagram —</p>
+              <p style="color:var(--ink-soft);">
+                <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" style="color:var(--blue-600);">@achievers.mind.academy</a>
+                <span data-i18n="ex.reg.askD2"> — or use the </span>
+                <a href="contact.html" style="color:var(--blue-600);" data-i18n="ex.reg.askD3">contact page</a>
+              </p>
+            </div>
+            <div class="ask" style="margin-top:1.2rem;" data-whatsapp hidden>
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener" style="border-color:var(--line);" data-whatsapp-link>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+                <span data-i18n="ex.reg.waT">Chat with AMA</span>
+              </a>
+              <p style="color:var(--ink-soft); font-size:0.85rem; margin-top:0.5rem;" data-i18n="ex.reg.waD">Send us a message on WhatsApp for a quick response about preview sessions.</p>
+            </div>
+          </div>
+          <div class="split-media reveal reveal-delay-1">
+            <picture>
+              <source srcset="images/web/gallery1-1600.webp" type="image/webp">
+              <img src="images/web/gallery1-1600.jpg" alt="Photograph from an Achievers Mind Academy session" loading="lazy" data-i18n-alt="alt.session">
+            </picture>
+            <span class="frame-note" data-i18n="ex.reg.b1">Free for parents and children</span>
           </div>
         </div>
       </div>
@@ -226,32 +254,29 @@
 
     <!-- ================= REGIONS ================= -->
     <section class="section tone-light">
-      <div class="container regions">
-        <div class="reveal">
-          <p class="eyebrow">Where previews take place</p>
-          <h2 class="display-2">Across Malaysia.</h2>
-          <p class="lead" style="margin-top:1.2rem;">Preview programmes and events have been conducted in these regions — register your interest for the next session near you.</p>
-          <ul class="region-list" style="margin-top:2rem;">
-            <li><span class="marker">●</span><div><span class="state">Selangor</span><div class="detail">Home of the academy — regular preview programmes and sessions.</div></div></li>
-            <li><span class="marker">●</span><div><span class="state">Johor</span><div class="detail">Preview programmes with community venues.</div></div></li>
-            <li><span class="marker">●</span><div><span class="state">Perak</span><div class="detail">Preview programmes and events.</div></div></li>
-            <li><span class="marker">●</span><div><span class="state">Pahang</span><div class="detail">Preview programmes and events.</div></div></li>
-          </ul>
+      <div class="container">
+        <div class="lede-block reveal">
+          <p class="eyebrow" data-i18n="ex.regions.eyebrow">Where previews are held</p>
+          <h2 class="display-2" data-i18n="ex.regions.title">Across Malaysia.</h2>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="ex.regions.sub">Preview programmes and events have been run in these regions — register your interest for the next session near you.</p>
         </div>
-        <div class="reveal reveal-delay-1" style="display:grid; place-items:center;">
-          <svg viewBox="0 0 120 130" class="map" role="img" aria-label="Map of Peninsular Malaysia showing Selangor, Johor, Perak and Pahang">
-            <path d="M62 5 C70 5 76 9 77 16 C78 24 79 32 82 40 C84 48 85 58 84 66 C83 74 81 82 76 90 C73 96 70 104 68 112 C66 118 60 120 57 115 C55 108 54 100 53 92 C52 82 50 72 47 64 C44 56 40 50 36 44 C31 38 28 32 27 26 C26 20 30 14 36 11 C42 8 50 6 62 5 Z"
-              fill="rgba(154,122,58,0.12)" stroke="rgba(154,122,58,0.6)" stroke-width="1"/>
-            <circle cx="34" cy="22" r="2.6" fill="#9a7a3a"/>
-            <text x="38" y="24.5" font-size="5.2" fill="rgba(10,15,28,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">PERAK</text>
-            <circle cx="42" cy="46" r="2.6" fill="#9a7a3a"/>
-            <text x="47" y="48" font-size="5.2" fill="rgba(10,15,28,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">SELANGOR</text>
-            <circle cx="68" cy="38" r="2.6" fill="#9a7a3a"/>
-            <text x="60" y="32" font-size="5.2" fill="rgba(10,15,28,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">PAHANG</text>
-            <circle cx="60" cy="104" r="2.6" fill="#9a7a3a"/>
-            <text x="66" y="107" font-size="5.2" fill="rgba(10,15,28,0.75)" font-family="Inter, sans-serif" letter-spacing="0.3">JOHOR</text>
-          </svg>
-          <p style="margin-top:1rem; font-size:0.85rem; color:var(--ink-muted); text-align:center; max-width:20rem;">Community venues have included YMCA Brickfields (Kuala Lumpur), Digital Wave Academy (Klang) and Sri Subramaniar Paripalana Saba (Johor).</p>
+        <div class="region-list" style="margin-top:2.6rem;">
+          <div class="region-item reveal">
+            <span class="stat-num" style="font-size:1.6rem;" data-i18n="mal.r1s">Selangor</span>
+            <p data-i18n="mal.r1d">Headquarters and most frequent preview locations — including Digital Wave Academy, Klang.</p>
+          </div>
+          <div class="region-item reveal reveal-delay-1">
+            <span class="stat-num" style="font-size:1.6rem;" data-i18n="mal.r2s">Johor</span>
+            <p data-i18n="mal.r2d">Community previews hosted with Sri Subramaniar Paripalana Saba, Johor.</p>
+          </div>
+          <div class="region-item reveal reveal-delay-2">
+            <span class="stat-num" style="font-size:1.6rem;" data-i18n="mal.r3s">Perak</span>
+            <p data-i18n="mal.r3d">Preview programmes and events conducted in the state.</p>
+          </div>
+          <div class="region-item reveal reveal-delay-1">
+            <span class="stat-num" style="font-size:1.6rem;" data-i18n="mal.r4s">Pahang</span>
+            <p data-i18n="mal.r4d">Preview programmes and events conducted in the state.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -260,34 +285,26 @@
     <section class="section">
       <div class="container">
         <div class="lede-block reveal">
-          <p class="eyebrow">About preview sessions</p>
-          <h2 class="display-2">Questions about the preview.</h2>
+          <p class="eyebrow" data-i18n="ex.faq.eyebrow">About preview sessions</p>
+          <h2 class="display-2" data-i18n="ex.faq.title">Questions about the preview.</h2>
         </div>
-        <div class="faq" style="margin-top:2.5rem;">
-          <div class="faq-item reveal">
-            <details>
-              <summary>Is the preview really free?</summary>
-              <p>Yes. The preview session is completely free — for parents and children. Its purpose is to let you experience the method and understand the programme before any decision is made.</p>
-            </details>
-          </div>
-          <div class="faq-item reveal">
-            <details>
-              <summary>Should my child attend?</summary>
-              <p>Yes. The preview is designed for parents and children together. Your child will take part in the hands-on activities — it is the best way for both of you to understand the method.</p>
-            </details>
-          </div>
-          <div class="faq-item reveal">
-            <details>
-              <summary>What age is the programme for?</summary>
-              <p>The Super Memory Programme is designed for students from Standard 4 to Form 5.</p>
-            </details>
-          </div>
-          <div class="faq-item reveal">
-            <details>
-              <summary>Will I be pressured to enrol?</summary>
-              <p>No. The preview exists so families can understand the programme with confidence. Whether you enrol is entirely your decision — and many families take time to decide.</p>
-            </details>
-          </div>
+        <div class="faq" style="margin-top:2.6rem;">
+          <details class="faq-item">
+            <summary data-i18n="ex.faq.q1">Is the preview really free?</summary>
+            <p data-i18n="ex.faq.a1">Yes. The preview session is completely free — for parents and children. Its purpose is to let you experience the method and understand the programme before any decision is made.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="ex.faq.q2">Should my child attend?</summary>
+            <p data-i18n="ex.faq.a2">Yes. The preview is designed for parents and children together. Your child will take part in hands-on activities — it is the best way for both of you to understand the method.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="ex.faq.q3">What ages is the programme for?</summary>
+            <p data-i18n="ex.faq.a3">The Super Memory Programme is designed for students from Standard 4 to Form 5.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="ex.faq.q4">Will I be pressured to enrol?</summary>
+            <p data-i18n="ex.faq.a4">No. The preview exists so families can understand the programme with confidence. Whether you enrol is entirely your decision — and many families take time to decide.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -299,10 +316,10 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-            <span>Achievers Mind Academy</span>
+            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="40" height="40" data-i18n-alt="alt.logo">
+            <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
           </a>
-          <p style="margin-top:1.1rem;">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
+          <p style="margin-top:1.1rem;" data-i18n="footer.desc">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
           <div class="footer-social" style="margin-top:1.2rem;">
             <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg>
@@ -316,45 +333,44 @@
           </div>
         </div>
         <div>
-          <h4>Explore</h4>
+          <h4 data-i18n="footer.explore">Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="programmes.html">Programmes</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+            <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Get Started</h4>
+          <h4 data-i18n="footer.start">Get Started</h4>
           <ul>
-            <li><a href="experience.html#register">Join a Free Preview</a></li>
-            <li><a href="programmes.html">Super Memory Programme</a></li>
-            <li><a href="experience.html">What to Expect</a></li>
-            <li><a href="about.html#founder">Meet the Founder</a></li>
+            <li><a href="experience.html#register" data-i18n="footer.join">Join a Free Preview</a></li>
+            <li><a href="programmes.html" data-i18n="footer.programme">Super Memory Programme</a></li>
+            <li><a href="experience.html" data-i18n="footer.expect">What to Expect</a></li>
+            <li><a href="about.html#founder" data-i18n="footer.founder">Meet the Founder</a></li>
           </ul>
         </div>
         <div>
-          <h4>Headquarters</h4>
+          <h4 data-i18n="footer.hq">Headquarters</h4>
           <p style="max-width:none;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
         </div>
       </div>
       <div class="footer-meta">
-        <p>© <span data-year>2026</span> Achievers Mind Academy. All rights reserved.</p>
-        <p class="corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+        <p><span>©</span> <span data-year>2026</span> <span data-i18n="footer.rightsB">Achievers Mind Academy. All rights reserved.</span></p>
+        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
       </div>
     </div>
   </footer>
 
-  <a class="mobile-cta" href="experience.html#register">
+  <a class="mobile-cta" href="#register">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    Join a Free Preview
+    <span data-i18n="cta.preview">Join a Free Preview</span>
   </a>
 
   <script src="js/i18n.js"></script>
-  <script src="js/lang/bm.js"></script>
-  <script src="js/lang/ta.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Achievers Mind Academy — Memory &amp; Learning Skills Training Malaysia</title>
-  <meta name="description" content="Contact Achievers Mind Academy — preview session enquiries, programme questions and general enquiries. Headquarters at C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor.">
+  <meta name="description" content="Contact Achievers Mind Academy — ask about free preview sessions, programmes or the academy. Reach us on Instagram, WhatsApp, TikTok, Facebook or at our Selangor headquarters.">
+  <link rel="canonical" href="https://achieversmindacademy.github.io/contact.html">
 
-  <meta property="og:title" content="Contact | Achievers Mind Academy">
-  <meta property="og:description" content="Reach Achievers Mind Academy — preview sessions, programme enquiries and general questions.">
+  <meta property="og:title" content="Contact Achievers Mind Academy">
+  <meta property="og:description" content="Questions about preview sessions, programmes or how the academy works — reach us through any channel below.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/web/gallery6-1600.jpg">
+  <meta property="og:image" content="images/web/gallery1-1600.jpg">
 
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,10 +24,10 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-        <span>Achievers Mind Academy<small>Memory &amp; Learning Skills</small></span>
+        <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="42" height="42" data-i18n-alt="alt.logo">
+        <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
       </a>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="about.html" data-i18n="nav.about">About</a></li>
         <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
@@ -35,112 +36,148 @@
         <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <div class="lang-switch" aria-label="Language">
-          <button data-lang="en" class="active" data-i18n="lang.en">EN</button>
-          <button data-lang="bm" data-i18n="lang.bm">BM</button>
-          <button data-lang="ta" data-i18n="lang.ta">TA</button>
+        <div class="lang-select" data-lang-select>
+          <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <span data-lang-code>EN</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-menu" role="listbox" aria-label="Language">
+            <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+          </ul>
         </div>
-        <a href="experience.html#register" class="btn btn-brass" data-i18n="cta.preview">Join a Free Preview</a>
-        <button class="nav-toggle" aria-label="Menu">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <a href="experience.html#register" class="btn btn-primary nav-btn" data-i18n="cta.preview">Join a Free Preview</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </nav>
 
+  <div class="drawer" id="site-drawer">
+    <ul class="drawer-links">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+      <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+      <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="drawer-foot">
+      <div class="lang-select" data-lang-select>
+        <button type="button" class="lang-current" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <span data-lang-code>EN</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-menu" role="listbox" aria-label="Language">
+          <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
+        </ul>
+      </div>
+      <a href="experience.html#register" class="btn btn-primary" data-i18n="cta.preview">Join a Free Preview</a>
+    </div>
+  </div>
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
   <main>
     <!-- ================= PAGE HERO ================= -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h1 class="display-1">Let's talk.</h1>
-        <p class="lead">Questions about preview sessions, the programme or how the academy works — reach us through any of the channels below.</p>
+        <p class="eyebrow" data-i18n="ct.hero.eyebrow">Contact</p>
+        <h1 class="display-1" data-i18n="ct.hero.title">Let's talk.</h1>
+        <p class="lead" data-i18n="ct.hero.sub">Questions about preview sessions, programmes or how the academy works — reach us through any of the channels below.</p>
       </div>
     </section>
 
     <!-- ================= CHANNELS ================= -->
     <section class="section">
       <div class="container">
-        <div class="grid grid-3" style="margin-top:0;">
-          <a class="info-item reveal" href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg></span>
-            <div>
-              <h4>Instagram</h4>
-              <p>@achievers.mind.academy</p>
-              <p style="font-size:0.85rem; color:var(--brass);">Message us for quick responses</p>
-            </div>
-          </a>
-          <a class="info-item reveal reveal-delay-1" href="https://www.tiktok.com/@achievers.mind.academy" target="_blank" rel="noopener">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.1 1.6 3.7 3.5 4v3c-1.4 0-2.7-.4-3.8-1.2v6.4c0 4-2.9 6.8-6.6 6.8-3.6 0-6.6-2.7-6.6-6.4 0-3.6 2.9-6.5 6.7-6.4v3.2c-2 0-3.6 1.4-3.6 3.3 0 1.9 1.6 3.3 3.5 3.3 2 0 3.5-1.5 3.5-3.6V2h3.4z"/></svg></span>
-            <div>
-              <h4>TikTok</h4>
-              <p>@achievers.mind.academy</p>
-              <p style="font-size:0.85rem; color:var(--brass);">Watch the method in action</p>
-            </div>
-          </a>
-          <a class="info-item reveal reveal-delay-2" data-facebook href="#" target="_blank" rel="noopener">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.1-3.2 3.2V11H8.5v3h2.8v7h2.2z"/></svg></span>
-            <div>
-              <h4>Facebook</h4>
-              <p>Official Achievers Mind Academy page</p>
-              <p style="font-size:0.85rem; color:var(--brass);">Events, updates and announcements</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="info-item reveal" style="margin-top:1.2rem; align-items:center;">
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-          <div>
-            <h4>Headquarters</h4>
-            <p>C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
+        <div class="social-grid">
+          <div class="social-card reveal">
+            <h3>Instagram</h3>
+            <p>@achievers.mind.academy</p>
+            <p data-i18n="ct.ch.ig.note">Message us for a quick response</p>
+            <a class="go" href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener">
+              <span>@achievers.mind.academy</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="social-card reveal reveal-delay-1" data-whatsapp hidden>
+            <h3>WhatsApp</h3>
+            <p data-i18n="ex.reg.waD">Send us a message on WhatsApp for a quick response about preview sessions.</p>
+            <a class="go" href="#" target="_blank" rel="noopener" data-whatsapp-link>
+              <span data-i18n="ex.reg.waT">Chat with AMA</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="social-card reveal">
+            <h3>TikTok</h3>
+            <p>@achievers.mind.academy</p>
+            <p data-i18n="ct.ch.tk.note">Watch the method in action</p>
+            <a class="go" href="https://www.tiktok.com/@achievers.mind.academy" target="_blank" rel="noopener">
+              <span>@achievers.mind.academy</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="social-card reveal reveal-delay-1">
+            <h3>Facebook</h3>
+            <p data-i18n="ct.ch.fb.d">Official page of Achievers Mind Academy</p>
+            <p data-i18n="ct.ch.fb.note">Events, updates and announcements</p>
+            <a class="go" data-facebook href="#" target="_blank" rel="noopener">
+              <span data-i18n="soc.fb.handle">@achievers.mind.academy</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="social-card reveal">
+            <h3 data-i18n="footer.hq">Headquarters</h3>
+            <p data-i18n="ct.ch.hq.d">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
+            <p style="font-size:0.85rem; color:var(--ink-soft);">002744992W / 201703417057</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= GENERAL ENQUIRY FORM ================= -->
-    <section class="section tone-light" style="padding-top:0;">
-      <div class="container split">
-        <div class="reveal">
-          <p class="eyebrow">General enquiry</p>
-          <h2 class="display-2">Send us a message.</h2>
-          <p class="lead" style="margin-top:1.2rem;">For preview session bookings, please use the <a href="experience.html#register" style="color:#9a7a3a; text-decoration:underline;">preview registration form</a> — it helps us match you to the right session. For everything else, write to us here.</p>
-        </div>
-        <div class="reveal reveal-delay-1">
-          <div class="form-panel" style="border-color:var(--line);">
-            <h3 style="margin-bottom:1.6rem; color:var(--ink);">General enquiry</h3>
-            <form data-ama-form>
-              <div class="form-grid">
-                <div class="form-field">
-                  <label for="c-name" style="color:var(--ink-muted);">Your name</label>
-                  <input type="text" id="c-name" name="name" placeholder="Your full name" required style="background:#fff; border-color:var(--line-strong); color:var(--ink);">
-                </div>
-                <div class="form-field">
-                  <label for="c-phone" style="color:var(--ink-muted);">Phone / WhatsApp</label>
-                  <input type="tel" id="c-phone" name="phone" placeholder="012-345 6789" style="background:#fff; border-color:var(--line-strong); color:var(--ink);">
-                </div>
-                <div class="form-field full">
-                  <label for="c-message" style="color:var(--ink-muted);">Your message</label>
-                  <textarea id="c-message" name="message" placeholder="How can we help?" required style="background:#fff; border-color:var(--line-strong); color:var(--ink);"></textarea>
-                </div>
+    <!-- ================= GENERAL ENQUIRY ================= -->
+    <section class="section tone-light">
+      <div class="container">
+        <div class="form-panel reveal" style="max-width:720px; margin:0 auto;">
+          <p class="eyebrow" data-i18n="ct.form.eyebrow">General enquiry</p>
+          <h2 class="display-2" style="font-size:1.9rem;" data-i18n="ct.form.title">Send us a message.</h2>
+          <p style="margin-top:0.6rem; color:var(--ink-soft);">
+            <span data-i18n="ct.form.subA">For preview session bookings, please use the </span>
+            <a href="experience.html#register" style="color:var(--blue-600);" data-i18n="ct.form.subLink">preview registration form</a>
+            <span data-i18n="ct.form.subB"> — it helps us match you to the right session. For everything else, write to us here.</span>
+          </p>
+          <form data-ama-form novalidate style="margin-top:1.6rem;">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="c-name" data-i18n="ct.form.name">Your name</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required data-i18n-ph="ct.form.ph.name" placeholder="Your full name">
               </div>
-              <button type="submit" class="btn btn-ink btn-lg" style="width:100%; margin-top:1.6rem;">Send Message</button>
-              <div class="form-status" role="status"></div>
-            </form>
-          </div>
+            </div>
+            <div class="form-field">
+              <label for="c-message" data-i18n="ct.form.message">Your message</label>
+              <textarea id="c-message" name="message" rows="5" required data-i18n-ph="ct.form.ph.message" placeholder="How can we help?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="margin-top:1.4rem;" data-i18n="ct.form.submit">Send Message</button>
+            <div class="form-status" role="status"></div>
+          </form>
         </div>
       </div>
     </section>
 
     <!-- ================= CTA ================= -->
-    <section class="section">
+    <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="cta-band reveal">
-          <p class="eyebrow" style="justify-content:center;">The fastest way to understand</p>
-          <h2 class="display-2">Join a free preview session.</h2>
-          <p class="lead">Don't just ask questions — come and experience the method. Reserve a free preview for you and your child.</p>
+          <p class="eyebrow" data-i18n="ct.cta.eyebrow">The fastest way to understand</p>
+          <h2 class="display-2" data-i18n="ct.cta.title">Join a free preview session.</h2>
+          <p class="lead" data-i18n="ct.cta.sub">Don't just ask questions — come and experience the method. Book a free preview for you and your child.</p>
           <div class="cta-actions">
-            <a href="experience.html#register" class="btn btn-brass btn-lg">Reserve Your Free Preview</a>
+            <a href="experience.html#register" class="btn btn-white btn-lg" data-i18n="cta.reserve">Reserve Your Free Preview</a>
           </div>
         </div>
       </div>
@@ -153,10 +190,10 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="44" height="44">
-            <span>Achievers Mind Academy</span>
+            <img src="images/web/logo.webp" alt="Achievers Mind Academy logo" width="40" height="40" data-i18n-alt="alt.logo">
+            <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
           </a>
-          <p style="margin-top:1.1rem;">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
+          <p style="margin-top:1.1rem;" data-i18n="footer.desc">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
           <div class="footer-social" style="margin-top:1.2rem;">
             <a href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/></svg>
@@ -170,45 +207,44 @@
           </div>
         </div>
         <div>
-          <h4>Explore</h4>
+          <h4 data-i18n="footer.explore">Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="programmes.html">Programmes</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="programmes.html" data-i18n="nav.programs">Programmes</a></li>
+            <li><a href="achievements.html" data-i18n="nav.achievements">Achievements</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Get Started</h4>
+          <h4 data-i18n="footer.start">Get Started</h4>
           <ul>
-            <li><a href="experience.html#register">Join a Free Preview</a></li>
-            <li><a href="programmes.html">Super Memory Programme</a></li>
-            <li><a href="experience.html">What to Expect</a></li>
-            <li><a href="about.html#founder">Meet the Founder</a></li>
+            <li><a href="experience.html#register" data-i18n="footer.join">Join a Free Preview</a></li>
+            <li><a href="programmes.html" data-i18n="footer.programme">Super Memory Programme</a></li>
+            <li><a href="experience.html" data-i18n="footer.expect">What to Expect</a></li>
+            <li><a href="about.html#founder" data-i18n="footer.founder">Meet the Founder</a></li>
           </ul>
         </div>
         <div>
-          <h4>Headquarters</h4>
+          <h4 data-i18n="footer.hq">Headquarters</h4>
           <p style="max-width:none;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Selangor, Malaysia</p>
         </div>
       </div>
       <div class="footer-meta">
-        <p>© <span data-year>2026</span> Achievers Mind Academy. All rights reserved.</p>
-        <p class="corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+        <p><span>©</span> <span data-year>2026</span> <span data-i18n="footer.rightsB">Achievers Mind Academy. All rights reserved.</span></p>
+        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
       </div>
     </div>
   </footer>
 
   <a class="mobile-cta" href="experience.html#register">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    Join a Free Preview
+    <span data-i18n="cta.preview">Join a Free Preview</span>
   </a>
 
   <script src="js/i18n.js"></script>
-  <script src="js/lang/bm.js"></script>
-  <script src="js/lang/ta.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
