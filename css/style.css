@@ -716,7 +716,6 @@ body.drawer-open { overflow: hidden; }
 }
 .centre-item:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
 .centre-item:hover, .centre-item.active {
-  transform: translateY(-2px);
   border-color: var(--blue-200);
   background: var(--blue-50);
   box-shadow: var(--shadow-sm);
@@ -749,11 +748,11 @@ body.drawer-open { overflow: hidden; }
   cursor: default;
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 0.18s ease;
+  transition: transform 150ms ease;
 }
 .malaysia-map .marker .pin-body {
   fill: var(--blue-700);
-  transition: fill 0.18s ease;
+  transition: fill 150ms ease;
 }
 .malaysia-map .marker .pin-dot { fill: #ffffff; }
 .malaysia-map .marker text {
@@ -765,9 +764,10 @@ body.drawer-open { overflow: hidden; }
   stroke: #ffffff;
   stroke-width: 3px;
   stroke-linejoin: round;
+  transition: fill 150ms ease;
 }
 .malaysia-map .marker:hover,
-.malaysia-map .marker.active { transform: scale(1.18); }
+.malaysia-map .marker.active { transform: scale(1.1); }
 .malaysia-map .marker:hover .pin-body,
 .malaysia-map .marker.active .pin-body { fill: var(--gold-500); }
 .map-hint {
@@ -838,6 +838,22 @@ body.drawer-open { overflow: hidden; }
 }
 .social-card .go svg { width: 1rem; height: 1rem; transition: transform 0.18s ease; }
 .social-card:hover .go svg { transform: translateX(3px); }
+.social-card.wa-card { border-color: #d3efe0; }
+.social-card.wa-card .handle, .social-card.wa-card .go { color: #128c4a; }
+.social-card.wa-card:hover { border-color: #25d366; }
+.social-card.wa-card .wa-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  flex: none;
+}
+.social-card.wa-card .wa-glyph svg { width: 1.05rem; height: 1.05rem; }
+.social-card.wa-card .go { gap: 0.55rem; }
 
 /* --------------------------------------------------------------------------
    16. CTA BAND

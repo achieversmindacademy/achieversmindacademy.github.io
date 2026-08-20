@@ -23,7 +23,7 @@
    ------------------------------------------------------------------ */
 var AMA_CONFIG = {
   FORM_ENDPOINT: '',
-  WHATSAPP_NUMBER: '',
+  WHATSAPP_NUMBER: '60102027575',
   FACEBOOK_URL: '',
   INSTAGRAM_URL: 'https://www.instagram.com/achievers.mind.academy',
   TIKTOK_URL: 'https://www.tiktok.com/@achievers.mind.academy'
@@ -160,15 +160,19 @@ var AMA_CONFIG = {
     });
     document.body.appendChild(lb);
 
-    /* ---------- WhatsApp buttons (hidden until number configured) ---------- */
-    var waButtons = document.querySelectorAll('[data-whatsapp]');
+    /* ---------- WhatsApp buttons (shown when number configured) ---------- */
+    var waLinks = document.querySelectorAll('[data-whatsapp-link]');
+    var waBlocks = document.querySelectorAll('[data-whatsapp]');
     if (CFG.WHATSAPP_NUMBER) {
-      waButtons.forEach(function (el) {
-        el.href = 'https://wa.me/' + CFG.WHATSAPP_NUMBER +
-          '?text=' + encodeURIComponent(el.getAttribute('data-whatsapp-text') || 'Hello, I would like to know more about Achievers Mind Academy.');
+      waLinks.forEach(function (el) {
+        el.href = 'https://api.whatsapp.com/send?phone=' + CFG.WHATSAPP_NUMBER +
+          '&text=' + encodeURIComponent(el.getAttribute('data-whatsapp-text') || 'Hello, I would like to know more about Achievers Mind Academy.');
+        el.style.display = '';
       });
+      waBlocks.forEach(function (el) { el.hidden = false; el.style.display = ''; });
     } else {
-      waButtons.forEach(function (el) { el.style.display = 'none'; });
+      waLinks.forEach(function (el) { el.style.display = 'none'; });
+      waBlocks.forEach(function (el) { el.hidden = true; el.style.display = 'none'; });
     }
 
     /* ---------- Facebook link (hidden until URL provided) ---------- */
