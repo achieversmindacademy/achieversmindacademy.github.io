@@ -112,27 +112,8 @@ var AMA_CONFIG = {
       revealEls.forEach(function (el) { el.classList.add('in'); });
     }
 
-    /* ---------- Centre list <-> map marker highlight ---------- */
-    var centreItems = document.querySelectorAll('.centre-item');
-    var mapMarkers = document.querySelectorAll('.malaysia-map .marker');
-    function highlightCentre(name) {
-      centreItems.forEach(function (el) {
-        el.classList.toggle('active', name && el.getAttribute('data-centre') === name);
-      });
-      mapMarkers.forEach(function (m) {
-        m.classList.toggle('active', name && m.getAttribute('data-centre') === name);
-      });
-    }
-    centreItems.forEach(function (el) {
-      el.addEventListener('mouseenter', function () { highlightCentre(el.getAttribute('data-centre')); });
-      el.addEventListener('mouseleave', function () { highlightCentre(null); });
-      el.addEventListener('focus', function () { highlightCentre(el.getAttribute('data-centre')); });
-      el.addEventListener('blur', function () { highlightCentre(null); });
-    });
-    mapMarkers.forEach(function (m) {
-      m.addEventListener('mouseenter', function () { highlightCentre(m.getAttribute('data-centre')); });
-      m.addEventListener('mouseleave', function () { highlightCentre(null); });
-    });
+    /* ---------- Static map markers: no hover tracking. Centres are identified
+       by the numbered markers and the matching numbered list (01–09). ---------- */
 
     /* ---------- Lightbox ---------- */
     var lb = document.createElement('div');
@@ -263,6 +244,25 @@ var AMA_CONFIG = {
     /* ---------- Footer year ---------- */
     document.querySelectorAll('[data-year]').forEach(function (el) {
       el.textContent = String(new Date().getFullYear());
+    });
+
+    /* ---------- FAQ accordion (one open at a time) ---------- */
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+      var btn = item.querySelector('.faq-q');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var wasOpen = item.classList.contains('open');
+        faqItems.forEach(function (other) {
+          other.classList.remove('open');
+          var q = other.querySelector('.faq-q');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
   });
 })();
