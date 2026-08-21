@@ -111,6 +111,37 @@ var AMA_CONFIG = {
     } else {
       revealEls.forEach(function (el) { el.classList.add('in'); });
     }
+    
+    /* ---------- Service section scroll indicators ---------- */
+    var serviceSections = document.querySelectorAll('.service-section');
+    if (serviceSections.length > 0) {
+      var serviceObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Update service indicator if exists
+            var serviceIndex = entry.target.getAttribute('data-service-index');
+            if (serviceIndex) {
+              updateServiceIndicator(serviceIndex);
+            }
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      serviceSections.forEach(function (section) {
+        serviceObserver.observe(section);
+      });
+    }
+    
+    // Service indicator update function
+    function updateServiceIndicator(index) {
+      var indicator = document.querySelector('.service-indicator');
+      if (indicator) {
+        indicator.textContent = '0' + index + ' / 06';
+      }
+    }
 
     /* ---------- Static map markers: no hover tracking. Centres are identified
        by the numbered markers and the matching numbered list (01–09). ---------- */
