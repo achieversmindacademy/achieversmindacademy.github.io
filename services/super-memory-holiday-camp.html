@@ -46,7 +46,12 @@
             <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
             <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
           </ul>
-        </div
+        </div>
+        <a href="../experience.html#register" class="btn btn-primary nav-btn" data-i18n="cta.preview">Join a Free Preview</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
     </div>
   </nav>
@@ -82,7 +87,9 @@
     <!-- ================= SERVICE HEADER ================= -->
     <section class="service-header reveal">
       <div class="container">
-        <img class="service-header-image" src="../images/web/gallery5-1600.jpg" alt="Super Memory Holiday Camp students and activities" data-i18n-alt="alt.holiday-camp">
+        <div class="service-header-image">
+          <img src="../images/web/gallery5-1600.jpg" alt="Super Memory Holiday Camp students and activities" data-i18n-alt="alt.holiday-camp">
+        </div>
         <span class="service-badge">YEARLY EVENT</span>
         <h1 data-i18n="sv.holiday.title">Super Memory Holiday Camp</h1>
         <p class="service-tagline" data-i18n="sv.holiday.tagline">Learn. Play. Explore. Grow.</p>
@@ -104,8 +111,12 @@
           <p data-i18n="sv.holiday.about.p4">It is an experience where children can learn while having fun.</p>
         </div>
         <div class="image-column reveal reveal-delay-1">
-          <img class="service-image" src="../images/web/gallery6-1600.jpg" alt="Holiday camp students participating in activities" data-i18n-alt="alt.holiday-students">
-          <img class="service-image" src="../images/web/gallery1-1600.jpg" alt="Holiday camp group photo" data-i18n-alt="alt.holiday-group">
+          <div class="service-image">
+            <img src="../images/web/gallery6-1600.jpg" alt="Holiday camp students participating in activities" data-i18n-alt="alt.holiday-students">
+          </div>
+          <div class="service-image">
+            <img src="../images/web/gallery1-1600.jpg" alt="Holiday camp group photo" data-i18n-alt="alt.holiday-group">
+          </div>
         </div>
       </div>
     </section>
@@ -114,7 +125,7 @@
     <section class="section tone-light content-section reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="sv.holiday.activities.t">Camp Activities</h2>
-        <div class="activity-grid reveal">
+        <div class="activity-grid">
           <div class="activity-card reveal">
             <div class="activity-card-image">
               <img src="../images/web/gallery2-1600.jpg" alt="Brain activities at holiday camp" data-i18n-alt="alt.brain-activities">
@@ -140,7 +151,7 @@
             <div class="activity-card-content">
               <h3>🔥 CAMPFIRE</h3>
               <p>A shared camp experience encouraging friendship and connection.</p>
-            </div
+            </div>
           </div>
           <div class="activity-card reveal reveal-delay-3">
             <div class="activity-card-image">
@@ -195,7 +206,7 @@
     <section class="section content-section reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="sv.holiday.lifeskills.t">Life Skills</h2>
-        <div class="lifeskills-grid reveal">
+        <div class="lifeskills-grid">
           <div class="lifeskill-card reveal">
             <div class="lifeskill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22l-12-7.19L2 9.27l5-4.87L8.91 8.26 12 2z"/></svg>
@@ -212,7 +223,7 @@
           </div>
           <div class="lifeskill-card reveal reveal-delay-2">
             <div class="lifeskill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5L12 17l8-5-10-5zM2 17l10 5L12 22l8-5-10-5z"/></svg>
             </div>
             <h3>PROBLEM-SOLVING</h3>
             <p>Skill in handling stress, adapting to sudden changes and making smart choices.</p>
@@ -233,7 +244,7 @@
       <div class="container">
         <h2 class="section-title" data-i18n="sv.holiday.character.t">Character Counts</h2>
         <p data-i18n="sv.holiday.character.p">The camp reflects four important values:</p>
-        <div class="values-grid reveal">
+        <div class="values-grid">
           <div class="value-card reveal">
             <h3>CARING</h3>
           </div>
@@ -247,7 +258,7 @@
             <h3>RESPONSIBILITY</h3>
           </div>
         </div>
-        <p data-i18n="sv.holiday.character.note">These values should be shown through daily camp life and activities.</p>
+        <p style="margin-top: 1.5rem; font-style: italic; color: var(--ink-muted);" data-i18n="sv.holiday.character.note">These values should be shown through daily camp life and activities.</p>
       </div>
     </section>
 
@@ -255,7 +266,7 @@
     <section class="section content-section reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="sv.holiday.includes.t">Camp Includes</h2>
-        <ul class="prose reveal">
+        <ul class="prose" style="max-width: 500px; columns: 2; column-gap: 3rem;">
           <li data-i18n="sv.holiday.includes.1">Accommodation</li>
           <li data-i18n="sv.holiday.includes.2">Meals</li>
           <li data-i18n="sv.holiday.includes.3">Leadership activities</li>
@@ -278,11 +289,11 @@
         <h2 class="section-title" data-i18n="sv.holiday.yearly.t">Yearly Event</h2>
         <p data-i18n="sv.holiday.yearly.p1">The Holiday Camp is organised yearly.</p>
         <p data-i18n="sv.holiday.yearly.p2">The previously provided 2025 event was held at:</p>
-        <p><strong>Agrotech Garden Chalet Resort, Hulu Langat, Selangor</strong></p>
+        <p style="font-weight: 600; color: var(--ink);"><strong>Agrotech Garden Chalet Resort, Hulu Langat, Selangor</strong></p>
         <p data-i18n="sv.holiday.yearly.p3">with the event running from:</p>
-        <p><strong>19–21 December 2025</strong></p>
-        <p data-i18n="sv.holiday.yearly.note">IMPORTANT: This is historical information. Do not display it as the next upcoming camp.</p>
-        <div class="highlight-box reveal">
+        <p style="font-weight: 600; color: var(--ink);"><strong>19–21 December 2025</strong></p>
+        <p style="font-size: 0.85rem; color: var(--ink-soft); font-style: italic;" data-i18n="sv.holiday.yearly.note">IMPORTANT: This is historical information. Do not display it as the next upcoming camp.</p>
+        <div class="highlight-box" style="margin-top: 2rem; text-align: center;">
           <h3 data-i18n="sv.holiday.yearly.next.t">NEXT CAMP</h3>
           <p data-i18n="sv.holiday.yearly.next.p">Dates and venue will be announced.</p>
         </div>
@@ -297,8 +308,12 @@
           <p data-i18n="sv.holiday.facilitators.p">The camp is conducted by <strong>Master Alagan</strong> and his experienced team, including <strong>Ms. Naga Devi</strong> and senior members of the <strong>Achievers Youth Club</strong>, who serve as facilitators.</p>
         </div>
         <div class="image-column reveal reveal-delay-1">
-          <img class="service-image" src="../images/web/gallery2-1600.jpg" alt="Master Alagan facilitating holiday camp" data-i18n-alt="alt.master-alagan">
-          <img class="service-image" src="../images/web/gallery3-1600.jpg" alt="Ms. Naga Devi with holiday camp students" data-i18n-alt="alt.ms-nagadevi">
+          <div class="service-image">
+            <img src="../images/web/gallery2-1600.jpg" alt="Master Alagan facilitating holiday camp" data-i18n-alt="alt.master-alagan">
+          </div>
+          <div class="service-image">
+            <img src="../images/web/gallery3-1600.jpg" alt="Ms. Naga Devi with holiday camp students" data-i18n-alt="alt.ms-nagadevi">
+          </div>
         </div>
       </div>
     </section>
@@ -306,17 +321,19 @@
     <!-- ================= FINAL CTA ================= -->
     <section class="section tone-light content-section reveal">
       <div class="container">
-        <h2 class="section-title" data-i18n="sv.holiday.final.t">Give Your Child an Experience They Will Remember.</h2>
-        <p data-i18n="sv.holiday.final.p1">Register / Enquire About the Next Camp</p>
-        <div class="hero-actions" style="margin-top: 1.5rem;">
-          <a href="../experience.html#register" class="btn btn-primary btn-lg" data-i18n="sv.holiday.final.cta">Register / Enquire About the Next Camp</a>
-        </div>
-        
-        <div class="highlight-box" style="margin-top: 2rem;">
-          <h3 data-i18n="sv.holiday.assist.t">Have Questions?</h3>
-          <p data-i18n="sv.holiday.assist.p">Feel free to chat with us on WhatsApp.</p>
-          <div class="hero-actions" style="margin-top: 1.5rem;">
-            <a href="https://api.whatsapp.com/send?phone=60102027575" class="btn btn-primary btn-lg" data-i18n="sv.holiday.assist.cta">Chat With Us on WhatsApp →</a>
+        <div class="lede-block center">
+          <h2 class="section-title" data-i18n="sv.holiday.final.t">Give Your Child an Experience They Will Remember.</h2>
+          <p data-i18n="sv.holiday.final.p1">Register / Enquire About the Next Camp</p>
+          <div class="hero-actions" style="margin-top: 1.5rem; justify-content: center;">
+            <a href="../experience.html#register" class="btn btn-primary btn-lg" data-i18n="sv.holiday.final.cta">Register / Enquire About the Next Camp</a>
+          </div>
+          
+          <div class="highlight-box" style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3 data-i18n="sv.holiday.assist.t">Have Questions?</h3>
+            <p data-i18n="sv.holiday.assist.p">Feel free to chat with us on WhatsApp.</p>
+            <div class="hero-actions" style="margin-top: 1.5rem; justify-content: center;">
+              <a href="https://api.whatsapp.com/send?phone=60102027575" class="btn btn-primary btn-lg" data-i18n="sv.holiday.assist.cta">Chat With Us on WhatsApp →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -371,4 +388,31 @@
         <div>
           <h4 data-i18n="footer.start">Get Started</h4>
           <ul>
-            <li><a href="../experience.html#register" data-i18n="footer.join">Join a Free Preview</a></li
+            <li><a href="../experience.html#register" data-i18n="footer.join">Join a Free Preview</a></li>
+            <li><a href="index.html" data-i18n="footer.service">View All Services</a></li>
+            <li><a href="../experience.html" data-i18n="footer.expect">What to Expect</a></li>
+            <li><a href="../about.html#founder" data-i18n="footer.founder">Meet the Founder</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.hq">Headquarters</h4>
+          <p style="max-width:none;">C-6-1, Jalan Mutiara 2, Mutiara Business Park, Rawang, Selangor, Malaysia</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p><span>©</span> <span data-year>2026</span> <span data-i18n="footer.rightsB">Achievers Mind Academy. All rights reserved.</span></p>
+        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management & book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="../experience.html#register">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <span data-i18n="cta.preview">Join a Free Preview</span>
+  </a>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/translations.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
