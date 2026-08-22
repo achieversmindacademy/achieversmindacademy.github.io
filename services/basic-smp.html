@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic SMP | Achievers Mind Academy</title>
-  <meta name="description" content="Basic Super Memory Programme for Tamil Schools - Free introduction to memory and learning">
+  <title>Basic SMP — Free Programme for Tamil Schools | Achievers Mind Academy</title>
+  <meta name="description" content="Basic SMP is a free introductory Super Memory Programme for Tamil schools — SMP Yoga, memory and concentration activities, and the 10 Habits to Improve and Protect Your Brain.">
   <meta property="og:title" content="Basic SMP — Achievers Mind Academy">
-  <meta property="og:description" content="Free Super Memory Programme for Tamil Schools - Introduction to memory techniques and concentration practices">
+  <meta property="og:description" content="A free introduction to memory and learning for Tamil schools.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="../images/web/gallery2-1600.jpg">
-  
+  <meta property="og:image" content="../images/web/gallery5-1600.jpg">
+
   <link rel="icon" type="image/png" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/services.css">
 </head>
-<body>
+<body class="svc">
   <!-- ================= NAVIGATION ================= -->
   <nav class="nav">
     <div class="container nav-inner">
       <a class="brand" href="../index.html">
         <img src="../images/web/logo.webp" alt="Achievers Mind Academy logo" width="42" height="42" data-i18n-alt="alt.logo">
-        <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory & Learning Skills</small></span>
+        <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
       </a>
 
       <ul class="nav-links">
         <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="../about.html" data-i18n="nav.about">About</a></li>
-        <li><a href="index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html" class="active" data-i18n="nav.services">Services</a></li>
         <li><a href="../achievements.html" data-i18n="nav.achievements">Achievements</a></li>
         <li><a href="../experience.html" data-i18n="nav.experience">Experience</a></li>
         <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -61,7 +62,7 @@
     <ul class="drawer-links">
       <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="../about.html" data-i18n="nav.about">About</a></li>
-      <li><a href="index.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.services">Services</a></li>
       <li><a href="../achievements.html" data-i18n="nav.achievements">Achievements</a></li>
       <li><a href="../experience.html" data-i18n="nav.experience">Experience</a></li>
       <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -74,8 +75,8 @@
         </button>
         <ul class="lang-menu" role="listbox" aria-label="Language">
           <li role="presentation"><button type="button" role="option" data-lang="en">English</button></li>
-          <li role="presentation"><button type="button" route="option" data-lang="bm">Bahasa Melayu</button></li>
-          <li role="presentation"><button type="button" route="option" data-lang="ta">தமிழ்</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="bm">Bahasa Melayu</button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="ta">தமிழ்</button></li>
         </ul>
       </div>
       <a href="../experience.html#register" class="btn btn-primary" data-i18n="cta.preview">Join a Free Preview</a>
@@ -84,99 +85,206 @@
   <div class="drawer-overlay" aria-hidden="true"></div>
 
   <main>
-    <!-- ================= SERVICE HEADER ================= -->
-    <section class="service-header reveal">
+    <!-- ================= HERO ================= -->
+    <section class="d-hero tint">
       <div class="container">
-        <div class="service-header-image">
-          <img src="../images/web/gallery2-1600.jpg" alt="Basic SMP students practicing memory techniques" data-i18n-alt="alt.basic-smp">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Services</a></li>
+            <li aria-current="page">Basic SMP</li>
+          </ol>
+        </nav>
+        <div class="d-hero-grid" style="margin-top:clamp(1.6rem,3vw,2.6rem);">
+          <div>
+            <p class="eyebrow reveal">Free School Programme · Tamil Schools</p>
+            <h1 class="reveal reveal-delay-1">Basic SMP</h1>
+            <p class="tagline reveal reveal-delay-1">A free introduction to memory &amp; learning</p>
+            <p class="lead reveal reveal-delay-2">
+              A free introductory Super Memory Programme experience designed for Tamil schools —
+              giving students their first encounter with AMA's memory and learning methodology.
+            </p>
+            <div class="facts d-hero-facts reveal reveal-delay-3">
+              <div><strong>FREE</strong><span>For Tamil schools</span></div>
+              <div><strong>SMP YOGA</strong><span>Movement &amp; focus</span></div>
+              <div><strong>10 HABITS</strong><span>Protect your brain</span></div>
+            </div>
+            <div class="sv-actions reveal reveal-delay-4">
+              <a class="btn btn-primary" href="../contact.html">
+                Bring Basic SMP to Your School
+                <svg class="arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="index.html">All Programmes</a>
+            </div>
+          </div>
+          <div class="d-hero-media reveal reveal-delay-2">
+            <div class="main-frame">
+              <img src="../images/web/gallery5-1600.jpg" alt="Students practising SMP Yoga together on a school field">
+            </div>
+          </div>
         </div>
-        <span class="service-badge">FREE SCHOOL PROGRAMME</span>
-        <h1 data-i18n="sv.basic-smp.title">Basic Super Memory Programme</h1>
-        <p class="service-tagline" data-i18n="sv.basic-smp.tagline">A Free Introduction to Memory & Learning</p>
-        <div class="whatsapp-contact-bar">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
-          <span data-i18n="sv.basic-smp.wa">Chat with us about Basic SMP</span>
+      </div>
+    </section>
+
+    <!-- ================= OVERVIEW ================= -->
+    <section class="section">
+      <div class="container d-overview">
+        <div class="sec-head">
+          <p class="eyebrow reveal">Programme overview</p>
+          <h2 class="display-2 reveal reveal-delay-1">A First Step Into The Super Memory Programme</h2>
+        </div>
+        <div class="reveal reveal-delay-2" style="margin-top:1.6rem;">
+          <p>Basic SMP is designed to introduce students to the fundamentals of AMA's Super Memory Programme through accessible, practical activities.</p>
+          <p>The programme gives schools an opportunity to expose students to memory and concentration training, and allows students to experience the methodology before deciding whether they want to pursue more extensive training such as the full Super Memory Programme.</p>
+          <p>Everything is delivered inside the school environment, making it an easy starting point for schools that want their students to experience AMA training without any cost.</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section class="section content-section reveal">
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="sv-block sv-school" style="--sv-pad:clamp(64px,9vw,110px);">
       <div class="container">
-        <h2 class="section-title" data-i18n="sv.basic-smp.about.t">A Free Introduction to Super Memory Programme</h2>
-        <p data-i18n="sv.basic-smp.about.p1">
-          Basic SMP is designed to introduce students to the fundamentals of AMA's Super Memory Programme through accessible, practical activities.
-          The programme gives schools an opportunity to expose students to memory and concentration training and allows students to experience the methodology before deciding whether they want to pursue more extensive training.
-        </p>
+        <div class="sec-head center">
+          <p class="eyebrow reveal" style="justify-content:center;">What students experience</p>
+          <h2 class="reveal reveal-delay-1">Simple Practices. Real Foundations.</h2>
+        </div>
+        <div class="xgrid reveal reveal-delay-2" style="margin-top:2.5rem;">
+          <div class="xcard">
+            <span class="xnum">01</span>
+            <h3>SMP Yoga</h3>
+            <p>A series of gentle movements and breathing exercises that help students prepare for learning, develop awareness, concentration and focus.</p>
+          </div>
+          <div class="xcard">
+            <span class="xnum">02</span>
+            <h3>Introduction to SMP</h3>
+            <p>Students get a first-hand introduction to the Super Memory Programme and how AMA's training works.</p>
+          </div>
+          <div class="xcard">
+            <span class="xnum">03</span>
+            <h3>Basic Memory Activities</h3>
+            <p>Simple, engaging memory exercises that show students that remembering can be trained.</p>
+          </div>
+          <div class="xcard">
+            <span class="xnum">04</span>
+            <h3>Concentration &amp; Focus Activities</h3>
+            <p>Practical activities that build attention and focus — foundations for all future learning.</p>
+          </div>
+          <div class="xcard">
+            <span class="xnum">05</span>
+            <h3>The 10 Secrets</h3>
+            <p>An introduction to the 10 Habits to Improve and Protect Your Brain — simple daily habits that support a healthy, trainable mind.</p>
+          </div>
+          <div class="xcard">
+            <span class="xnum">06</span>
+            <h3>A Positive Learning Experience</h3>
+            <p>Students leave knowing that learning ability is not fixed — it can be developed with practice.</p>
+          </div>
+        </div>
+        <div class="homevisit reveal reveal-delay-3" style="background:#fff;border-color:var(--blue-100);">
+          <b>10</b>
+          <div>
+            <strong>Habits to Improve and Protect Your Brain</strong>
+            <span>The complete module is available through AMA — contact us to learn more about what the programme covers.</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= SMP YOGA ================= -->
-    <section class="section tone-light content-section reveal">
-      <div class="container">
-        <h2 class="section-title" data-i18n="sv.basic-smp.yoga.t">SMP YOGA</h2>
-        <p data-i18n="sv.basic-smp.yoga.p1">
-          Explain the role it plays within the introductory experience without inventing medical claims.
-          SMP Yoga is a series of gentle movements and breathing exercises designed to help students prepare themselves for learning, develop greater awareness, concentration and focus.
-        </p>
+    <!-- ================= WHO IS IT FOR ================= -->
+    <section class="section">
+      <div class="container sv-grid flip">
+        <div>
+          <div class="sec-head">
+            <p class="eyebrow reveal">Who is it for?</p>
+            <h2 class="display-2 reveal reveal-delay-1">Built For Tamil Schools</h2>
+          </div>
+          <ul class="checklist reveal reveal-delay-2" style="margin-top:1.6rem;display:grid;gap:0.7rem;">
+            <li>Tamil schools that want students to experience memory training</li>
+            <li>Students meeting AMA's learning methodology for the first time</li>
+            <li>Schools looking for a free, accessible starting point</li>
+            <li>Teachers and headmasters exploring longer-term programmes such as PBB90</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sec-head">
+            <p class="eyebrow reveal">Why schools choose it</p>
+            <h2 class="display-2 reveal reveal-delay-1">Experience Before Commitment</h2>
+          </div>
+          <ul class="checklist reveal reveal-delay-2" style="margin-top:1.6rem;display:grid;gap:0.7rem;">
+            <li>Completely free of charge for Tamil schools</li>
+            <li>Delivered within the school environment</li>
+            <li>Introduces practices students can use immediately</li>
+            <li>A natural pathway into the full Super Memory Programme</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ================= 10 SECRETS ================= -->
-    <section class="section content-section reveal">
+    <!-- ================= PROGRAMME INFORMATION ================= -->
+    <section class="section tone-light">
       <div class="container">
-        <h2 class="section-title" data-i18n="sv.basic-smp.secrets.t">10 SECRETS</h2>
-        <h3 data-i18n="sv.basic-smp.secrets.subtitle">10 HABITS TO IMPROVE AND PROTECT YOUR BRAIN</h3>
-        <p data-i18n="sv.basic-smp.secrets.p1">
-          If the actual ten habits exist somewhere in the repository, DISPLAY THEM.
-          If they do not exist, DO NOT INVENT TEN HABITS.
-          Instead clearly say that the complete module can be obtained/discussed with AMA.
-        </p>
-        <p data-i18n="sv.basic-smp.secrets.p2">
-          For the complete module, please contact AMA directly.
-        </p>
-        <a href="../contact.html" class="btn btn-white" data-i18n="sv.basic-smp.secrets.cta">Contact Us on WhatsApp</a>
+        <div class="sec-head">
+          <p class="eyebrow reveal">Programme information</p>
+          <h2 class="display-2 reveal reveal-delay-1">The Essentials</h2>
+        </div>
+        <dl class="info-table reveal reveal-delay-2" style="max-width:52rem;margin-top:2rem;">
+          <div><dt>Format</dt><dd>In-school introductory programme</dd></div>
+          <div><dt>Fee</dt><dd>Free for Tamil schools</dd></div>
+          <div><dt>Focus</dt><dd>Memory basics, concentration &amp; focus, brain-healthy habits</dd></div>
+          <div><dt>Arrangement</dt><dd>Contact AMA to discuss scheduling a session at your school</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- ================= WHY SCHOOLS SHOULD CONTACT AMA ================= -->
-    <section class="section content-section reveal">
+    <!-- ================= GALLERY ================= -->
+    <section class="section">
       <div class="container">
-        <h2 class="section-title" data-i18n="sv.basic-smp.contact.t">Why Schools Should Contact AMA</h2>
-        <p data-i18n="sv.basic-smp.contact.p1">
-          Explain that the programme is offered free to Tamil schools and schools can contact AMA to discuss arranging a session.
-        </p>
-        <div class="highlight-box">
-          <h3 data-i18n="sv.basic-smp.contact.h3">Interested in a Free Basic SMP Session?</h3>
-          <p data-i18n="sv.basic-smp.contact.p2">Talk to our team about bringing the programme to your school.</p>
-          <a href="../contact.html" class="btn btn-primary btn-lg" data-i18n="sv.basic-smp.contact.cta">Contact Us on WhatsApp</a>
+        <div class="sec-head">
+          <p class="eyebrow reveal">Gallery</p>
+          <h2 class="display-2 reveal reveal-delay-1">Basic SMP In Action</h2>
+        </div>
+        <div class="photo-grid reveal reveal-delay-2" style="margin-top:2.2rem;">
+          <picture><img src="../images/web/gallery2-1600.jpg" alt="Students enjoying a group activity during an AMA school session" loading="lazy"></picture>
+          <picture><img src="../images/web/gallery6-1600.jpg" alt="A large student session led by Achievers Mind Academy" loading="lazy"></picture>
+          <picture><img src="../images/web/gallery3-1600.jpg" alt="A student participating actively during training" loading="lazy"></picture>
         </div>
       </div>
     </section>
 
     <!-- ================= FINAL CTA ================= -->
-    <section class="section tone-light content-section reveal">
+    <section class="band-final section">
       <div class="container">
-        <div class="lede-block center">
-          <h2 class="section-title" data-i18n="sv.basic-smp.final.t">Ready To Join?</h2>
-          <p data-i18n="sv.basic-smp.final.p1">Apply / Register</p>
-          <a href="../experience.html#register" class="btn btn-primary btn-lg" data-i18n="sv.basic-smp.final.cta">Apply / Register</a>
-        </div>
-        <div class="highlight-box reveal" style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-          <h3 data-i18n="sv.basic-smp.assist.t">Need Assistance?</h3>
-          <p data-i18n="sv.basic-smp.assist.p">Questions about Basic SMP?</p>
-          <p data-i18n="sv.basic-smp.assist.p2">Feel free to chat with us on WhatsApp.</p>
-          <a href="https://api.whatsapp.com/send?phone=60102027575" class="btn btn-primary btn-lg" data-i18n="sv.basic-smp.assist.cta">Chat With Us on WhatsApp →</a>
+        <div class="sec-head center">
+          <p class="eyebrow reveal" style="justify-content:center;">Ready to get started?</p>
+          <h2 class="reveal reveal-delay-1">Bring Basic SMP To Your School</h2>
+          <p class="lead reveal reveal-delay-2">
+            Whether you are a parent, teacher or school representative, we are happy to explain
+            the programme and arrange a session.
+          </p>
+          <div class="sv-actions reveal reveal-delay-3" style="justify-content:center;">
+            <a class="btn btn-white btn-lg" href="../contact.html">
+              Contact Us
+              <svg class="arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="../experience.html#register" style="border-color:rgba(255,255,255,0.35);color:#fff;">Apply / Register Interest</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= NEED ASSISTANCE ================= -->
-    <section class="container reveal">
-      <div class="need-assistance-bar reveal">
-        <h3 data-i18n="sv.assist.t">Not sure which programme fits?</h3>
-        <p data-i18n="sv.assist.p">Message us on WhatsApp and we'll help you choose the right starting point for your child.</p>
-        <a href="https://api.whatsapp.com/send?phone=60102027575" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="sv.assist.cta">Chat on WhatsApp</a>
+    <!-- ================= NEED HELP ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="help-band reveal">
+          <div>
+            <h3>Not sure or need assistance?</h3>
+            <p>Have questions about programme suitability, arranging a school session, dates or requirements? Feel free to chat with us on WhatsApp.</p>
+          </div>
+          <a class="btn btn-wa btn-lg" data-whatsapp-link data-whatsapp-text="Hello, I would like to know more about Basic SMP." href="https://api.whatsapp.com/send?phone=60102027575" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.15em;height:1.15em;"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+            Chat With Us on WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -188,7 +296,7 @@
         <div>
           <a class="brand" href="../index.html">
             <img src="../images/web/logo.webp" alt="Achievers Mind Academy logo" width="40" height="40" data-i18n-alt="alt.logo">
-            <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory & Learning Skills</small></span>
+            <span class="brand-name">Achievers Mind Academy<small data-i18n="brand.tagline">Memory &amp; Learning Skills</small></span>
           </a>
           <p style="margin-top:1.1rem;" data-i18n="footer.desc">A Malaysian educational enrichment academy specialising in memory training, learning skills and cognitive development for students.</p>
           <div class="footer-social" style="margin-top:1.2rem;">
@@ -233,18 +341,21 @@
       </div>
       <div class="footer-meta">
         <p><span>©</span> <span data-year>2026</span> <span data-i18n="footer.rightsB">Achievers Mind Academy. All rights reserved.</span></p>
-        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management & book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
+        <p class="corp" data-i18n="footer.corp">Registered business: 002744992W / 201703417057 · Registered 14 November 2017 · Business scope: event management &amp; book sales. Programmes operate with official approval from the Ministry of Education Malaysia (KPM).</p>
       </div>
     </div>
   </footer>
 
-  <a class="mobile-cta" href="../experience.html#register">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    <span data-i18n="cta.preview">Join a Free Preview</span>
+  <!-- ================= MOBILE CTA ================= -->
+  <a class="mobile-cta" href="../contact.html">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+    <span>Contact Us on WhatsApp</span>
   </a>
 
+  <!-- JavaScript -->
   <script src="../js/i18n.js"></script>
   <script src="../js/translations.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/services.js"></script>
 </body>
 </html>

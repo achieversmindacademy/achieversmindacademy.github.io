@@ -180,7 +180,6 @@ const translations = {
     'sv.adult.info.fee': 'FEE',
     'sv.adult.details.t': 'Programme Details Coming Soon',
     'sv.adult.details.p1': 'More information about the modules, schedule and programme experience will be added soon.',
-    'sv.adult.details.p2': 'Do not invent missing details.',
     'sv.adult.details.important.h3': 'Important',
     'sv.adult.details.important.p1': 'Designed to support memory development and cognitive training through structured exercises and techniques.',
     'sv.adult.details.important.p2': 'For more information, contact AMA directly.',

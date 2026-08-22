@@ -1397,5 +1397,5 @@ footer {
 
 /* --------------------------------------------------------------------------
    28. SERVICES COMPONENTS
+   Services pages load css/services.css directly after this file.
    -------------------------------------------------------------------------- */
-@import "_services.css";
