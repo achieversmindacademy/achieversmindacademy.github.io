@@ -29,7 +29,7 @@ All third-party integrations are configured in one place: **`js/main.js` → `AM
 
 ## Languages
 
-English is the default and is always available — every HTML page carries the English text natively. Bahasa Malaysia and Tamil are wired into the switcher UI (`js/i18n.js`, keyed by `data-i18n` attributes) but their dictionaries in **`js/translations.js`** (`window.AMA_T`) are **not yet populated** — selecting them currently falls back to English. Missing keys always fall back to English automatically, so translations can be added progressively. Language choice persists in `localStorage` (`ama-lang`).
+English is the default and is always available — every HTML page carries the English text natively. Full **Bahasa Malaysia** and **Tamil** dictionaries live in `js/translations.js` (`window.AMA_T`, keyed by `data-i18n` attributes). The engine in `js/i18n.js` swaps text, placeholders, alt text and aria-labels on the fly; missing keys fall back to English automatically. Language choice persists in `localStorage` (`ama-lang`).
 
 ## Images
 
