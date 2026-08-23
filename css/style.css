@@ -1399,3 +1399,255 @@ footer {
    28. SERVICES COMPONENTS
    Services pages load css/services.css directly after this file.
    -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   29. ACHIEVEMENTS PAGE COMPONENTS
+   -------------------------------------------------------------------------- */
+
+/* Featured world-record student cards */
+.record-stack { display: grid; gap: 2rem; margin-top: 3rem; }
+
+.record-feature {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: clamp(1.6rem, 3.4vw, 2.6rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  box-shadow: var(--shadow-md);
+}
+
+.rf-medal { align-self: start; text-align: center; }
+.rf-medal .medal {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, #fdf7e7 0%, #f6eed6 55%, #efe0b4 100%);
+  border: 1px solid rgba(196, 154, 47, 0.35);
+  color: var(--gold-600);
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.55);
+}
+.rf-medal .medal svg { width: 44%; height: 44%; }
+.rf-medal .medal-cap {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-700);
+}
+
+.rf-badges { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.9rem; }
+.badge-rec {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.34rem 0.85rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.71rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge-rec svg { width: 0.9rem; height: 0.9rem; flex: none; }
+.badge-guinness { background: var(--blue-900); color: #fff; }
+.badge-wbr { background: linear-gradient(140deg, var(--gold-500), var(--gold-600)); color: #241a04; }
+.badge-ambr { background: var(--blue-600); color: #fff; }
+.badge-student { background: var(--blue-50); color: var(--blue-700); border: 1px solid var(--blue-200); }
+
+.record-feature h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); letter-spacing: -0.02em; }
+.rf-tagline { margin-top: 0.25rem; font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); }
+
+.rf-quote {
+  margin-top: 0.95rem;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 3px solid var(--gold-500);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.rf-desc { margin-top: 0.85rem; font-size: 0.95rem; color: var(--ink-muted); }
+.rf-desc p + p { margin-top: 0.6rem; }
+
+.rf-facts {
+  margin-top: 1.15rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem 1.5rem;
+}
+.rf-facts dt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.rf-facts dd { margin-top: 0.12rem; font-size: 0.9rem; font-weight: 600; color: var(--ink); line-height: 1.45; }
+
+.rf-train {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--radius);
+  padding: 0.95rem 1.1rem;
+}
+.rf-train svg { width: 1.25rem; height: 1.25rem; color: var(--blue-700); flex: none; margin-top: 0.12rem; }
+.rf-train p { font-size: 0.89rem; color: var(--ink); line-height: 1.6; }
+.rf-train strong { color: var(--blue-900); }
+
+/* AMBR sub-headings + record cards */
+.ambr-subhead { margin-top: 3.5rem; max-width: 46rem; }
+.ambr-subhead h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); margin-top: 0.4rem; }
+.ambr-subhead p { margin-top: 0.65rem; color: var(--ink-muted); font-size: 0.98rem; }
+
+.ambr-grid {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.ambr-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.35rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ambr-card:hover { transform: translateY(-4px); border-color: var(--blue-100); box-shadow: var(--shadow-md); }
+.ambr-top { display: flex; align-items: center; gap: 0.65rem; }
+.ambr-num {
+  display: grid;
+  place-items: center;
+  min-width: 2.05rem;
+  height: 2.05rem;
+  padding: 0 0.3rem;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--gold-500), var(--gold-700));
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.ambr-card h4 { font-size: 1rem; line-height: 1.3; }
+.ambr-rec {
+  margin-top: 0.75rem;
+  font-size: 0.87rem;
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 500;
+}
+.ambr-meta { margin-top: auto; padding-top: 0.85rem; display: grid; gap: 0.18rem; justify-items: start; }
+.ambr-meta span { font-size: 0.77rem; color: var(--ink-soft); line-height: 1.45; }
+.chip-level {
+  margin-top: 0.65rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  background: var(--gold-100);
+  border: 1px solid rgba(196, 154, 47, 0.4);
+  color: var(--gold-700);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Name chips — additional achievers */
+.name-cloud { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
+.name-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.95rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+.name-chip svg { width: 0.85rem; height: 0.85rem; color: var(--gold-600); flex: none; }
+
+/* Sources strip */
+.src-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 1.8rem;
+  margin-top: 2.4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+.src-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.src-strip svg { width: 0.95rem; height: 0.95rem; flex: none; }
+.src-note { margin-top: 1.1rem; text-align: center; font-size: 0.86rem; color: var(--ink-soft); }
+
+/* Coming-soon panels */
+.soon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.soon-panel {
+  text-align: center;
+  background: var(--bg-soft);
+  border: 1.5px dashed var(--line-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.1rem, 4.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+.soon-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.34rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(140deg, var(--gold-500), var(--gold-600));
+  color: #241a04;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.soon-chip::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #241a04; opacity: 0.75; }
+.soon-panel h3 { margin-top: 1.05rem; font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
+.soon-panel p { margin: 0.65rem auto 0; max-width: 26rem; font-size: 0.93rem; color: var(--ink-muted); }
+.soon-panel .btn { margin-top: 1.35rem; }
+
+@media (max-width: 1100px) {
+  .ambr-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .record-feature { grid-template-columns: 1fr; }
+  .rf-medal { max-width: 190px; margin-inline: auto; }
+  .rf-facts { grid-template-columns: repeat(2, 1fr); }
+  .soon-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .rf-facts { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ambr-grid { grid-template-columns: 1fr; }
+}
