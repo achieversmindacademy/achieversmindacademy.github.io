@@ -166,8 +166,14 @@ var AMA_CONFIG = {
       if (e.key === 'Escape') closeLightbox();
     });
     document.querySelectorAll('.photo-grid img, .split-media img').forEach(function (img) {
-      img.addEventListener('click', function () {
-        openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+      img.addEventListener('click', function (e) {
+        var link = img.closest('a');
+        if (link && link.getAttribute('href')) {
+          e.preventDefault();
+          openLightbox(link.getAttribute('href'), img.getAttribute('alt'));
+        } else {
+          openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+        }
       });
     });
     document.body.appendChild(lb);

@@ -6,8 +6,8 @@ Official website for **Achievers Mind Academy**, a Malaysian educational enrichm
 
 - `index.html` — Home (hero → why we're different → free preview → Super Memory Programme → demonstrations → founder → achievements → Malaysia map → social → final CTA)
 - `about.html` — Story, founder (Master Alagan Govindan), methodology, recognition, community, corporate information
-- `programmes.html` — Super Memory Programme, student journey, FAQ
-- `achievements.html` — Demonstrations in action, official social channels
+- `programmes.html` — redirect stub to `services/index.html` (kept for old links, noindexed)
+- `achievements.html` — world records (Guinness WR, World Book of Records), 27 AMBR national record directory, awards panels (AMA / Master Alagan), demonstrations, social channels
 - `experience.html` — Free preview funnel + preview registration form
 - `contact.html` — Channels, headquarters, general enquiry form
 
@@ -29,7 +29,7 @@ All third-party integrations are configured in one place: **`js/main.js` → `AM
 
 ## Languages
 
-English is the default and is always available — every HTML page carries the English text natively. The full Bahasa Malaysia and Tamil dictionaries live in a single file, **`js/translations.js`** (`window.AMA_T`, keyed by `data-i18n` attributes). The engine in `js/i18n.js` swaps text, placeholders, alt text and aria-labels on the fly; missing keys fall back to English automatically, so translations can be added progressively. Language choice persists in `localStorage` (`ama-lang`).
+English is the default and is always available — every HTML page carries the English text natively. Bahasa Malaysia and Tamil are wired into the switcher UI (`js/i18n.js`, keyed by `data-i18n` attributes) but their dictionaries in **`js/translations.js`** (`window.AMA_T`) are **not yet populated** — selecting them currently falls back to English. Missing keys always fall back to English automatically, so translations can be added progressively. Language choice persists in `localStorage` (`ama-lang`).
 
 ## Images
 
@@ -41,7 +41,7 @@ python3 images_optimize.py   # (script kept locally; uses Pillow)
 
 ## Content notes
 
-Only verified facts are used: registration 002744992W / 201703417057 (14 Nov 2017), HQ C-6-1 Jalan Mutiara 2, Mutiara Business Park, Selangor; founder Master Alagan Govindan (MSc Training & Development, University of Leicester, UK; 33+ years of Super Memory Programmes); regions Selangor, Johor, Perak, Pahang; community venues YMCA Brickfields, Digital Wave Academy (Klang), Sri Subramaniar Paripalana Saba (Johor); official handles @achievers.mind.academy (Instagram, TikTok).
+Only verified facts are used: registration SSM No. 201703417057, HQ C-6-1 Jalan Mutiara 2, Mutiara Business Park, Selangor; founder Master Alagan Govindan (MSc Training & Development, University of Leicester, UK; 33+ years of Super Memory Programmes); regions Selangor, Johor, Perak, Pahang; community venues YMCA Brickfields, Digital Wave Academy (Klang), Sri Subramaniar Paripalana Saba (Johor); official handles @achievers.mind.academy (Instagram, TikTok).
 
 **Client-supplied assets still needed:**
 1. High-quality portrait of Master Alagan (drop into `about.html` founder section and homepage founder section).
