@@ -1651,3 +1651,51 @@ footer {
   .rf-facts { grid-template-columns: 1fr; gap: 0.6rem; }
   .ambr-grid { grid-template-columns: 1fr; }
 }
+/* --------------------------------------------------------------------------
+   30. TAMIL SCRIPT SUPPORT
+   js/i18n.js sets <html lang="ta"> when தமிழ் is selected. Indic scripts need
+   looser metrics than Latin: negative tracking breaks conjunct shaping and
+   tight line-heights clip glyphs. Noto Sans Tamil ships on every page.
+   -------------------------------------------------------------------------- */
+html[lang="ta"] {
+  --font-display: "Noto Sans Tamil", "Inter", system-ui, sans-serif;
+  --font-body: "Noto Sans Tamil", "Inter", system-ui, -apple-system, sans-serif;
+}
+html[lang="ta"] body { line-height: 1.8; }
+
+/* Headings: kill negative tracking, open up vertical rhythm */
+html[lang="ta"] h1,
+html[lang="ta"] h2,
+html[lang="ta"] h3,
+html[lang="ta"] h4,
+html[lang="ta"] .display-1,
+html[lang="ta"] .display-2 { letter-spacing: 0; line-height: 1.5; }
+html[lang="ta"] .display-1 { line-height: 1.4; }
+html[lang="ta"] .lead { line-height: 1.95; }
+html[lang="ta"] .prose p { line-height: 1.9; }
+html[lang="ta"] .feature p,
+html[lang="ta"] .prog-card p,
+html[lang="ta"] .journey-step p { line-height: 1.85; }
+html[lang="ta"] .faq-a p { line-height: 1.9; }
+
+/* Small caps / tracked labels: uppercase is meaningless in Tamil;
+   relax tracking so conjuncts breathe */
+html[lang="ta"] .eyebrow,
+html[lang="ta"] .medal-cap,
+html[lang="ta"] .soon-chip,
+html[lang="ta"] .badge-rec,
+html[lang="ta"] .chip-level,
+html[lang="ta"] footer h4,
+html[lang="ta"] .founder-creds dt,
+html[lang="ta"] .rf-facts dt,
+html[lang="ta"] .rf-train p,
+html[lang="ta"] .hq-fact .label,
+html[lang="ta"] .ambr-meta span,
+html[lang="ta"] .src-strip a,
+html[lang="ta"] .lede-note,
+html[lang="ta"] .src-note { letter-spacing: 0.02em; text-transform: none; }
+html[lang="ta"] .stat-num,
+html[lang="ta"] .rf-quote { letter-spacing: 0; }
+
+/* Buttons: Tamil strings run long — let them wrap instead of overflowing */
+html[lang="ta"] .btn { white-space: normal; }

@@ -1026,3 +1026,16 @@
   .gallery-grid { grid-template-columns: 1fr; }
   .collage { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   TAMIL SCRIPT SUPPORT (<html lang="ta">, set by js/i18n.js)
+   ========================================================================== */
+html[lang="ta"] .sv-hero h1 { letter-spacing: 0; line-height: 1.45; }
+html[lang="ta"] .sv-copy h2,
+html[lang="ta"] .sv-copy h3 { letter-spacing: 0; line-height: 1.45; }
+html[lang="ta"] .sv-index b { letter-spacing: 0; }
+html[lang="ta"] .facts strong { letter-spacing: 0; }
+html[lang="ta"] .prog-nav-label,
+html[lang="ta"] .sv-index span,
+html[lang="ta"] .facts span,
+html[lang="ta"] .sv-hero-card small { letter-spacing: 0.03em; text-transform: none; }
