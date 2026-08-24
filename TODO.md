@@ -12,6 +12,7 @@
 - [x] Responsive WebP/JPEG image optimization (2.6–3.3MB → 49–139KB)
 - [x] Lazy loading, IntersectionObserver reveals, lightbox, reduced-motion support
 - [x] Full i18n system: EN native in HTML + complete BM/Tamil dictionaries in js/translations.js, on-the-fly switching, persisted choice
+- [x] Awards section live: Master Alagan's honours (Aryavarta World Record, TSA Rashtriya Samman 2023, AMBR MAA 2024) + academy recognition (Yoga University of the Americas affiliation, AMBR National Record plaque) with certificate photos, IDs, dates and source links
 - [x] Forms wired to configurable endpoint with honest unconfigured state
 - [x] WhatsApp buttons config-gated (hidden until real number provided)
 - [x] GitHub Actions Pages deployment workflow + .nojekyll
@@ -22,5 +23,4 @@
 - [ ] Official Facebook page URL (links hidden until provided)
 - [ ] Form backend endpoint (forms show honest notice until connected)
 - [ ] KPM certificate/documentation image if available
-- [ ] Real student achievement stories/records for the Achievements page
-- [ ] Headless-browser QA of the language switcher across all pages
+- [ ] Real student achievement stories/records for the Achievements page- [ ] Headless-browser QA of the language switcher across all pages

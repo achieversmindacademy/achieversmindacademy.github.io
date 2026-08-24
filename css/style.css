@@ -1608,48 +1608,102 @@ footer {
 .src-strip svg { width: 0.95rem; height: 0.95rem; flex: none; }
 .src-note { margin-top: 1.1rem; text-align: center; font-size: 0.86rem; color: var(--ink-soft); }
 
-/* Coming-soon panels */
-.soon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-.soon-panel {
-  text-align: center;
-  background: var(--bg-soft);
-  border: 1.5px dashed var(--line-strong);
-  border-radius: var(--radius-lg);
-  padding: clamp(2.1rem, 4.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+/* Founder & academy awards */
+.aw-subhead { margin-top: 3.5rem; max-width: 46rem; }
+.aw-subhead h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); margin-top: 0.4rem; }
+.aw-subhead p { margin-top: 0.65rem; color: var(--ink-muted); font-size: 0.98rem; }
+
+.aw-grid {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
-.soon-chip {
+.aw-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.aw-card:hover { transform: translateY(-4px); border-color: var(--blue-100); box-shadow: var(--shadow-md); }
+.aw-photo { position: relative; margin: 0; border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+.aw-photo a { display: block; cursor: zoom-in; }
+.aw-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+.aw-zoom {
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.7rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.34rem 0.9rem;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  background: linear-gradient(140deg, var(--gold-500), var(--gold-600));
-  color: #241a04;
-  font-family: var(--font-display);
+  background: rgba(12, 24, 46, 0.74);
+  color: #fff;
   font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+.aw-zoom svg { width: 0.85rem; height: 0.85rem; flex: none; }
+.aw-body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.25rem 1.3rem; }
+.aw-issuer {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  background: var(--gold-100);
+  border: 1px solid rgba(196, 154, 47, 0.4);
+  color: var(--gold-700);
+  font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.soon-chip::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #241a04; opacity: 0.75; }
-.soon-panel h3 { margin-top: 1.05rem; font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
-.soon-panel p { margin: 0.65rem auto 0; max-width: 26rem; font-size: 0.93rem; color: var(--ink-muted); }
-.soon-panel .btn { margin-top: 1.35rem; }
+.aw-body h4 { margin-top: 0.8rem; font-size: 1.02rem; line-height: 1.35; }
+.aw-facts { margin-top: 0.85rem; display: grid; gap: 0.5rem; }
+.aw-facts dt {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.aw-facts dd { margin-top: 0.05rem; font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.45; }
+.aw-desc { margin-top: 0.85rem; font-size: 0.88rem; line-height: 1.6; color: var(--ink-muted); }
+.aw-link {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.aw-link svg { width: 0.9rem; height: 0.9rem; flex: none; }
 
 @media (max-width: 1100px) {
   .ambr-grid { grid-template-columns: repeat(2, 1fr); }
+  .aw-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
   .record-feature { grid-template-columns: 1fr; }
   .rf-medal { max-width: 190px; margin-inline: auto; }
   .rf-facts { grid-template-columns: repeat(2, 1fr); }
-  .soon-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
   .rf-facts { grid-template-columns: 1fr; gap: 0.6rem; }
   .ambr-grid { grid-template-columns: 1fr; }
+  .aw-grid { grid-template-columns: 1fr; }
 }
 /* --------------------------------------------------------------------------
    30. TAMIL SCRIPT SUPPORT
@@ -1682,12 +1736,15 @@ html[lang="ta"] .faq-a p { line-height: 1.9; }
    relax tracking so conjuncts breathe */
 html[lang="ta"] .eyebrow,
 html[lang="ta"] .medal-cap,
-html[lang="ta"] .soon-chip,
+html[lang="ta"] .aw-issuer,
+html[lang="ta"] .aw-zoom,
+html[lang="ta"] .aw-link,
 html[lang="ta"] .badge-rec,
 html[lang="ta"] .chip-level,
 html[lang="ta"] footer h4,
 html[lang="ta"] .founder-creds dt,
 html[lang="ta"] .rf-facts dt,
+html[lang="ta"] .aw-facts dt,
 html[lang="ta"] .rf-train p,
 html[lang="ta"] .hq-fact .label,
 html[lang="ta"] .ambr-meta span,

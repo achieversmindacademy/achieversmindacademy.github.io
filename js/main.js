@@ -165,7 +165,7 @@ var AMA_CONFIG = {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeLightbox();
     });
-    document.querySelectorAll('.photo-grid img, .split-media img').forEach(function (img) {
+    document.querySelectorAll('.photo-grid img, .split-media img, .aw-photo img').forEach(function (img) {
       img.addEventListener('click', function (e) {
         var link = img.closest('a');
         if (link && link.getAttribute('href')) {
