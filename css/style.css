@@ -1778,3 +1778,284 @@ html[lang="ta"] .brand-name small { letter-spacing: 0.02em; text-transform: none
 /* Mobile drawer rows: same compact rhythm, still comfortable to tap */
 html[lang="bm"] .drawer-links a,
 html[lang="ta"] .drawer-links a { font-size: 1rem; }
+
+/* --------------------------------------------------------------------------
+   32. ENHANCEMENTS — scroll progress, back-to-top, mini flow, founder chips,
+       memory challenge, method flow, map sync, hover polish
+   -------------------------------------------------------------------------- */
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-600), var(--blue-800) 55%, var(--gold-500));
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 220;
+  pointer-events: none;
+}
+
+/* Back to top */
+.to-top {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--blue-100);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--blue-700);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.6rem);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 95;
+}
+.to-top svg { width: 1.15rem; height: 1.15rem; }
+.to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
+@media (max-width: 900px) {
+  .to-top { bottom: 6.4rem; right: 0.9rem; }
+}
+
+/* Mini flow — the free preview in three beats (home) */
+.mini-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.85rem; counter-reset: mf; }
+.mini-flow li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.95rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.mini-flow li:hover { transform: translateX(4px); border-color: var(--blue-100); box-shadow: var(--shadow-md); }
+.mf-step {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--blue-600), var(--blue-800));
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex: none;
+}
+.mini-flow h3 { font-size: 1.02rem; }
+.mini-flow p { margin-top: 0.15rem; font-size: 0.9rem; color: var(--ink-muted); }
+
+/* Founder chips (home teaser) */
+.fnd-line { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
+.fnd-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.fnd-chip-gold {
+  border-color: rgba(196, 154, 47, 0.65);
+  background: rgba(196, 154, 47, 0.16);
+  color: #ecd9a0;
+}
+
+/* Method flow — how a technique is taught (about) */
+.method-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; max-width: 52rem; }
+.mf-big {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.mf-big::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--blue-600), var(--blue-800));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.mf-big:hover { transform: translateX(5px); border-color: var(--blue-100); box-shadow: var(--shadow-md); }
+.mf-big:hover::after { opacity: 1; }
+.mf-num {
+  display: grid;
+  place-items: center;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  color: var(--blue-700);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  flex: none;
+}
+.mf-big h3 { font-size: 1.15rem; }
+.mf-big p { margin-top: 0.35rem; font-size: 0.95rem; color: var(--ink-muted); }
+
+/* Map <-> list sync */
+.centre-item { transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease; cursor: default; }
+.centre-item.hot {
+  border-color: var(--blue-600);
+  background: var(--blue-50);
+  transform: translateX(3px);
+}
+.centre-item.hot .centre-num { background: var(--blue-800); }
+.malaysia-map .marker { cursor: pointer; }
+.malaysia-map .marker .pin-body,
+.malaysia-map .marker .pin-num-badge { transition: fill 0.15s ease, transform 0.2s ease; transform-box: fill-box; transform-origin: 50% 100%; }
+.malaysia-map .marker.hot .pin-body { fill: var(--gold-600); }
+.malaysia-map .marker.hot .pin-num-badge { fill: var(--gold-500); }
+.malaysia-map .marker.hot { opacity: 1; }
+.malaysia-map .marker.hot .pin-body { transform: scale(1.18); }
+.malaysia-map .marker.dim { opacity: 0.3; }
+
+/* Memory challenge */
+.mem-game {
+  max-width: 46rem;
+  margin: 2.8rem auto 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+}
+.mem-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.6rem 1.2rem; }
+.mem-status { font-weight: 600; color: var(--ink); font-size: 0.98rem; }
+.mem-score {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--blue-700);
+  font-variant-numeric: tabular-nums;
+}
+.mem-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.65rem;
+  perspective: 700px;
+}
+.mem-card {
+  position: relative;
+  aspect-ratio: 3 / 3.6;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  cursor: pointer;
+  padding: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+.mem-card .mem-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: calc(var(--radius) - 2px);
+  backface-visibility: hidden;
+}
+.mem-card .mem-front {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  transform: rotateY(180deg);
+}
+.mem-card .mem-back {
+  background:
+    radial-gradient(120% 90% at 30% 20%, var(--blue-500), var(--blue-800));
+}
+.mem-card .mem-back::after {
+  content: "?";
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.mem-card.up { transform: rotateY(180deg); }
+.mem-card.recall:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.mem-card.recall:not(.up):hover .mem-back { filter: brightness(1.15); }
+.mem-card.correct .mem-front {
+  background: var(--gold-100);
+  border-color: rgba(196, 154, 47, 0.55);
+  animation: memPop 0.35s ease;
+}
+.mem-card.wrong .mem-front {
+  background: #fdeaea;
+  border-color: rgba(200, 60, 60, 0.55);
+  animation: memShake 0.4s ease;
+}
+@keyframes memPop {
+  0% { transform: rotateY(180deg) scale(0.85); }
+  60% { transform: rotateY(180deg) scale(1.08); }
+  100% { transform: rotateY(180deg) scale(1); }
+}
+@keyframes memShake {
+  0%, 100% { transform: rotateY(180deg) translateX(0); }
+  25% { transform: rotateY(180deg) translateX(-5px); }
+  50% { transform: rotateY(180deg) translateX(5px); }
+  75% { transform: rotateY(180deg) translateX(-3px); }
+}
+.mem-actions { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+.mem-actions[hidden], .mem-card[hidden] { display: none; }
+@media (max-width: 640px) {
+  .mem-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Hover polish */
+.prog-card .prog-icon { transition: transform 0.25s ease; }
+.prog-card:hover .prog-icon { transform: scale(1.12) rotate(-4deg); }
+.social-card .go svg { transition: transform 0.2s ease; }
+.social-card:hover .go svg { transform: translateX(4px); }
+.ambr-card { position: relative; overflow: hidden; }
+.ambr-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+.ambr-card:hover::after { left: 130%; }
+.btn { transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(30, 59, 216, 0.55); }
+.btn-primary:active { transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+  .mem-card { transition: none; }
+  .mem-card.correct .mem-front,
+  .mem-card.wrong .mem-front { animation: none; }
+  .ambr-card::after { display: none; }
+  .mini-flow li:hover, .mf-big:hover { transform: none; }
+}

@@ -13,6 +13,8 @@
 - [x] Lazy loading, IntersectionObserver reveals, lightbox, reduced-motion support
 - [x] Full i18n system: EN native in HTML + complete BM/Tamil dictionaries in js/translations.js, on-the-fly switching, persisted choice
 - [x] Awards section live: Master Alagan's honours (Aryavarta World Record, TSA Rashtriya Samman 2023, AMBR MAA 2024) + academy recognition (Yoga University of the Americas affiliation, AMBR National Record plaque) with certificate photos, IDs, dates and source links
+- [x] Interactivity pass: 30-second memory challenge game (home), count-up stats, interactive Malaysia map <-> centre list sync, scroll progress bar, back-to-top button, hover micro-interactions
+- [x] De-duplication pass: founder creds (home -> about only), preview agenda (home 3-step teaser -> experience full agenda), centres list (home map only), gallery sections merged (home), social cards (home + contact only), achievements page focused on records + awards, about methodology rewritten as 4-beat teaching method
 - [x] Forms wired to configurable endpoint with honest unconfigured state
 - [x] WhatsApp buttons config-gated (hidden until real number provided)
 - [x] GitHub Actions Pages deployment workflow + .nojekyll

@@ -302,4 +302,198 @@ var AMA_CONFIG = {
       });
     });
   });
+
+  /* ==========================================================
+     ENHANCEMENTS — scroll progress, back-to-top, count-up,
+     map sync, memory challenge. All progressive enhancement:
+     pages work fully without any of this.
+     ========================================================== */
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ---------- Scroll progress bar ---------- */
+    var bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+    var ticking = false;
+    function paintBar() {
+      var doc = document.documentElement;
+      var max = (doc.scrollHeight - window.innerHeight) || 1;
+      bar.style.transform = 'scaleX(' + (window.scrollY / max) + ')';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(paintBar); }
+    }, { passive: true });
+    paintBar();
+
+    /* ---------- Back to top ---------- */
+    var toTop = document.createElement('button');
+    toTop.type = 'button';
+    toTop.className = 'to-top';
+    toTop.setAttribute('aria-label', 'Back to top');
+    toTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    document.body.appendChild(toTop);
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: REDUCED ? 'auto' : 'smooth' });
+    });
+    function paintTop() { toTop.classList.toggle('show', window.scrollY > 700); }
+    window.addEventListener('scroll', paintTop, { passive: true });
+    paintTop();
+
+    /* ---------- Count-up stats ---------- */
+    function countUp(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      if (isNaN(target)) return;
+      if (REDUCED) { el.textContent = target.toFixed(decimals); return; }
+      var dur = 1300, t0 = null;
+      function frame(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals);
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+    var counters = document.querySelectorAll('[data-count]');
+    if (counters.length) {
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              countUp(entry.target);
+              cio.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        counters.forEach(function (el) { cio.observe(el); });
+      } else {
+        counters.forEach(countUp);
+      }
+    }
+
+    /* ---------- Map <-> centre list sync ---------- */
+    var map = document.querySelector('.malaysia-map');
+    if (map) {
+      var markers = map.querySelectorAll('.marker[data-centre]');
+      var items = document.querySelectorAll('.centre-item[data-centre]');
+      function setHot(name, on) {
+        markers.forEach(function (m) {
+          m.classList.toggle('hot', on && m.getAttribute('data-centre') === name);
+          m.classList.toggle('dim', on && m.getAttribute('data-centre') !== name);
+        });
+        items.forEach(function (it) {
+          it.classList.toggle('hot', on && it.getAttribute('data-centre') === name);
+        });
+      }
+      markers.forEach(function (m) {
+        var name = m.getAttribute('data-centre');
+        m.addEventListener('mouseenter', function () { setHot(name, true); });
+        m.addEventListener('mouseleave', function () { setHot(name, false); });
+      });
+      items.forEach(function (it) {
+        var name = it.getAttribute('data-centre');
+        it.addEventListener('mouseenter', function () { setHot(name, true); });
+        it.addEventListener('mouseleave', function () { setHot(name, false); });
+      });
+    }
+
+    /* ---------- Memory challenge ---------- */
+    document.querySelectorAll('[data-mem-game]').forEach(function (game) {
+      var grid = game.querySelector('[data-mem-grid]');
+      var status = game.querySelector('[data-mem-status]');
+      var score = game.querySelector('[data-mem-score]');
+      var startBtn = game.querySelector('[data-mem-start]');
+      var cta = game.querySelector('[data-mem-cta]');
+      if (!grid || !status || !startBtn) return;
+
+      var SYMBOLS = ['\uD83E\uDDE0', '\u2B50', '\uD83C\uDFAF', '\uD83D\uDD22', '\uD83C\uDCCF', '\u231B'];
+      var SHOW_MS = 3500;
+      var seq = [], pos = 0, lock = false;
+      var t = function (key, fallback) {
+        return (window.AMA_I18N && AMA_I18N.t(key)) || fallback;
+      };
+
+      function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+        return arr;
+      }
+
+      function card(btn, symbol, state) {
+        btn.className = 'mem-card' + (state ? ' ' + state : '');
+        btn.innerHTML = '<span class="mem-face mem-front">' + symbol + '</span><span class="mem-face mem-back"></span>';
+        btn.type = 'button';
+        btn.disabled = state !== 'recall';
+        return btn;
+      }
+
+      function showPhase() {
+        lock = true;
+        score.textContent = '';
+        cta.hidden = true;
+        startBtn.hidden = true;
+        status.textContent = t('mem.status.memorize', 'Memorise the order\u2026');
+        grid.innerHTML = '';
+        seq = shuffle(SYMBOLS.slice());
+        seq.forEach(function (sym) {
+          var b = document.createElement('button');
+          card(b, sym, 'up');
+          grid.appendChild(b);
+        });
+        setTimeout(recallPhase, REDUCED ? 2000 : SHOW_MS);
+      }
+
+      function recallPhase() {
+        pos = 0;
+        lock = false;
+        status.textContent = t('mem.status.recall', 'Now click them back in the same order.');
+        grid.innerHTML = '';
+        shuffle(seq.slice()).forEach(function (sym) {
+          var b = document.createElement('button');
+          card(b, sym, 'recall');
+          b.setAttribute('aria-label', 'Hidden card');
+          b.addEventListener('click', function () { pick(b, sym); });
+          grid.appendChild(b);
+        });
+      }
+
+      function pick(btn, sym) {
+        if (lock || btn.disabled) return;
+        if (sym === seq[pos]) {
+          pos++;
+          card(btn, sym, 'up correct');
+          btn.disabled = true;
+          if (pos === seq.length) finish(true);
+        } else {
+          lock = true;
+          card(btn, sym, 'up wrong');
+          finish(false);
+        }
+      }
+
+      function finish(won) {
+        lock = true;
+        var n = pos;
+        score.textContent = n + ' / ' + seq.length;
+        if (won) {
+          status.textContent = t('mem.status.win', 'Perfect \u2014 6 out of 6! Now imagine doing it blindfolded.');
+          cta.hidden = false;
+        } else {
+          status.textContent = t('mem.status.fail', 'You got {n} of 6 before the chain broke \u2014 this is exactly the gap training closes.').replace('{n}', n);
+          cta.hidden = false;
+        }
+        startBtn.textContent = t('mem.again', 'Play again');
+        startBtn.hidden = false;
+      }
+
+      startBtn.addEventListener('click', showPhase);
+    });
+  });
 })();
