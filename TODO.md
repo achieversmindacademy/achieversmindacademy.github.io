@@ -30,3 +30,9 @@
 - [ ] Real student achievement stories/records for the Achievements page
 - [ ] Headless-browser QA of the language switcher across all pages
 - [ ] Services sub-pages (basic-smp, SMP, MMCP, holiday camp, adult, PBB90 detail pages) are still English-only — main services page is fully translated (EN/BM/TA)
+- [x] Brand tagline is now "Pathway to Genius" across all pages and languages
+- [x] Home: removed floating preview chip; messy centres map replaced with a clean Kulim-to-Skudai journey line (HQ badge on Rawang)
+- [x] Student photos added to all 15 record cards (Guinness official photo for Punithamalar, AMBR official PDF for the 13, school page for Oviya)
+- [x] Services facts: text no longer touches divider lines (desktop + mobile)
+- [x] Spacing tightened: main sections clamp(4-6.5rem -> 3.4-5.25rem), services --sv-pad clamp(80-140px -> 56-96px)
+- [x] Scroll check: only standard smooth anchor scrolling exists (reduced-motion aware); no scroll-speed manipulation anywhere

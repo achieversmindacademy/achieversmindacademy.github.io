@@ -8,7 +8,7 @@
    0. TOKENS & SCOPE
    -------------------------------------------------------------------------- */
 :root {
-  --sv-pad: clamp(80px, 10vw, 140px);   /* section breathing room */
+  --sv-pad: clamp(56px, 7vw, 96px);   /* section breathing room */
   --sv-w:    1200px;                    /* services container width */
 }
 
@@ -263,9 +263,10 @@
   border-top: 1px solid var(--line-strong);
 }
 .facts > div {
-  padding: 1rem 1.1rem 0.2rem 0;
+  padding: 1rem 1.1rem 0.2rem 1.1rem;
   border-right: 1px solid var(--line);
 }
+.facts > div:first-child { padding-left: 0; }
 .facts > div:last-child { border-right: 0; }
 .facts strong {
   display: block;
@@ -1003,8 +1004,8 @@
 @media (max-width: 640px) {
   .facts { grid-auto-flow: row; grid-template-columns: repeat(2, 1fr); }
   .sv-actions .btn { white-space: normal; text-align: center; }
-  .facts > div { border-right: 0; padding: 0.9rem 0.4rem 0.2rem; border-bottom: 1px solid var(--line); }
-  .facts > div:nth-child(odd) { border-right: 1px solid var(--line); }
+  .facts > div { border-right: 0; padding: 0.9rem 0.4rem 0.2rem 1rem; border-bottom: 1px solid var(--line); }
+  .facts > div:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
 
   .skill-grid { grid-template-columns: 1fr; }
   .collage { grid-template-columns: 1fr 1fr; grid-template-rows: none; }

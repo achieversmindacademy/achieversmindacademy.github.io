@@ -376,32 +376,6 @@ var AMA_CONFIG = {
       }
     }
 
-    /* ---------- Map <-> centre list sync ---------- */
-    var map = document.querySelector('.malaysia-map');
-    if (map) {
-      var markers = map.querySelectorAll('.marker[data-centre]');
-      var items = document.querySelectorAll('.centre-item[data-centre]');
-      function setHot(name, on) {
-        markers.forEach(function (m) {
-          m.classList.toggle('hot', on && m.getAttribute('data-centre') === name);
-          m.classList.toggle('dim', on && m.getAttribute('data-centre') !== name);
-        });
-        items.forEach(function (it) {
-          it.classList.toggle('hot', on && it.getAttribute('data-centre') === name);
-        });
-      }
-      markers.forEach(function (m) {
-        var name = m.getAttribute('data-centre');
-        m.addEventListener('mouseenter', function () { setHot(name, true); });
-        m.addEventListener('mouseleave', function () { setHot(name, false); });
-      });
-      items.forEach(function (it) {
-        var name = it.getAttribute('data-centre');
-        it.addEventListener('mouseenter', function () { setHot(name, true); });
-        it.addEventListener('mouseleave', function () { setHot(name, false); });
-      });
-    }
-
     /* ---------- Memory challenge ---------- */
     document.querySelectorAll('[data-mem-game]').forEach(function (game) {
       var grid = game.querySelector('[data-mem-grid]');
