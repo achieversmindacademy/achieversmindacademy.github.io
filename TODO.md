@@ -16,6 +16,7 @@
 - [x] Interactivity pass: 30-second memory challenge game (home), count-up stats, interactive Malaysia map <-> centre list sync, scroll progress bar, back-to-top button, hover micro-interactions
 - [x] De-duplication pass: founder creds (home -> about only), preview agenda (home 3-step teaser -> experience full agenda), centres list (home map only), gallery sections merged (home), social cards (home + contact only), achievements page focused on records + awards, about methodology rewritten as 4-beat teaching method
 - [x] Fix pass: removed "Built with the community" section (about), header brand no longer shifts on services pages (nav/footer keep main container width), circle+tick lists rebuilt as pixel-perfect SVG badges everywhere (experience register, marshal page, MMCP), map cropped to Peninsular Malaysia, centre-name hover changed from slide to clean colour highlight
+- [x] Services page fully translated: 165 new keys each in BM and Tamil covering hero, all six programme blocks, quick nav, which-programme guide and final CTA
 - [x] Forms wired to configurable endpoint with honest unconfigured state
 - [x] WhatsApp buttons config-gated (hidden until real number provided)
 - [x] GitHub Actions Pages deployment workflow + .nojekyll
@@ -26,4 +27,6 @@
 - [ ] Official Facebook page URL (links hidden until provided)
 - [ ] Form backend endpoint (forms show honest notice until connected)
 - [ ] KPM certificate/documentation image if available
-- [ ] Real student achievement stories/records for the Achievements page- [ ] Headless-browser QA of the language switcher across all pages
+- [ ] Real student achievement stories/records for the Achievements page
+- [ ] Headless-browser QA of the language switcher across all pages
+- [ ] Services sub-pages (basic-smp, SMP, MMCP, holiday camp, adult, PBB90 detail pages) are still English-only — main services page is fully translated (EN/BM/TA)
