@@ -685,6 +685,20 @@ body.drawer-open { overflow: hidden; }
 }
 .split-media img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
 
+/* Founder portrait — preserve the portrait composition used on Mindathon. */
+.split-media.founder-photo {
+  max-width: 470px;
+  width: 100%;
+  justify-self: center;
+}
+.split-media.founder-photo picture {
+  aspect-ratio: 3 / 4;
+  background: var(--paper);
+}
+.split-media.founder-photo img {
+  object-position: 50% 18%;
+}
+
 /* --------------------------------------------------------------------------
    14. CENTRES ROUTE
    -------------------------------------------------------------------------- */
