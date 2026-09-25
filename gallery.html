@@ -193,6 +193,16 @@
   <script src="js/translations.js"></script><script src="js/gallery-translations.js"></script><script src="js/i18n.js"></script><script src="js/main.js"></script>
   <script>
   (function(){
+    function albumLabel(opening){
+      var lang=(window.AMA_I18N&&window.AMA_I18N.get)?window.AMA_I18N.get():'en';
+      var labels={
+        en:{open:'Open folder ↓',close:'Close folder ↑'},
+        bm:{open:'Buka folder ↓',close:'Tutup folder ↑'},
+        ta:{open:'கோப்புறையைத் திற ↓',close:'கோப்புறையை மூடு ↑'}
+      };
+      var set=labels[lang]||labels.en;
+      return opening?set.close:set.open;
+    }
     document.querySelectorAll('[data-album-toggle]').forEach(function(toggle){
       toggle.addEventListener('click',function(){
         var album=toggle.closest('[data-album]');
@@ -209,7 +219,13 @@
         album.classList.toggle('open',opening);
         toggle.setAttribute('aria-expanded',opening?'true':'false');
         var label=toggle.querySelector('.album-open');
-        if(label) label.textContent=opening?'Close folder ↑':'Open folder ↓';
+        if(label) label.textContent=albumLabel(opening);
+      });
+    });
+    document.addEventListener('ama:lang',function(){
+      document.querySelectorAll('[data-album]').forEach(function(album){
+        var label=album.querySelector('.album-open');
+        if(label) label.textContent=albumLabel(album.classList.contains('open'));
       });
     });
     var lb=document.querySelector('.gallery-lightbox'), li=lb.querySelector('img'), lc=lb.querySelector('.gallery-lightbox-caption');
