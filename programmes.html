@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting to Services | Achievers Mind Academy</title>
   <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=services/index.html">
+  
   <style>
     body { font-family: sans-serif; text-align: center; padding: 2rem; }
     a { color: #0066cc; text-decoration: none; }
@@ -13,7 +13,24 @@
   </style>
 </head>
 <body>
-  <p>Redirecting to our Services page...</p>
-  <p>If you are not redirected automatically, <a href="services/index.html">click here</a>.</p>
+  <p id="redirect-title">Redirecting to our Programmes page...</p>
+  <p id="redirect-help">If you are not redirected automatically, <a href="services/index.html" id="redirect-link">click here</a>.</p>
+  <script>
+    (function(){
+      var lang='en';
+      try { lang=localStorage.getItem('ama-lang')||'en'; } catch(e) {}
+      var copy={
+        en:{t:'Redirecting to our Programmes page...',h:'If you are not redirected automatically,',l:'click here'},
+        bm:{t:'Mengalihkan anda ke halaman Program kami...',h:'Jika anda tidak dialihkan secara automatik,',l:'klik di sini'},
+        ta:{t:'எங்கள் பயிற்சி நிரல்கள் பக்கத்திற்கு மாற்றுகிறோம்...',h:'தானாக மாற்றப்படவில்லை என்றால்,',l:'இங்கே சொடுக்குங்கள்'}
+      };
+      var x=copy[lang]||copy.en;
+      document.documentElement.lang=lang==='bm'?'ms':lang;
+      document.getElementById('redirect-title').textContent=x.t;
+      document.getElementById('redirect-help').firstChild.nodeValue=x.h+' ';
+      document.getElementById('redirect-link').textContent=x.l;
+      setTimeout(function(){location.replace('services/index.html')},50);
+    })();
+  </script>
 </body>
 </html>
