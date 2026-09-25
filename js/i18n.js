@@ -28,6 +28,7 @@
   var defaults = {};     // key -> original HTML text (snapshot before any swap)
   var defaultsPh = {};   // key -> original placeholder
   var current = 'en';
+  var staticNodes = []; // legacy text nodes without data-i18n
 
   function persist(lang) {
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* private mode */ }
@@ -47,6 +48,45 @@
     document.querySelectorAll('[data-i18n-ph]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-ph');
       if (defaultsPh[key] === undefined) defaultsPh[key] = el.getAttribute('placeholder') || '';
+    });
+  }
+
+  function snapshotStatic() {
+    staticNodes = [];
+    if (!document.body || !document.createTreeWalker) return;
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var parent = node.parentElement;
+      if (!parent) continue;
+      if (parent.closest('script, style, svg, noscript, textarea')) continue;
+      if (parent.closest('[data-i18n]')) continue;
+      var raw = node.nodeValue || '';
+      var trimmed = raw.trim();
+      if (!trimmed) continue;
+      staticNodes.push({ node: node, raw: raw, source: trimmed });
+    }
+  }
+
+  function applyStatic(lang) {
+    var dict = (window.AMA_STATIC_T && window.AMA_STATIC_T[lang]) || {};
+    var rules = (window.AMA_STATIC_RULES && window.AMA_STATIC_RULES[lang]) || [];
+    staticNodes.forEach(function (item) {
+      if (!item.node || !item.node.parentNode) return;
+      var next = item.source;
+      if (lang !== 'en') {
+        if (dict[item.source] !== undefined && dict[item.source] !== null) {
+          next = dict[item.source];
+        } else {
+          rules.forEach(function (rule) {
+            try { next = next.replace(new RegExp(rule.pattern, rule.flags || 'g'), rule.replace); } catch (e) { /* ignore invalid rule */ }
+          });
+        }
+      }
+      var lead = (item.raw.match(/^\s*/) || [''])[0];
+      var tail = (item.raw.match(/\s*$/) || [''])[0];
+      var value = lead + next + tail;
+      if (item.node.nodeValue !== value) item.node.nodeValue = value;
     });
   }
 
@@ -84,6 +124,8 @@
       var text = (lang === 'en') ? null : t(key, lang);
       if (text) el.setAttribute('alt', text);
     });
+
+    applyStatic(lang);
 
     document.querySelectorAll('[data-lang-code]').forEach(function (el) {
       el.textContent = CODES[lang];
@@ -140,6 +182,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     snapshot();
+    snapshotStatic();
     document.querySelectorAll('[data-lang-select]').forEach(wireDropdown);
     apply(read());
   });
