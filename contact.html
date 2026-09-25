@@ -105,7 +105,6 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
               <span data-i18n="ct.hero.wa">Chat with us on WhatsApp</span>
             </a>
-            <a href="#enquiry" class="btn btn-ghost btn-lg" data-i18n="ct.hero.enquiry">Send an Enquiry</a>
           </div>
           <div class="hero-trust">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span data-i18n="ct.hero.trust1">We reply on WhatsApp</span></span>
@@ -175,49 +174,33 @@
       </div>
     </section>
 
-    <!-- ================= ENQUIRY ================= -->
-    <section class="section" id="enquiry">
-      <div class="container">
-        <div class="ct-enquiry-grid">
-          <div class="form-panel reveal">
-            <p class="eyebrow" data-i18n="ct.form.eyebrow">General enquiry</p>
-            <h2 class="display-2" style="font-size:1.9rem;" data-i18n="ct.form.title">Send us a message.</h2>
-            <p style="margin-top:0.6rem; color:var(--ink-soft);">
-              <span data-i18n="ct.form.subA">For preview session bookings, please use the </span>
-              <a href="experience.html#register" style="color:var(--blue-600);" data-i18n="ct.form.subLink">preview registration form</a>
-              <span data-i18n="ct.form.subB"> — it helps us match you to the right session. For everything else, write to us here.</span>
-            </p>
-            <form data-ama-form novalidate style="margin-top:1.6rem;">
-              <div class="form-field">
-                <label for="c-name" data-i18n="ct.form.name">Your name</label>
-                <input id="c-name" name="name" type="text" autocomplete="name" required data-i18n-ph="ct.form.ph.name" placeholder="Your full name">
-              </div>
-              <div class="form-field" style="margin-top:1.2rem;">
-                <label for="c-message" data-i18n="ct.form.message">Your message</label>
-                <textarea id="c-message" name="message" rows="6" required data-i18n-ph="ct.form.ph.message" placeholder="How can we help?"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-lg" style="margin-top:1.4rem;" data-i18n="ct.form.submit">Send Enquiry</button>
-              <div class="form-status" role="status"></div>
-            </form>
+    <!-- ================= WHATSAPP FIRST ================= -->
+    <section class="section tone-navy" id="whatsapp">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="ct.aside.wa.t">Talk directly with AMA</p>
+          <h2 class="display-2" style="color:#fff;">Questions? Confirm it with our team on WhatsApp.</h2>
+          <p class="lead" style="margin-top:1.2rem;color:rgba(255,255,255,.78);">Whether you are checking programme details, fees, dates, centres, preview sessions or simply want to make sure information you received is genuinely from Achievers Mind Academy, message our team directly. We would rather you ask us than be unsure.</p>
+          <div class="hero-actions" style="margin-top:2rem;">
+            <a class="btn btn-wa btn-lg" href="#" target="_blank" rel="noopener" data-whatsapp-link data-whatsapp-text="Hi! I have a question about Achievers Mind Academy and would like to confirm some details.">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+              Chat with the AMA team
+            </a>
           </div>
-
-          <aside class="ct-aside">
-            <div class="ct-aside-card wa-card reveal reveal-delay-1">
-              <h3 data-i18n="ct.aside.wa.t">Prefer WhatsApp?</h3>
-              <p data-i18n="ct.aside.wa.d">Chat with us directly on WhatsApp for a quick response about programmes and preview sessions.</p>
-              <a class="btn btn-wa" href="#" target="_blank" rel="noopener" data-whatsapp-link data-whatsapp-text="Hi! I'd like to know more about Achievers Mind Academy.">
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.05em;height:1.05em;"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.2z"/></svg>
-                <span data-i18n="ct.ch.wa.go">Chat on WhatsApp</span>
-              </a>
-            </div>
-            <div class="ct-aside-card reveal reveal-delay-2">
-              <h3 data-i18n="ct.aside.social.t">Follow the academy</h3>
-              <p data-i18n="ct.aside.social.d">Previews, demonstrations and achievement moments — shared on our official channels.</p>
-              <a class="btn btn-ghost" href="https://www.instagram.com/achievers.mind.academy" target="_blank" rel="noopener" style="margin-top:1rem;">
-                <span data-i18n="final.cta2">Message Us on Instagram</span>
-              </a>
-            </div>
-          </aside>
+        </div>
+        <div class="grid" style="gap:1rem;">
+          <div class="feature" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);">
+            <h3 style="color:#fff;">Ask before you register</h3>
+            <p style="color:rgba(255,255,255,.72);">Check programme suitability, schedules, locations, fees and what to expect before making a decision.</p>
+          </div>
+          <div class="feature" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);">
+            <h3 style="color:#fff;">Verify official information</h3>
+            <p style="color:rgba(255,255,255,.72);">If you received a message, poster or programme detail and want to confirm it is genuine, send it to us on WhatsApp.</p>
+          </div>
+          <div class="feature" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);">
+            <h3 style="color:#fff;">Speak to the academy directly</h3>
+            <p style="color:rgba(255,255,255,.72);">Your questions go directly to the AMA team so you can get clear information from the source.</p>
+          </div>
         </div>
       </div>
     </section>
