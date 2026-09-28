@@ -12,6 +12,23 @@
   ta['cta.services']='பயிற்சி நிரல்களைப் பாருங்கள்';
 
   Object.assign(bm,{
+    'gal.new.audience':'Dewan penuh pelajar · 2026',
+    'gal.new.community':'Komuniti bengkel · 2026',
+    'gal.new.ambr':'Pelajar pemegang rekod · 2024',
+    'gal.new.camp1':'Aktiviti berkumpulan · 2024',
+    'gal.new.camp2':'Penyertaan dalam kem · 2024',
+    'gal.new.camp3':'Aktiviti kumpulan berpandu · 2024'
+  });
+  Object.assign(ta,{
+    'gal.new.audience':'கற்றலாளர்கள் நிறைந்த அரங்கம் · 2026',
+    'gal.new.community':'பயிலரங்கக் குழு · 2026',
+    'gal.new.ambr':'சாதனைப் பதிவு பெற்ற மாணவர்கள் · 2024',
+    'gal.new.camp1':'குழு செயல்பாடு · 2024',
+    'gal.new.camp2':'முகாம் பங்கேற்பு · 2024',
+    'gal.new.camp3':'வழிகாட்டப்பட்ட குழு செயல்பாடு · 2024'
+  });
+
+  Object.assign(bm,{
     'gal.hero.eyebrow':'Kelas & Bengkel Sebenar',
     'gal.hero.title':'Lihat sendiri pengalaman pembelajaran kami.',
     'gal.hero.sub':'Detik sebenar daripada kelas, bengkel, demonstrasi dan penghargaan pelajar Achievers Mind Academy — bukan gambar stok, tetapi komuniti pembelajaran kami sendiri.',
