@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://achieversmindacademy.github.io/sitemap.xml
+Sitemap: https://achieversmindacademy.com/sitemap.xml
