@@ -2075,3 +2075,62 @@ html[lang="ta"] .drawer-links a { font-size: 1rem; }
   .ambr-card::after { display: none; }
   .mini-flow li:hover, .mf-big:hover { transform: none; }
 }
+
+/* Phone layout shared by every page, including the programme pages. */
+@media (max-width: 640px) {
+  :root { --nav-h: 64px; }
+
+  .container { width: min(100% - 2rem, var(--container-w)); }
+  .section { padding-block: 3.25rem; }
+  .split, .hero-grid, .grid, .real-sessions-grid,
+  .footer-grid, .stats-band { min-width: 0; }
+  .split > *, .hero-grid > *, .grid > *, .footer-grid > * { min-width: 0; }
+  h1, h2, h3, h4, p, .footer-meta { overflow-wrap: anywhere; }
+
+  .nav-inner { gap: 0.65rem; }
+  .brand { flex: 1 1 auto; min-width: 0; gap: 0.5rem; margin-right: 0; }
+  .brand img { width: 36px; height: 36px; flex: none; }
+  .brand-name { min-width: 0; white-space: normal; font-size: clamp(0.78rem, 3.6vw, 0.98rem); line-height: 1.18; }
+  .nav-cta, .nav-toggle { flex: none; }
+  .drawer {
+    max-height: calc(100vh - var(--nav-h));
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.7rem 1rem 1.25rem;
+  }
+  .drawer-links a { padding-block: 0.72rem; }
+  .drawer-foot { gap: 0.75rem; }
+
+  .hero { padding-top: calc(var(--nav-h) + 2.4rem); padding-bottom: 3rem; }
+  .hero-grid { gap: 2rem; }
+  .hero h1, .page-hero h1 { font-size: clamp(2rem, 9vw, 2.65rem); }
+  .lead { font-size: 1rem; line-height: 1.65; }
+  .hero-actions, .cta-actions { gap: 0.7rem; }
+  .btn, html[lang="bm"] .btn, html[lang="ta"] .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero-media::before { display: none; }
+  .photo-grid { grid-template-columns: 1fr; }
+
+  .mobile-cta {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+  .footer-grid, .footer-meta { gap: 1.6rem; }
+}
+
+@media (max-width: 420px) {
+  .stats-band { grid-template-columns: 1fr; gap: 0.75rem; }
+  .stat { padding: 1rem 1.15rem; }
+  .stat .stat-num { font-size: 1.8rem; }
+  .brand-name { font-size: 0.8rem; }
+  .nav-toggle { width: 42px; height: 42px; }
+}
